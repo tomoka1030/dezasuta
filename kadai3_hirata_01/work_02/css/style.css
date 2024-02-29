@@ -39,56 +39,59 @@ h1 {
 }
 
 body {
-    max-width: 960px;
-    margin: 0 auto;
     background-color: #eeeeee;
 }
 
-.Service_wrap {
+#service {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.service_wrap {
     display: flex;
     justify-content: space-between;
     max-width: 960px;
 }
 
-.ServiceContents {
+.servie_content {
     width: 32%;
     background-color: white;
 }
 
-.ServiceContents_img {
+.service_img {
     width: 100%;
     margin-bottom: 8px;
 }
 
-.ServiceContents_title {
+.service_title {
     border-left: 10px solid;
     color: darkcyan;
     font-weight: bold;
-    font: 26px;
+    font-size: 26px;
     margin-left: 8px;
+    padding-left: 4px;
 }
 
-.ServiceContents_text {
+.service_text {
     line-height: 1.5;
     padding: 4%;
 }
 
 @media screen and (max-width: 400px) {
-    .Service_wrap {
+    .service_wrap {
         display: block;
     }
 
-    .ServiceContents {
+    .servie_content {
         width: 100%;
         margin-bottom: 20px;
     }
 
-    .ServiceContents_img {
+    .service_img img {
         width: 100%;
-        margin-bottom: 10px;
     }
 
-    .ServiceContents_title {
+    .service_title {
         font-size: 20px;
     }
 }
