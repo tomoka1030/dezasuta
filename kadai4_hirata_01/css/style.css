@@ -1,0 +1,326 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+html {
+    scroll-behavior: smooth;
+}
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #4f260b;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+        "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+        "ＭＳ 明朝", serif;
+    font-feature-settings: "palt";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* --------
+HEADER
+-------- */
+
+.header_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 7% 0 2.8%;
+}
+
+.header_logo img {
+    height: 50px;
+}
+
+.pc_nav ul {
+    display: flex;
+}
+
+.pc_nav ul li {
+    width: 105px;
+    margin-left: 55px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: #e8d9bf;
+}
+
+/* --------
+共通
+---------*/
+
+.lead,
+.about,
+.menu,
+.event {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section_title {
+    text-align: center;
+}
+h2 img {
+    height: 78px;
+}
+
+/* --------
+lead
+---------*/
+
+.lead {
+    padding-top: 95px;
+    text-align: center;
+}
+
+.en {
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+.title {
+    margin-bottom: 20px;
+    font-size: 82px;
+    line-height: 1.17;
+    letter-spacing: 0.1em;
+}
+.title_text {
+    font-size: 23px;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+}
+
+/* --------
+ABOUT US
+-------- */
+
+.about {
+    padding-top: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about_image {
+    width: 50%;
+}
+
+.about_img img {
+    border-radius: 0 0 82px 0;
+}
+
+.about_title {
+    margin-bottom: 34px;
+    font-size: 30px;
+}
+
+.about_text {
+    width: 41%;
+    padding-right: 10px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.about_text h3 {
+    margin-bottom: 20px;
+    font-size: 44px;
+    line-height: 1.4;
+    font-weight: normal;
+}
+
+.about_caption {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* --------
+MENU
+-------- */
+
+.menu {
+    padding: 93px 10px 0 10px;
+}
+
+.menu_wrap {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu_content {
+    width: 30%;
+}
+
+.menu_img img {
+    width: 100%;
+    border-radius: 0 41px 0 0;
+}
+.menu_title {
+    margin-top: -13px;
+    margin-bottom: 10px;
+    font-size: 38px;
+    font-weight: normal;
+    color: #d30202;
+}
+
+.menu_text {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+/* --------
+GALLERY
+-------- */
+
+.gallery {
+    padding-top: 85px;
+}
+
+.gallery_img {
+    margin-top: 20px;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --------
+EVENT
+-------- */
+
+.event {
+    padding: 64px 10px 0 10px;
+}
+
+.event_box {
+    margin: 0 auto;
+    margin-top: 32px;
+    padding: 3% 16% 3% 16%;
+    border: solid 3px #4f260b;
+    background-color: #ffffff;
+}
+
+.event_wrap {
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+}
+.event_day {
+    padding: 10px 0px 10px 0px;
+}
+.event_text {
+    padding-left: 46px;
+    text-decoration: underline #4f260b;
+}
+
+/* --------
+ACCESS
+-------- */
+
+.access {
+    padding-top: 75px;
+}
+
+iframe {
+    margin-top: 35px;
+    width: 100%;
+    height: 463px;
+    display: block;
+}
+
+/* --------
+FOOTER
+-------- */
+
+footer {
+    background-color: white;
+}
+.footer_wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 74px;
+    display: flex;
+}
+
+.footer_logo {
+    width: 226px;
+    padding-right: 60px;
+    vertical-align: top;
+}
+
+.item_info {
+    padding-left: 20px;
+}
+.item_info p {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    line-height: 1.95;
+}
+
+.copyright {
+    margin: 0 auto;
+    padding-top: 74px;
+    padding-bottom: 75px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* --------
+page top
+-------- */
+
+.pagetop {
+    /* 固定表示 */
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 125px;
+}
