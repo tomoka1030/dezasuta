@@ -124,7 +124,7 @@ lead
     font-size: 30px;
 }
 .title {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-size: 82px;
     line-height: 1.17;
     letter-spacing: 0.1em;
@@ -150,7 +150,7 @@ ABOUT US
     width: 50%;
 }
 
-.about_img img {
+.about_image img {
     border-radius: 0 0 82px 0;
 }
 
@@ -196,21 +196,20 @@ MENU
     width: 30%;
 }
 
-.menu_img img {
+.menu_content img {
     width: 100%;
     border-radius: 0 41px 0 0;
 }
 .menu_title {
     margin-top: -13px;
     margin-bottom: 10px;
+    padding-left: 12px;
     font-size: 38px;
     font-weight: normal;
     color: #d30202;
 }
 
 .menu_text {
-    padding-right: 10px;
-    padding-left: 10px;
     font-size: 17px;
     line-height: 1.5;
 }
@@ -225,7 +224,7 @@ GALLERY
 
 .gallery_img {
     margin-top: 20px;
-    width: 20%;
+    /* width: 20%; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -240,9 +239,10 @@ EVENT
 }
 
 .event_box {
-    margin: 0 auto;
     margin-top: 32px;
-    padding: 3% 16% 3% 16%;
+    display: flex;
+    justify-content: center;
+    padding: 3% 30px 3% 30px;
     border: solid 3px #4f260b;
     background-color: #ffffff;
 }
@@ -252,10 +252,10 @@ EVENT
     align-items: center;
     font-size: 23px;
 }
-.event_day {
+time {
     padding: 10px 0px 10px 0px;
 }
-.event_text {
+.event_wrap a {
     padding-left: 46px;
     text-decoration: underline #4f260b;
 }
@@ -271,7 +271,7 @@ ACCESS
 iframe {
     margin-top: 35px;
     width: 100%;
-    height: 463px;
+    height: 470px;
     display: block;
 }
 
@@ -295,14 +295,12 @@ footer {
     vertical-align: top;
 }
 
-.item_info {
-    padding-left: 20px;
-}
 .item_info p {
     padding-right: 10px;
     padding-left: 10px;
     font-size: 20px;
     line-height: 1.95;
+    color: black;
 }
 
 .copyright {
@@ -311,6 +309,7 @@ footer {
     padding-bottom: 75px;
     font-size: 16px;
     text-align: center;
+    color: black;
 }
 
 /* --------
