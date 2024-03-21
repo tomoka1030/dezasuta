@@ -56,6 +56,10 @@ img {
 HEADER
 -------- */
 
+.sp_img {
+    display: none;
+}
+
 .header_wrap {
     position: absolute;
     top: 0;
@@ -87,10 +91,116 @@ HEADER
     text-align: center;
 }
 
+.header_slider img {
+    width: 100%;
+}
+
+/* ハンバーガーメニュー */
+.sp_nav,
+.sp_btn {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .pc_img {
+        display: none;
+    }
+    .sp_img {
+        display: block;
+    }
+    .pc_nav {
+        display: none;
+    }
+
+    .sp_btn {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        display: block;
+        height: 23px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .sp_btn span {
+        position: relative;
+        top: 10px;
+        display: block;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+        transition: 0.3s;
+    }
+}
+
+.sp_btn span::before,
+.sp_btn span::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.sp_btn span::before {
+    bottom: 10px;
+}
+
+.sp_btn span::after {
+    top: 10px;
+}
+
+/* ハンバーガーメニューを閉じる */
+
+.sp_btn.open span {
+    background: transparent;
+}
+
+.sp_btn.open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+.sp_btn.open span::after {
+    top: 0;
+    transform: rotate(135deg);
+}
 body {
     background-color: #e8d9bf;
 }
 
+/* ハンバーガーメニュー */
+.sp_nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* ↓全画面表示 デバイスの高さ vh vw */
+    height: 100vh;
+    /* 一部の背景を透過させる*/
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.sp_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.sp_nav ul li {
+    padding: 20px 0;
+    color: #fff;
+    font-size: 18px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
 /* --------
 共通
 ---------*/
@@ -110,9 +220,18 @@ h2 img {
     height: 78px;
 }
 
+@media screen and (max-width: 767px) {
+    h2 img {
+        height: 45px;
+    }
+}
+
 /* --------
 lead
 ---------*/
+.sp_title_text {
+    display: none;
+}
 
 .lead {
     padding-top: 95px;
@@ -124,20 +243,55 @@ lead
     font-size: 30px;
 }
 .title {
-    margin-bottom: 40px;
+    margin-bottom: 33px;
     font-size: 82px;
     line-height: 1.17;
     letter-spacing: 0.1em;
 }
-.title_text {
+
+.pc_title_text {
     font-size: 23px;
     line-height: 1.6;
     letter-spacing: 0.1em;
 }
 
+@media screen and (max-width: 767px) {
+    .pc_title_text {
+        display: none;
+    }
+
+    .lead {
+        padding-top: 45px;
+        text-align: center;
+    }
+
+    .en {
+        margin-bottom: 23px;
+        font-size: 17px;
+    }
+
+    .title {
+        margin-bottom: 24px;
+        font-size: 37px;
+        line-height: 1.15;
+        letter-spacing: 0.02em;
+    }
+
+    .sp_title_text {
+        display: block;
+        font-size: 16px;
+        line-height: 1.9;
+        letter-spacing: 0.1em;
+    }
+}
+
 /* --------
 ABOUT US
 -------- */
+.sp_about_content,
+.sp_section title {
+    display: none;
+}
 
 .about {
     padding-top: 90px;
@@ -146,36 +300,81 @@ ABOUT US
     align-items: center;
 }
 
-.about_image {
+/* .pc_about_image img {
     width: 50%;
-}
+} */
 
-.about_image img {
+.pc_about_image img {
     border-radius: 0 0 82px 0;
 }
 
-.about_title {
+.pc_about_title {
     margin-bottom: 34px;
     font-size: 30px;
 }
 
-.about_text {
+.pc_about_text {
     width: 41%;
     padding-right: 10px;
     padding-left: 10px;
     position: relative;
 }
 
-.about_text h3 {
+.pc_about_text h3 {
     margin-bottom: 20px;
     font-size: 44px;
     line-height: 1.4;
     font-weight: normal;
 }
 
-.about_caption {
+.pc_about_caption {
     font-size: 16px;
     line-height: 1.6;
+}
+
+@media screen and (max-width: 767px) {
+    .pc_section title,
+    .pc_about_image,
+    .pc_about_text {
+        display: none;
+    }
+
+    .about {
+        text-align: center;
+        padding-top: 26px;
+    }
+
+    .sp_about_image {
+        display: block;
+    }
+
+    .sp_about_image img {
+        width: 100%;
+    }
+
+    .sp_about_text {
+        display: block;
+        width: 335px;
+        margin: 0 auto;
+        padding-top: 35px;
+    }
+
+    .sp_about_content {
+        display: block;
+    }
+
+    .sp_about_text h3 {
+        text-align: left;
+        margin-bottom: 16px;
+        font-size: 36px;
+        font-weight: normal;
+        line-height: 1.25;
+    }
+
+    .sp_about_caption {
+        font-size: 16px;
+        line-height: 1.75;
+    }
 }
 
 /* --------
@@ -214,20 +413,63 @@ MENU
     line-height: 1.5;
 }
 
+@media screen and (max-width: 767px) {
+    .menu {
+        padding: 35px 0 23px 0;
+    }
+
+    .menu_wrap {
+        display: block;
+        margin-top: 17px;
+    }
+
+    .menu_content {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .menu_title {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .menu_text {
+        line-height: 1.6;
+        margin-bottom: 58px;
+    }
+}
+
 /* --------
 GALLERY
 -------- */
-
+.sp_gallery_img {
+    display: none;
+}
 .gallery {
     padding-top: 85px;
 }
 
-.gallery_img {
+.pc_gallery_img {
     margin-top: 20px;
     /* width: 20%; */
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+    .pc_gallery_img {
+        display: none;
+    }
+
+    .gallery {
+        padding-top: 10px;
+    }
+
+    .sp_gallery_img {
+        display: block;
+        width: 100%;
+        padding-top: 15px;
+    }
 }
 
 /* --------
@@ -252,12 +494,52 @@ EVENT
     align-items: center;
     font-size: 23px;
 }
+
 time {
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0 10px 0;
 }
+
 .event_wrap a {
     padding-left: 46px;
     text-decoration: underline #4f260b;
+}
+
+@media screen and (max-width: 767px) {
+    .event {
+        margin: 0 auto;
+        padding: 27px 10px 0 10px;
+    }
+
+    .event_box {
+        margin-top: 20px;
+        padding: 3% 10px 3% 10px;
+        justify-content: center;
+    }
+
+    .event_box ul {
+        max-width: 330px;
+        padding-left: 27px;
+    }
+
+    .event_wrap {
+        display: block;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+
+    time {
+        display: block;
+        padding: 10px 0 5px 0;
+    }
+
+    .event_wrap a {
+        display: block;
+        padding: 0 0 10px 0;
+        width: 80%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
 /* --------
@@ -275,6 +557,17 @@ iframe {
     display: block;
 }
 
+@media screen and (max-width: 767px) {
+    .access {
+        padding-top: 26px;
+    }
+
+    iframe {
+        margin-top: 5px;
+        width: 100%;
+        height: 191px;
+    }
+}
 /* --------
 FOOTER
 -------- */
@@ -312,6 +605,29 @@ footer {
     color: black;
 }
 
+@media screen and (max-width: 767px) {
+    .footer_wrap {
+        display: block;
+        padding-top: 39px;
+        padding-left: 20px;
+    }
+
+    .item_info {
+        padding: 25px 0 0 0;
+    }
+
+    .item_info p {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    .copyright {
+        padding-top: 40px;
+        padding-bottom: 25px;
+        font-size: 16px;
+    }
+}
+
 /* --------
 page top
 -------- */
@@ -322,4 +638,10 @@ page top
     right: 40px;
     bottom: 40px;
     width: 125px;
+}
+
+@media screen and (max-width: 767px) {
+    .pagetop {
+        width: 100px;
+    }
 }
