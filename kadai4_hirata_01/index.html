@@ -9,9 +9,13 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css">
     <link rel="stylesheet" href="css/style.css">
     <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
 </head>
 
 <body>
@@ -114,19 +118,58 @@
         </section>
 
         <section id="gallery" class="gallery">
-            <h2 class="section_title"><img src="images/gallery@2x.png" alt="GALLERY">
-            </h2>
-            <div class="pc_gallery_img">
-                <div><img src="images/pc_gallary_01-100.jpg" alt="店内の様子"></div>
-                <div><img src="images/pc_gallary_02-100.jpg" alt="コーヒー豆"></div>
-                <div><img src="images/pc_gallary_03-100.jpg" alt="店内の様子"></div>
-                <div><img src="images/pc_gallary_04-100.jpg" alt="店内の装飾"></div>
-                <div><img src="images/pc_gallary_05-100.jpg" alt="コーヒーを淹れる様子"></div>
-            </div>
-            <div class="sp_gallery_img">
-                <div><img src="images/mobile_gallery-100.jpg" alt="店内の様子"></div>
-            </div>
+            <h2 class="section_title"><img src="images/gallery@2x.png" alt="GALLERY"></h2>
 
+            <div class="gallery_slider">
+                <div>
+                    <a href="images/pc_gallary_03-100.jpg" data-lightbox="gallery" data-title="ギャラリー_01">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="images/mobile_gallery-100.jpg">
+                            <img src="images/pc_gallary_03-100.jpg" alt="店内の様子">
+                        </picture>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/pc_gallary_04-100.jpg" data-lightbox="gallery" data-title="ギャラリー_02">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="images/mobile_gallery-100.jpg">
+                            <img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆">
+                        </picture>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/pc_gallary_05-100.jpg" data-lightbox="gallery" data-title="ギャラリー_03">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="images/mobile_gallery-100.jpg">
+                            <img src="images/pc_gallary_05-100.jpg" alt="店内の様子">
+                        </picture>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/pc_gallary_02-100.jpg" data-lightbox="gallery" data-title="ギャラリー_04">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="images/mobile_gallery-100.jpg">
+                            <img src="images/pc_gallary_02-100.jpg" alt="店内の装飾">
+                        </picture>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/pc_gallary_01-100.jpg" data-lightbox="gallery" data-title="ギャラリー_05">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="images/mobile_gallery-100.jpg">
+                            <img src="images/pc_gallary_01-100.jpg" alt="コーヒーを淹れる様子">
+                        </picture>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/pc_gallary_01-100.jpg" data-lightbox="gallery" data-title="ギャラリー_06">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="images/mobile_gallery-100.jpg">
+                            <img src="images/pc_gallary_01-100.jpg" alt="コーヒーを淹れる様子">
+                        </picture>
+                    </a>
+                </div>
+            </div>
         </section>
 
         <section id="event" class="event">
@@ -197,10 +240,27 @@
                 autoplay: true,
                 autoplaySpeed: 2000,
                 dots: true,
-                arrows: false
+                arrows: false/*デフォルトのスクロールを非表示にする*/
+            });
+
+            $('.gallery_slider').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    }
+                ]
             });
 
         });
+
     </script>
 
 </body>
