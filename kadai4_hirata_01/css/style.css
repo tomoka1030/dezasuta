@@ -525,20 +525,19 @@ GALLERY
     border-top: 5px solid #fff; /*矢印の色*/
     border-right: 5px solid #fff; /*矢印の色*/
     position: absolute; /*絶対配置にする*/
-    top: 45%;
 }
 
 .slick-prev {
     /*戻る矢印*/
     left: 22%;
     z-index: 1; /*レイヤーの重なり順*/
-    transform: rotate(-135deg);
+    transform: translateY(-50%) rotate(-135deg);
 }
 
 .slick-next {
     /*次へ矢印*/
     right: 22%;
-    transform: rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
 }
 
 .lb-data .lb-number {
@@ -584,20 +583,19 @@ GALLERY
         border-top: 2px solid #fff; /*矢印の色*/
         border-right: 2px solid #fff; /*矢印の色*/
         position: absolute; /*絶対配置にする*/
-        top: 45%;
     }
 
     .slick-prev {
         /*戻る矢印*/
         left: 5%;
         z-index: 1; /*レイヤーの重なり順*/
-        transform: rotate(-135deg);
+        transform: translateY(-50%) rotate(-135deg); /*translateY(-50%)基準点が上下中央になる*/
     }
 
     .slick-next {
         /*次へ矢印*/
         right: 5%;
-        transform: rotate(45deg);
+        transform: translateY(-50%) rotate(45deg);
     }
 }
 
