@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* ------------
+カテゴリータグ
+------------- */
+@mixin category{
+    display: flex;
+    gap: 8px;
+    margin-top:12px;
+    font-size: 14px;
+}
+
+/* ------------
+コンタクト
+------------- */

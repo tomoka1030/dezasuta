@@ -1,0 +1,58 @@
+@charset "utf-8";
+@use "variable";
+
+
+/* --------
+ヘッダー
+-------- */
+
+.header {
+    top: 0px;
+    // width: 100%;
+    // position: fixed; 
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+        padding: 0 5%;
+        background-color: #FFF7EF;
+    }
+
+    &__logo img{
+        height: 58px;
+        }
+
+    &__list{
+            display: flex;
+            align-items: center;
+            margin: 0
+            ;
+            }
+
+    &__item{
+            padding-left: 36px;
+            text-align: center;
+            } 
+            a{
+                line-height:1.5;
+            }
+
+    &__title-ja{
+    font-size: 11px; 
+    }
+
+    &__title{
+    font-size: 18px;
+    font-family: variable.$ff-en; 
+    }
+
+    &__sns img{
+        width: 24px; 
+    }
+}
+
+.sns img{
+width: 24px;
+}
