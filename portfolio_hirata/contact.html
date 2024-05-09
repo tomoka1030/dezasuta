@@ -20,8 +20,18 @@
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'hib7xfm',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
 
-    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
@@ -53,7 +63,7 @@
                         </a>
                     </li>
                     <li class="header__item">
-                        <a href="#skill">
+                        <a href="index.html#skill">
                             <span class="header__title-ja">できること</span>
                             <br>
                             <span class="header__title">SKILL</span>
@@ -85,7 +95,7 @@
 
     <main class="main">
         <div class="mainvisual">
-            <img src="images/mv_contact.jpg" alt="わたしのおもい">
+            <img src="images/mv_contact.jpg" alt="お問い合わせ">
             <h2 class="mainvisual__title">
                 <p class="mainvisual__title-ja">お問い合わせ</p>
                 <br>
@@ -95,36 +105,49 @@
 
         <section id="inquire" class="inquire">
             <div class="inquire__inner">
-            </div>
-            <h3 class="inquire__title">メールでのお問い合わせはこちらから</h3>
-            <div class="inquire__img">
-                <img src="images/contact__img.png" alt="お問い合わせ">
-            </div>
-            <p class="inquire__message">お仕事のご依頼や、こんなことできるかなといった疑問、<br>
-                こんなこと一緒にやらない？などのお誘いなど何でもお気軽にどうぞ！</p>
 
-            <form action="">
-                <p class="inquire__item">
-                    <label for="name-field">お名前 <span class="required"> *</span></label>
-                    <br>
-                    <input type="text" name="name" id="name-field" placeholder="デザイン 花子" required>
-                </p>
-                <p class="inquire__item">
-                    <label for=" email-field">メールアドレス <span class="required"> *</span></label>
-                    <br>
-                    <input type="email" name="email" id="email-field" placeholder="email@example.com" required>
-                </p>
-                <p class="inquire__item">
-                    <label for="comment">お問い合わせ内容<span class="required"> *</span></label>
-                    <br>
-                    <textarea name="comment" id="comment"></textarea>
-                </p>
-                <p class="buttonArea">
-                    <!-- 送信ボタン -->
-                    <input type="submit" name="submit" value="送信する" id="submit">
-                    <img src="images/send.png" alt="send">
-                </p>
-            </form>
+                <h3 class="inquire__title">メールでのお問い合わせはこちらから</h3>
+                <div class="inquire__img">
+                    <img src="images/contact__img.png" alt="お問い合わせ">
+                </div>
+                <p class="inquire__message">お仕事のご依頼や、こんなことできるかなといった疑問、<br>
+                    こんなこと一緒にやらない？などのお誘いなど何でもお気軽にどうぞ！</p>
+
+                <form
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe2m_CsYfhCuHpDPnxg6A7_NWO7ZO-328eX_kIjLpDRTS_BZg/formResponse"
+                    method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
+                    <p class="inquire__item">
+                        <label for="name-field">お名前 <span class="required"> *</span></label>
+                        <br>
+                        <input type="text" name="entry.2103408560" id="name-field" placeholder="デザイン 花子" required>
+                    </p>
+                    <p class="inquire__item">
+                        <label for="email-field">メールアドレス <span class="required"> *</span></label>
+                        <br>
+                        <input type="email" name="entry.575196597" id="email-field" placeholder="email@example.com"
+                            required>
+                    </p>
+                    <p class="inquire__item">
+                        <label for="comment">お問い合わせ内容<span class="required"> *</span></label>
+                        <br>
+                        <input type="comment" textarea name="entry.1275055082" id="comment">
+                    </p>
+                    <p class="btn__area">
+                        <!-- 送信ボタン -->
+                        <button type="submit" id="submit" class="submit-btn">
+                            送信<div class="send__img"><img src="images/send.png" alt=""></div>
+                        </button>
+                        <!-- <input type="submit" name="submit" value="送信する" id="submit">
+                        <img src="images/send.png" alt="send"> -->
+                    </p>
+                    <script type="text/javascript">
+                        var submitted = false;
+                    </script>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+                        onload="if(submitted)  {window.location='thanks.html';}"></iframe>
+                </form>
+            </div>
         </section>
     </main>
     <footer class="footer">

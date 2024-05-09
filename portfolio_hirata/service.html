@@ -21,7 +21,7 @@
         })(document);
     </script>
 
-    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
@@ -54,7 +54,7 @@
                         </a>
                     </li>
                     <li class="header__item">
-                        <a href="#skill">
+                        <a href="index.html#skill">
                             <span class="header__title-ja">できること</span>
                             <br>
                             <span class="header__title">SKILL</span>
@@ -95,17 +95,14 @@
             </h2>
         </div>
 
-
-        <ul id="page__link">
-            <li><a href="#">サービス</a></li>
-            <li><a href="#">ご利用のながれ</a></li>
+        <ul class="page__link">
+            <li page__item><a href="#service" class="page__link-btn">サービス</a></li>
+            <li page__item><a href="#flow" class="page__link-btn">ご利用のながれ</a></li>
         </ul>
-
         <section id="service" class="service">
             <div class="service__inner">
-                <p class="service__message">
-                    デザインからコーディングまでワンストップで担当できるWEBサイト制作をメインに、<br>
-                    デザインにかかわる様々なお仕事を承っております。お気軽にお問い合わせください。
+                <p>デザインからコーディングまでワンストップで担当できるWEBサイト制作をメインに、<br>
+                    デザインにかかわる様々なお仕事を承っております。
                 </p>
 
                 <ul class="service__list">
@@ -114,61 +111,72 @@
                         <div class="service__img">
                             <img src="images/img_service_web.png" alt="Webサイト">
                         </div>
-                        <p class="service__title"> Webサイト制作</p>
-                        <div class="service__category">
-                            <p class="service__label">Webサイト</p>
-                            <p class="service__label">LP</p>
+                        <div class="service__body">
+                            <p class="service__title"> Webサイト制作</p>
+                            <div class="service__category">
+                                <p class="service__label">Webサイト</p>
+                                <p class="service__label">LP</p>
+                            </div>
+                            <p class="service__text">
+                                あなたのブランドの価値を最大限魅せるデザインを創り上げます。<br>
+                                JavaScriptやjQueryを使用し、テンプレートでは表現できない雰囲気にあった動きのあるWebサイトができます。
+                            </p>
+                            <a href="" class="btn-arrow">
+                                Webサイト制作の実績を見る</a>
                         </div>
-                        <p class="service__text">
-                            あなたのブランドの価値を最大限魅せるデザインを創り上げます。<br>
-                            JavaScriptやjQueryを使用し、テンプレートでは表現できない雰囲気にあった動きのあるWebサイトができます。
-                        </p>
-                        <a href="" class="works__btn">
-                            Webサイト制作の実績を見る</a>
                     </li>
                     <li class="service__item">
                         <p class="service__number">02</p>
                         <div class="service__img">
                             <img src="images/img_service_design.png" alt="Webサイト">
                         </div>
-                        <p class="service__title">バナー制作</p>
-                        <div class="service__category">
-                            <p class="service__label">Web広告</p>
-                            <p class="service__label">SNS広告</p>
+                        <div class="service__body">
+                            <p class="service__title">バナー制作</p>
+                            <div class="service__category">
+                                <p class="service__label">Web広告</p>
+                                <p class="service__label">SNS広告</p>
+                            </div>
+                            <p class="service__text">
+                                バナーは多くのユーザーの目に触れるため、認知度を高めるチャンスです。<br>
+                                オープンの告知や、新商品の紹介など、ターゲットのニーズにマッチする広告を作ります。
+                            </p>
+                            <a href="" class="btn-arrow">
+                                バナー制作の実績を見る</a>
                         </div>
-                        <p class="service__text">
-                            バナーは多くのユーザーの目に触れるため、認知度を高めるチャンスです。<br>
-                            オープンの告知や、新商品の紹介など、ターゲットのニーズにマッチする広告を作ります。
-                        </p>
-                        <a href="" class="works__btn">
-                            バナー制作の実績を見る</a>
                     </li>
                     <li class="service__item">
                         <p class="service__number">03</p>
                         <div class="service__img">
                             <img src="images/img_service_graphic.png" alt="Webサイト">
                         </div>
-                        <p class="service__title">チラシ・名刺制作</p>
-                        <div class="service__category">
-                            <p class="service__label">チラシ</p>
-                            <p class="service__label">名刺</p>
+                        <div class="service__body">
+                            <p class="service__title">チラシ・名刺制作</p>
+                            <div class="service__category">
+                                <p class="service__label">チラシ</p>
+                                <p class="service__label">名刺</p>
+                            </div>
+                            <p class="service__text">
+                                チラシは手に取り、必ず目に触れるため、記憶にも残りやすい特徴があります。心に響くデザインをして、手に取った方の行動に結びつけます。
+                                名刺などの印刷物も対応可能です！
+                            </p>
+                            <a href="" class="btn-arrow">
+                                チラシ・名刺制作の実績を見る</a>
                         </div>
-                        <p class="service__text">
-                            チラシは手に取り、必ず目に触れるため、記憶にも残りやすい特徴があります。心に響くデザインをして、手に取った方の行動に結びつけます。
-                            名刺などの印刷物も対応可能です！
-                        </p>
-                        <a href="" class="works__btn">
-                            チラシ・名刺制作の実績を見る</a>
                     </li>
                 </ul>
-
-                <a href="" class="works__btn">
-                    つくったものを見る
-                </a>
+                <p class="btn-circle">
+                    <a href="" class="service__btn">
+                        つくったものを見る
+                    </a>
+                </p>
             </div>
         </section>
 
         <section id="flow" class="flow">
+            <h3 class="section__title">
+                <span class="section__title-ja">ご利用のながれ</span>
+                <span class="section__title-en">FLOW</span>
+            </h3>
             <div flow__detail>
                 <ol class="flow__list">
                     <li class="flow__item">
@@ -176,64 +184,78 @@
                         <div class="flow__img">
                             <img src="images/flow__img-1.png" alt="お問い合わせ">
                         </div>
-                        <p class="flow__title">お問い合わせ</p>
-                        <p class="flow__text">制作のことや、不安に思って
-                            いること、お困りのことなど、
-                            何でも大丈夫です。<br>
-                            どうぞお気軽にご相談ください。</p>
+                        <div class="flow__body">
+                            <p class="flow__title">お問い合わせ</p>
+                            <p class="flow__text">制作のことや、不安に思って
+                                いること、お困りのことなど、
+                                何でも大丈夫です。<br>
+                                どうぞお気軽にご相談ください。</p>
+                        </div>
                     </li>
                     <li class="flow__item">
                         <p class="flow__number">STEP 02</p>
                         <div class="flow__img">
                             <img src="images/flow__img-2.png" alt="ヒアリング">
                         </div>
-                        <p class="flow__title">ヒアリング</p>
-                        <p class="flow__text">あなたに寄り添う丁寧なヒアリングを心がけております。<br>
-                            世界観がふわっとしていても大丈夫です。課題解決のため、一緒に考えましょう。</p>
+                        <div class="flow__body">
+                            <p class="flow__title">ヒアリング</p>
+                            <p class="flow__text">あなたに寄り添う丁寧なヒアリングを心がけております。<br>
+                                世界観がふわっとしていても大丈夫です。課題解決のため、一緒に考えましょう。</p>
+                        </div>
                     </li>
                     <li class="flow__item">
                         <p class="flow__number">STEP 03</p>
                         <div class="flow__img">
                             <img src="images/flow__img-3.png" alt="お見積り・ご契約">
                         </div>
-                        <p class="flow__title">お見積り・ご契約</p>
-                        <p class="flow__text">ヒアリング内容をもとに、お見積りを提出します。<br>
-                            見積もりは無料ですのでご安心ください。</p>
+                        <div class="flow__body">
+                            <p class="flow__title">お見積り・ご契約</p>
+                            <p class="flow__text">ヒアリング内容をもとに、お見積りを提出します。<br>
+                                見積もりは無料ですのでご安心ください。</p>
+                        </div>
                     </li>
                     <li class="flow__item">
                         <p class="flow__number">STEP 04</p>
                         <div class="flow__img">
                             <img src="images/flow__img-4.png" alt="デザイン設計・構築">
                         </div>
-                        <p class="flow__title">デザイン設計・構築</p>
-                        <p class="flow__text">世界観やコンセプト、目的を明確にした後、あなたのブランドの価値を高めるためのデザイン設計、そして構築をしていきます。</p>
+                        <div class="flow__body">
+                            <p class="flow__title">デザイン設計・構築</p>
+                            <p class="flow__text">世界観やコンセプト、目的を明確にした後、あなたのブランドの価値を高めるためのデザイン設計、そして構築をしていきます。</p>
+                        </div>
                     </li>
                     <li class="flow__item">
                         <p class="flow__number">STEP 05</p>
                         <div class="flow__img">
                             <img src="images/flow__img-5.png" alt="入稿・公開準備">
                         </div>
-                        <p class="flow__title">入稿・公開準備</p>
-                        <p class="flow__text">Webサイトであれば公開前チェック、<br>
-                            チラシであれば入稿作業、<br>
-                            完成に向けた最後の確認作業はとっても重要です。</p>
+                        <div class="flow__body">
+                            <p class="flow__title">入稿・公開準備</p>
+                            <p class="flow__text">Webサイトであれば公開前チェック、<br>
+                                チラシであれば入稿作業、<br>
+                                完成に向けた最後の確認作業はとっても重要です。</p>
+                        </div>
                     </li>
                     <li class="flow__item">
                         <p class="flow__number">STEP 06</p>
                         <div class="flow__img">
                             <img src="images/flow__img-6.png" alt="納品・公開">
                         </div>
-                        <p class="flow__title">納品・公開</p>
-                        <p class="flow__text">ようやくお披露目です。<br>
-                            あなたの想いがたくさん詰まったデザインです。自分のこのように愛して、成長させていきましょう。</p>
+                        <div class="flow__body">
+                            <p class="flow__title">納品・公開</p>
+                            <p class="flow__text">ようやくお披露目です。<br>
+                                あなたの想いがたくさん詰まったデザインです。自分のこのように愛して、成長させていきましょう。</p>
+                        </div>
                     </li>
                     <li class="flow__item">
                         <p class="flow__number">STEP 07</p>
                         <div class="flow__img">
                             <img src="images/flow__img-7.png" alt="納品・公開">
                         </div>
-                        <p class="flow__title">その後のサポート</p>
-                        <p class="flow__text">完成後も、あなたのことをより多くの方に知っていただくため、WebやSNSを活用した広報活動もサポートさせていただきます！</p>
+                        <div class="flow__body">
+                            <p class="flow__title">その後のサポート</p>
+                            <p class="flow__text">完成後も、あなたのことをより多くの方に知っていただくため、WebやSNSを活用した広報活動もサポートさせていただきます！</p>
+                        </div>
                     </li>
                 </ol>
             </div>
@@ -247,11 +269,14 @@
                     <span class="en">CONTACT</span>
                 </h2>
 
-                <p class="btn-rectangle">
-                    <a href="" class="contact__btn">
-                        無料で相談する
-                        <img src="images/e-mail.png" alt="e-mail">
-                    </a>
+                <p class="btn__area">
+                    <button class="contact-btn">
+                        <a href="contact.html">
+                            無料で相談する </a>
+                        <div class="contact__img">
+                            <img src="images/e-mail.png" alt="e-mail">
+                        </div>
+                    </button>
                 </p>
                 <p class="contact__text">お仕事のご依頼や、こんなことできるかなといった疑問、
                     <br>
@@ -321,7 +346,13 @@
         </div>
     </footer>
 
-
+    <script>
+        $(function () {
+            $('a').on('click', function () {
+                return false;
+            });
+        });
+    </script>
 </body>
 
 </html>

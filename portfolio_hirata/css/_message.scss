@@ -1,0 +1,352 @@
+@charset "utf-8";
+@use "variable";
+@use "mixin";
+@use "btn";
+
+/* ------------
+messageページ
+------------- */
+
+/*メッセージ */
+.message{
+    padding-top: 183px;
+
+    &__inner{
+        display: block;
+        width: 55%;
+        // max-width: variable.$width-inner;
+        margin: 0 auto;
+        }
+
+    &__title{
+        font-size: 20px;
+        color: variable.$dusty-pink;
+    }
+
+    &__subtitle{
+        font-size: 18px;
+        margin-top: 30px;
+    }
+
+    &__text{
+        line-height: calc(38 / 16);
+        margin-top: 30px;
+    }
+    &__from{
+        text-align: end;
+        margin-top: 121px;
+    }
+
+}
+
+/*悩み*/
+.worry{
+    padding-top: 297px;
+
+    &__inner{
+        display: block;
+        max-width: variable.$width-inner;
+        text-align: center;
+        margin: 0 auto;
+        }
+
+    &__title{
+        display: inline-block;
+        font-size: 25px;
+        color: variable.$dusty-pink;
+    }
+
+.worry__box{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 60px 0;
+}
+
+    &__img{
+        width: 24%;   
+        img{
+            width: 100%;
+        }
+    }
+
+    &__item-left{
+        width: fit-content;
+        position: relative;
+        margin-top: 18px;
+        padding: 15px 20px;
+        background: variable.$cream-beige;
+        border-radius: 30px;
+        // line-height: calc(38 / 16);
+        margin-top: 18px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            right: -38px;
+            width: 13px;
+            height: 12px;
+            bottom: 0;
+            background: variable.$cream-beige;
+            border-radius: 50%;
+        }
+    
+        &:after {
+            content: "";
+            position: absolute;
+            right: -22px;
+            width: 18px;
+            height: 18px;
+            bottom: 3px;
+            background: variable.$cream-beige;
+            border-radius: 50%;
+        }
+    }
+
+    &__item-right{
+        width: fit-content;
+        position: relative;
+        margin-top: 18px;
+        padding: 15px 20px;
+        background: variable.$cream-beige;
+        border-radius: 30px;
+        // line-height: calc(38 / 16);
+        margin-top: 18px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: -38px;
+            width: 13px;
+            height: 12px;
+            bottom: 0;
+            background: variable.$cream-beige;
+            border-radius: 50%;
+        }
+    
+        &:after {
+            content: "";
+            position: absolute;
+            left: -22px;
+            width: 18px;
+            height: 18px;
+            bottom: 3px;
+            background: variable.$cream-beige;
+            border-radius: 50%;
+        }
+    }
+
+.arrow{
+    text-align: center;
+    width: 16px;
+    height: 16px;
+    border: 0;
+    border-top: solid 2px variable.$dusty-pink;
+    border-right: solid 2px variable.$dusty-pink;
+    transform: rotate(135deg);
+    position: absolute;
+}
+    &__answer{
+    margin-top: 132px;
+    font-size: 20px;
+}
+}
+
+/*大切にしていること */
+.feature{
+    padding-top: 130px;
+    text-align: center;
+
+    &__inner{
+        max-width: variable.$width-inner;
+        margin: 0 auto;
+        }
+
+    h3{
+        display: inline-block;
+        padding: 10px;
+        border-bottom: 4px dotted variable.$dusty-pink;
+        font-size: 30px;
+        color: variable.$dusty-pink;
+    }
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 138px;
+    }
+
+    &__item{
+        display: block;
+        text-align: center;
+        width:27%;
+        padding:32px 30px;
+        background-color: variable.$cream-beige;
+        border-radius: 10px
+    }
+
+    &__number{
+        @include mixin.number;
+        font-size:20px ;
+        /*動作してない 修正要 */
+        &:before { 
+            content: '';
+            position: absolute;
+            top: 50%;
+            display: inline-block;
+            width: 5px;
+            height: 1px;
+            background-color: variable.$dusty-pink;
+            left:0;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            display: inline-block;
+            width: 5px;
+            height: 1px;
+            background-color: variable.$dusty-pink;
+            right: 0;
+        }
+    }
+    &__title{
+        font-size:20px ;
+        margin-top: 22px;
+        }
+
+    &__img {
+        text-align: center;
+        margin-top: 22px;
+    }
+    &__img img{
+        width: 80%;
+    }
+
+    &__text{
+        text-align: left;
+        padding: 16px 10px 0px 10px ;
+        margin-top: 22px;
+        font-size: 15px;
+        line-height: calc(29/16);
+        }
+}
+
+/*わたしのこと */
+.introduction{
+    padding-top: 287px;
+
+    &__inner{
+        max-width: variable.$width-inner;
+        margin: 0 auto;
+        }
+
+    h3{
+        display: inline-block;
+        padding: 10px;
+        border-bottom: 4px dotted variable.$dusty-pink;
+        font-size: 30px;
+        color: variable.$dusty-pink;
+    }
+
+    &__contents{
+        display:flex;
+        align-items: flex-start;
+        gap:147px;
+        margin-top: 65px;
+    }/*流体シェイプいれる */
+
+    &__img{
+        margin-top: 41px;
+        width: 30%;
+    }
+
+    &__img img{
+        width: 100%;
+    }
+
+    &__text{
+        margin-top: 32px;
+        line-height: calc(35/16);
+    }
+}
+
+.name__area{
+    display: flex;
+    align-items: baseline;
+    gap: 23px;
+    padding: 8px 20px 12px 0;
+    display: inline-block;
+    border-bottom: 2px solid variable.$pink-beige;
+}
+.name{
+    font-size: 20px;
+    }
+
+.history {
+    margin-top: 65px;
+
+    p{
+        padding-left: 80px;
+    }
+
+    &__contents {
+        display: flex;
+        align-items: flex-start;
+        gap: 33px;
+// 流体シェイプいれる
+    }
+
+    &__img {
+        width: 40%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.timeline {
+    margin: 50px auto;
+    padding: 0 30px;
+
+    li {
+        // 線の起点とするためrelativeを設定
+        position: relative;
+        list-style: none;
+        padding: 0 0 40px 0;
+
+        dl {
+            margin: 0 0 10px 3em;
+        }
+
+        dd {
+            padding-top: 8px;
+            color: variable.$dusty-pink;
+        }
+
+        // 絶対配置で線を設定
+        .border-line {
+            // 線の位置
+            position: absolute;
+            left: 0.2em;
+            top: 0;
+            width: 1px; // 線の太さ
+            height: 0; // はじめは高さを0に
+            background: variable.$peach-fuzz;
+        }
+
+        // タイムラインの見出し横の丸の位置と形状
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 7px;
+            height: 7px;
+            background: variable.$peach-fuzz;
+            border-radius: 50%;
+        }
+    }
+}
+

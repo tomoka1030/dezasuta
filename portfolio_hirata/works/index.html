@@ -21,7 +21,7 @@
         })(document);
     </script>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
         <div class="header__inner">
             <h1 class="header__logo">
                 <a href="../index.html">
-                    <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                    <img src="../images/img_footer_logo.png" alt="デザインパートナーTOMO">
                 </a>
             </h1>
 
@@ -75,7 +75,7 @@
                     </li>
                     <li class="header__item">
                         <a class="header__sns" href="https://www.instagram.com/tomo_design24/">
-                            <img src="images/img_instagram.png" alt="インスタグラム">
+                            <img src="../images/img_instagram.png" alt="インスタグラム">
                         </a>
                     </li>
                 </ul>
@@ -85,54 +85,176 @@
 
     <main>
         <div class="mainvisual">
-            <img src="images/mv_works:service.jpg" alt="わたしのおもい">
+            <img src="images/mv_works:service.jpg" alt="つくったもの">
             <h2 class="mainvisual__title">
-                <span>つくったもの
-                </span>
+                <p class="mainvisual__title-ja">つくったもの</p>
                 <br>
-                <span>WORKS</span>
+                <p class="mainvisual__title-en">WORKS</p>
             </h2>
         </div>
-
-        <ul id="page__link">
-            <li><a href="#">Webサイト制作</a></li>
-            <li><a href="#">バナー制作</a></li>
-            <li><a href="#">チラシ・名刺制作</a></li>
+        <ul class="page__link">
+            <li page__item><a href="#website" class="page__link-btn">Webサイト制作</a></li>
+            <li page__item><a href="#banner" class="page__link-btn">バナー制作</a></li>
+            <li page__item><a href="#graphic" class="page__link-btn">チラシ・名刺制作</a></li>
         </ul>
+
 
         <section id="website" class="website">
             <h3 class="section title">Webサイト制作</h3>
             <div class="website__slider">
-                <a href=""><img src="images/img_works_web_hairsalon.jpg" alt="hairsalon"></a>
-                <a href=""><img src="images/img_works_web_cafe.jpg" alt="cafe"></a>
-                <a href=""><img src="images/img_works_web_portfolio.jpg" alt="portfolio"></a>
+
+                <div class="website__img">
+                    <a href="work-website_01.html">
+                        <span class="mask">
+                            <img src="images/img_works_web_hairsalon.jpg" alt="website">
+                            <p class="caption">
+                                <span class="title">美容室のLP制作</span><br>
+                                <span>LIFE hair design</span><br>
+                                <span>担当:デザイン</span>
+                            </p>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="website__img">
+                    <a href="work-website_02.html">
+                        <span class="mask">
+                            <img src="images/img_works_web_cafe.jpg" alt="website">
+                            <p class="caption">
+                                <span class="title">カフェのLP制作</span><br>
+                                <span>DESIGN CAFE</span><br>
+                                <span>担当:コーディング</span>
+                            </p>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- <div class="website__img">
+                    <a href="work-website_03.html">
+                        <span class="mask">
+                            <img src="images/img_works_web_portfolio.jpg" alt="website">
+                            <p class="caption">
+                                <span class="title">当サイト</span><br>
+                                <span>TOMOデザインパートナー</span><br>
+                                <span>担当：デザイン・コーディング</span>
+                            </p>
+                        </span>
+                    </a>
+                </div> -->
             </div>
         </section>
 
         <section id="banner" class="banner">
             <h3 class="section title">バナー制作</h3>
-            <div class="website__slider">
-                <a href=""><img src="images/img_works_banner_burger.png" alt="hamburger"></a>
-                <a href=""><img src="images/img_works_banner_mobile.png" alt="cafe"></a>
-                <a href=""><img src="images/img_works_banner_skincare.png" alt="cafe"></a>
+            <div class="banner__slider">
+
+                <div class="banner__img">
+                    <a href="work-banner_01.html">
+                        <span class="mask">
+                            <img src="images/img_works_banner_burger.png" alt="banner">
+                            <p class="caption">
+                                <span class="title">ハンバーガーのバナー制作</span><br>
+                                <span>デラックスバーガー</span><br>
+                                <span>担当:デザイン</span>
+                            </p>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="banner__img">
+                    <a href="work-banner_02.html">
+                        <span class="mask">
+                            <img src="images/img_works_banner_mobile.png" alt="banner">
+                            <p class="caption">
+                                <span class="title">スマホプランのバナー制作</span><br>
+                                <span>デザスタモバイル</span><br>
+                                <span>担当:デザイン</span>
+                            </p>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="banner__img">
+                    <a href="work-banner_03.htm">
+                        <span class="mask">
+                            <img src="images/img_works_banner_skincare.png" alt="banner">
+                            <p class="caption">
+                                <span class="title">化粧品のバナー制作</span><br>
+                                <span>デザスタモバイル</span><br>
+                                <span>担当:デザイン</span>
+                            </p>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- <div class="banner__img">
+                    <a href="work-banner_04.html">
+                        <span class="mask">
+                            <img src="images/img_works_banner_skincare.png" alt="banner">
+                            <p class="caption">
+                                <span class="title">水泳教室の体験のバナー制作</span><br>
+                                <span>tmスイミングスクール</span><br>
+                                <span>担当:デザイン</span>
+                            </p>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section> -->
             </div>
         </section>
 
-        <section id="graphic" class="graphiic">
+        <section id="graphic" class="graphic">
             <h3 class="section title">チラシ・名刺制作</h3>
-            <div class="website__slider">
-                <a href=""><img src="images/img_works_flyer_harisalon.png" alt="lifehairdesign"></a>
-                <a href=""><img src="images/img_works_comingsoon.png" alt="coming soon"></a>
-                <a href=""><img src="images/img_works_comingsoon.png" alt="coming soon"></a>
+            <div class="graphic__slider">
+                <div class="graphic__img">
+                    <a href="work-flyer_01.html">
+                        <span class="mask">
+                            <img src="images/img_works_flyer_harisalon.png" alt="lifehairdesign">
+                            <p class="caption">
+                                <span class="title">美容室の新規オープンチラシ</span><br>
+                                <span>LIFE hair design</span><br>
+                                <span>担当:デザイン</span>
+                            </p>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="graphic__img">
+                    <a href="">
+                        <span class="mask">
+                            <img src="images/img_works_comingsoon.png" alt="coming soon">
+                            <!-- <p class="caption">
+                                <span class="title">美容室の新規オープンチラシ</span><br>
+                                <span>LIFE hair design</span><br>
+                                <span>担当:デザイン</span>
+                            </p> -->
+                        </span>
+                    </a>
+                </div>
+
+                <div class="graphic__img">
+                    <a href="">
+                        <span class="mask">
+                            <img src="images/img_works_comingsoon.png" alt="coming soon">
+                            <!-- <p class="caption">
+                                <span class="title">美容室の新規オープンチラシ</span><br>
+                                <span>LIFE hair design</span><br>
+                                <span>担当:デザイン</span>
+                            </p> -->
+                        </span>
+                    </a>
+                </div>
             </div>
+
+            <p class="btn-circle">
+                <a href="" class="service__btn">
+                    サービスについて見る
+                </a>
+            </p>
         </section>
 
-
-        <a href="" class="service__btn">
-            サービスについて見る
-        </a>
-
-        <section id="CONTACT" class="CONTACT">
+        <section id="contact" class="contact">
             <div class="contact__inner">
                 <h2 class="section__title-contact">
                     <span class="ja">お問い合わせ</span>
@@ -140,11 +262,15 @@
                     <span class="en">CONTACT</span>
                 </h2>
 
-                <a href="" class="contact__btn">
-                    無料で相談する
-                    <img src="../images/e-mail.png" alt="e-mail">
-                </a>
-
+                <p class="btn__area">
+                    <button class="contact-btn">
+                        <a href="contact.html">
+                            無料で相談する </a>
+                        <div class="contact__img">
+                            <img src="../images/e-mail.png" alt="e-mail">
+                        </div>
+                    </button>
+                </p>
                 <p class="contact__text">お仕事のご依頼や、こんなことできるかなといった疑問、
                     <br>
                     こんなこと一緒にやらない？などのお誘いなど、何でもお気軽にどうぞ！
@@ -158,7 +284,7 @@
             <div class="footer__container">
                 <p class="footer__logo">
                     <a href="../index.html">
-                        <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                        <img src="../images/img_footer_logo.png" alt="デザインパートナーTOMO">
                     </a>
                 </p>
 
@@ -201,7 +327,7 @@
                         </li>
                         <li class="footer__item">
                             <a class="footer__sns" href="https://www.instagram.com/tomo_design24/">
-                                <img src="images/img_instagram.png" alt="インスタグラム">
+                                <img src="../images/img_instagram.png" alt="インスタグラム">
                             </a>
                         </li>
                     </ul>

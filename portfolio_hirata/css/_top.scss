@@ -1,6 +1,8 @@
 @charset "utf-8";
+@use "servicesection";
 @use "variable";
 @use "mixin";
+@use "btn";
 /* ------------
 topページ
 ------------- */
@@ -12,6 +14,10 @@ topページ
     position: absolute;
     top: 0;
     left: 50%;
+    width: 100%;
+    height: 750px;
+    object-fit: cover;
+
     }
     &__maincopy img {
         position: absolute;
@@ -25,11 +31,13 @@ topページ
     position: absolute;
     text-align: center;  
     top: 0;
+    width: 172px;
     padding-top: 54px;
     margin-left: 100px;
     }
 
     &__logo img{
+        width: 100%;
         height: 122px;
         }
 
@@ -69,14 +77,16 @@ lead
     max-width: variable.$width-inner;
     margin: 0 auto;
     display: flex;
-    gap: 147px;
+    justify-content: center;
+    gap: 100px;
     align-items: center;
-    padding: 0 66px
+    padding: 0 66px;
     }
 
     &__img{
     position: relative;
-    width: 30%;
+    // width: 30%;
+    width: 16.5vw;
     }
 
     &__img img{
@@ -91,17 +101,18 @@ lead
 
     .brand__logo img{
         margin-bottom: 14px;
-        height: 77px;
+        height: 6vw;
     }
 
     &__title{
         margin-bottom: 18px;
-        font-size: 25px;
+        // font-size: 25px;
+        font-size: 1.5vw;
         color:#AE7E62;
     }
 
     &__text{
-        font-size: 16px;
+        font-size: 1.2vw;
         line-height:calc(30 / 16);
     }
 }
@@ -177,65 +188,6 @@ skill
 /* ------------
 service
 ------------- */   
-.service{
-    padding-top: 205px;
-    p{
-        line-height:calc(32/18);
-    }
 
-    &__inner{
-        max-width: variable.$width-inner;
-        margin: 0 auto;
-        }
+// _servicesection.scssで管理
 
-    &__list{
-        display: flex;
-        justify-content: space-between;
-        margin-top: 138px;
-        }
-
-    &__item{
-        width:31.7%;
-        }
-
-        &__number{
-            font-size:35px ;
-            font-weight: bold;
-            color: variable.$peach-fuzz;
-        }
-        &__img img{
-            width: 100%;
-        }
-
-        &__title{
-            font-size:25px ;
-            margin-top: 22px;
-            padding-left: 13%
-        }
-
-    &__category{
-        @include mixin.category;
-        padding-left: 13%
-        }
-}
-
-/* ------------
-コンタクト
-------------- */
-.contact{
-    padding: 132px 0;
-
-    &__inner{
-        display: block;
-        text-align: center;
-        max-width: variable.$width-inner;
-        margin: 0 auto;
-        }
-    .btn-rectangle{
-            margin-top: 36px;  
-        }
-
-    &__text{
-        margin-top: 42px;
-}
-}

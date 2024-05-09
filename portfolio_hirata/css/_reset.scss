@@ -1,4 +1,8 @@
 @charset "utf-8";
+
+@use "variable";
+@use "mixin";
+@use "btn";
 /* ------------
 cssリセット
 ------------- */
@@ -31,21 +35,25 @@ li {
     font-feature-settings: "palt";
 }
 
-h2{
+h2,h3{
     font-weight: normal;
 }
 
 a {
+    color: #522A28;
+    font-family: "fot-tsukuardgothic-std", sans-serif, "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+        "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+        "ＭＳ 明朝", serif;
     /*下線を消す*/
     text-decoration: none;
     /*色を消す*/
-    color: inherit;
-    transition: 0.3s;
+    // color: inherit;
+    // transition: 0.3s;
 }
 
-a:hover {
-    opacity: 0.5;
-}
+// a:hover {
+//     opacity: 0.5;
+// }
 
 ul {
     /*左の「・」を消す*/

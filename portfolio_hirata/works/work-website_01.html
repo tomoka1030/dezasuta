@@ -21,19 +21,18 @@
         })(document);
     </script>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
     <header id="header" class="header">
         <div class="header__inner">
             <h1 class="header__logo">
                 <a href="../index.html">
-                    <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                    <img src="../images/img_footer_logo.png" alt="デザインパートナーTOMO">
                 </a>
             </h1>
 
@@ -76,7 +75,7 @@
                     </li>
                     <li class="header__item">
                         <a class="header__sns" href="https://www.instagram.com/tomo_design24/">
-                            <img src="images/img_instagram.png" alt="インスタグラム">
+                            <img src="../images/img_instagram.png" alt="インスタグラム">
                         </a>
                     </li>
                 </ul>
@@ -85,78 +84,92 @@
     </header>
 
     <main>
-        <h2 class="mainvisual_title">
+        <h2 class="mainvisual__title-work">
+            <p class="ja">つくったもの</p>
+            <br>
+            <p class="en">WORKS</p>
+        </h2>
+        <!-- <h2 class="mainvisual_title">
             <span>つくったもの
             </span>
             <br>
             <span>WORK</span>
-        </h2>
+        </h2> -->
 
         <section class="work">
             <div class="work__img">
                 <img src="images/works_website_lifehairsalon.png" alt="lifehairsalon">
             </div>
-            <div class="work__detail">
-                <div class="work__head">
-                    <h3 class="work__heading">Website
-                    </h3>
-                    <div class="work__heading">
-                        <h4 class="work__title">ヘアサロン
-                        </h4>
-                        <p class="work__lead">LIFE hair design</p>
+            <div class="work__inner">
+                <!-- <div class="work__head"> -->
+                <h3 class="section__title">Website
+                </h3>
+                <div class="work__detail">
+                    <div class="work__head">
+                        <div class="work__heading">
+                            <h4 class="work__title">ヘアサロン
+                            </h4>
+                            <p class="work__lead">LIFE hair design</p>
+                        </div>
+                        <div class="work__category">
+                            <p class="work__label">LP</p>
+                            <p class="work__label">自主制作</p>
+                        </div>
                     </div>
-                    <div class="work__category">
-                        <p class="work__label">LP</p>
-                        <p class="work__label">自主制作</p>
+                    <div class="work__desc">
+                        <dl>
+                            <dt>URL</dt>
+                            <dd>xxxxxxxxxxxxxx</dd>
+                        </dl>
+                        <dl>
+                            <dt>担当範囲</dt>
+                            <dd>デザイン</dd>
+                        </dl>
+                        <dl>
+                            <dt>使用ツール</dt>
+                            <dd>Illustrator/Photoshop/Visual Studio Code/GitHub</dd>
+                        </dl>
+                        <dl>
+                            <dt>制作期間</dt>
+                            <dd>1週間</dd>
+                        </dl>
+                        <dl>
+                            <dt>ターゲット</dt>
+                            <dd>20代〜50代女性</dd>
+                        </dl>
+                        <dl>
+                            <dt>デザイン</dt>
+                            <dd>ロゴのピンクを基調にし、「LifestyleFit」のコンセプトに合うよう、柔らかいイメージで作成しました。予約につなげるための視線誘導や、キッズスペースやユニバーサルデザインといった差別化できる要素をわかりやすくデザインするよう心がけました。
+                            </dd>
+                        </dl>
                     </div>
                 </div>
+            </div>
 
-                <div work__desc>
-                    <!-- <dl>
-                        <dt>URL</dt>
-                        <dd>xxxxxxxxxxxxxx</dd>
-                    </dl> -->
-                    <dl>
-                        <dt>担当範囲</dt>
-                        <dd>デザイン</dd>
-                    </dl>
-                    <dl>
-                        <dt>使用ツール</dt>
-                        <dd>Illustrator/Photoshop/Visual Studio Code/GitHub</dd>
-                    </dl>
-                    <dl>
-                        <dt>制作期間</dt>
-                        <dd>1週間</dd>
-                    </dl>
-                    <dl>
-                        <dt>ターゲット</dt>
-                        <dd>20代〜50代女性</dd>
-                    </dl>
-                    <dl>
-                        <dt>デザイン</dt>
-                        <dd>ロゴのピンクを基調にし、「Lifestyle
-                            Fit」のコンセプトに合うよう、柔らかいイメージで作成しました。予約につなげるための視線誘導や、キッズスペースやユニバーサルデザインといった差別化できる要素をわかりやすくデザインするよう心がけました。
-                        </dd>
-                    </dl>
+            <div class="img__inner">
+                <div class="detail__img-pc">
+                    <img src="images/website_lifehairsalon_detail_pc_01.jpg" alt="website">
+                    <img src="images/website_lifehairsalon_detail_pc_02.jpg" alt="website">
+                    <img src="images/website_lifehairsalon_detail_pc_03.jpg" alt="website">
                 </div>
 
-                <div class="desc__img-pc">
-                    <img src="images/" alt="">
-
+                <div class="detail__img-sp">
+                    <img src="images/website_Lifehairdesign_detail_sp_01.jpg" alt="website">
+                    <img src="images/website_Lifehairdesign_detail_sp_02.jpg" alt="website">
+                    <img src="images/website_Lifehairdesign_detail_sp_03.jpg" alt="website">
                 </div>
 
-                <div class="desc__img-sp">
-                    <img src="" alt="">
+            </div>
 
-                </div>
 
-                <a href="" class="service__btn">
+            <p class="btn-circle">
+                <a href="index.html" class="works__btn">
                     他の作品を見る
                 </a>
-            </div>
+            </p>
         </section>
 
-        <section id="CONTACT" class="CONTACT">
+        <section id="contact" class="contact">
             <div class="contact__inner">
                 <h2 class="section__title-contact">
                     <span class="ja">お問い合わせ</span>
@@ -164,11 +177,15 @@
                     <span class="en">CONTACT</span>
                 </h2>
 
-                <a href="" class="contact__btn">
-                    無料で相談する
-                    <img src="../images/e-mail.png" alt="e-mail">
-                </a>
-
+                <p class="btn__area">
+                    <button class="contact-btn">
+                        <a href="contact.html">
+                            無料で相談する </a>
+                        <div class="contact__img">
+                            <img src="../images/e-mail.png" alt="e-mail">
+                        </div>
+                    </button>
+                </p>
                 <p class="contact__text">お仕事のご依頼や、こんなことできるかなといった疑問、
                     <br>
                     こんなこと一緒にやらない？などのお誘いなど、何でもお気軽にどうぞ！
@@ -177,12 +194,13 @@
         </section>
 
     </main>
+
     <footer class="footer">
         <div class="footer__inner">
             <div class="footer__container">
                 <p class="footer__logo">
                     <a href="../index.html">
-                        <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                        <img src="../images/img_footer_logo.png" alt="デザインパートナーTOMO">
                     </a>
                 </p>
 
@@ -225,7 +243,7 @@
                         </li>
                         <li class="footer__item">
                             <a class="footer__sns" href="https://www.instagram.com/tomo_design24/">
-                                <img src="images/img_instagram.png" alt="インスタグラム">
+                                <img src="../images/img_instagram.png" alt="インスタグラム">
                             </a>
                         </li>
                     </ul>

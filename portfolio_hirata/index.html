@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>デザインパートナーTOMO | 優しく温かく行き届く</title>
     <meta name="description" content="優しく、温かく、行き届くデザインパートナーとして、幸せの輪を広げるお手伝いをします。">
-    <link rel="canonical" href="https://designpartnertomo.com/portfolio/">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" href="android-chrome-256x256.png">
@@ -22,7 +21,7 @@
         })(document);
     </script>
 
-    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
@@ -86,9 +85,9 @@
 
     <main>
         <div class="fv">
-            <video src="images/mainvisual_pc.mp4" autoplay muted loop></video>
+            <video src="images/mainvisual_pc.mp4" autoplay muted loop width="100%"></video>
             <div class="fv__maincopy">
-                <img src="images/img_home_maincopy.png" alt="優しく、温かく、行き届く">
+                <img src="images/mv_textanimation.gif" alt="優しく、温かく、行き届く">
             </div>
             <div class="fv__inner">
                 <p class="fv__logo">
@@ -176,7 +175,6 @@
             <div class="works__inner">
                 <h2 class="section__title">
                     <span class="section__title-ja">つくったもの</span>
-                    <br>
                     <span class="section__title-en">WORKS</span>
                 </h2>
 
@@ -220,7 +218,7 @@
                     </li>
                 </ul>
                 <p class="btn-circle">
-                    <a href="" class="works__btn">
+                    <a href="./works/index.html" class="works__btn">
                         つくったものを見る
                     </a>
                 </p>
@@ -231,7 +229,6 @@
             <div class="skill__inner">
                 <h2 class="section__title">
                     <span class="section__title-ja">できること</span>
-                    <br>
                     <span class="section__title-en">SKILL</span>
                 </h2>
                 <ul class="skill__list">
@@ -309,7 +306,6 @@
             <div class="service__inner">
                 <h2 class="section__title">
                     <span class="section__title-ja">サービス</span>
-                    <br>
                     <span class="section__title-en">SERVICE</span>
                 </h2>
                 <p>デザインからコーディングまでワンストップで担当できるWEBサイト制作をメインに、<br>
@@ -322,10 +318,12 @@
                         <div class="service__img">
                             <img src="images/img_service_web.png" alt="Webサイト">
                         </div>
-                        <p class="service__title"> Webサイト制作</p>
-                        <div class="service__category">
-                            <p class="service__label">Webサイト</p>
-                            <p class="service__label">LP</p>
+                        <div class="service__body">
+                            <p class="service__title"> Webサイト制作</p>
+                            <div class="service__category">
+                                <p class="service__label">Webサイト</p>
+                                <p class="service__label">LP</p>
+                            </div>
                         </div>
                     </li>
                     <li class="service__item">
@@ -333,10 +331,12 @@
                         <div class="service__img">
                             <img src="images/img_service_design.png" alt="Webサイト">
                         </div>
-                        <p class="service__title">バナー制作</p>
-                        <div class="service__category">
-                            <p class="service__label">Web広告</p>
-                            <p class="service__label">SNS広告</p>
+                        <div class="service__body">
+                            <p class="service__title">バナー制作</p>
+                            <div class="service__category">
+                                <p class="service__label">Web広告</p>
+                                <p class="service__label">SNS広告</p>
+                            </div>
                         </div>
                     </li>
                     <li class="service__item">
@@ -344,15 +344,17 @@
                         <div class="service__img">
                             <img src="images/img_service_graphic.png" alt="Webサイト">
                         </div>
-                        <p class="service__title">チラシ・名刺制作</p>
-                        <div class="service__category">
-                            <p class="service__label">チラシ</p>
-                            <p class="service__label">名刺</p>
+                        <div class="service__body">
+                            <p class="service__title">チラシ・名刺制作</p>
+                            <div class="service__category">
+                                <p class="service__label">チラシ</p>
+                                <p class="service__label">名刺</p>
+                            </div>
                         </div>
                     </li>
                 </ul>
                 <p class="btn-circle">
-                    <a href="" class="service__btn">
+                    <a href="service.html" class="service__btn">
                         サービスをくわしく見る
                     </a>
                 </p>
@@ -367,11 +369,14 @@
                     <span class="en">CONTACT</span>
                 </h2>
 
-                <p class="btn-rectangle">
-                    <a href="" class="contact__btn">
-                        無料で相談する
-                        <img src="images/e-mail.png" alt="e-mail">
-                    </a>
+                <p class="btn__area">
+                    <button class="contact-btn">
+                        <a href="contact.html">
+                            無料で相談する </a>
+                        <div class="contact__img">
+                            <img src="images/e-mail.png" alt="e-mail">
+                        </div>
+                    </button>
                 </p>
                 <p class="contact__text">お仕事のご依頼や、こんなことできるかなといった疑問、
                     <br>

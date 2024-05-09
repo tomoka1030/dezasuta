@@ -1,0 +1,309 @@
+@charset "utf-8";
+
+@use "variable";
+@use "mixin";
+@use "btn";
+/* ------------
+worksページ
+------------- */
+
+/*Webサイト制作*/
+.website{
+    // position: relative;
+    padding: 275px 143px 0 143px;
+    // max-width: variable.$width-inner;
+    margin: 0 auto;
+
+    h3{
+        font-size: 33px;
+        font-weight: bold;
+        color: variable.$dusty-pink;
+    }
+
+    &__slider{
+        display: flex;
+        justify-content: center;
+        gap: 69px;
+        // justify-content: space-between;
+        margin-top: 56px;
+    }
+
+
+    &__img{
+	    position: relative; 
+        border-radius: 10px;
+        width: 40%;
+        // width: 32%;
+
+        img{
+            width: 100%;
+            border-radius: 10px;
+            transform: scale(1);
+            filter: blur(0);
+            transition: .3s ease-in-out;
+            }
+    
+        span.mask{
+	        position: relative;
+            border-radius: 10px;
+	        transition: .3s ease-in-out;/*移り変わる速さ*/
+	        display: block;/*画像をくくるspanタグをブロック要素にする*/
+            text-align: center;
+            line-height: 0;/*行の高さを0にする*/
+            overflow:hidden;/*拡大してはみ出る要素を隠す*/     
+            }   
+
+        &:hover img{
+            border-radius: 10px;
+	        transform: scale(1.1);/*拡大の値*/
+            }
+
+        & p.caption{
+            position: absolute;
+            width: 80%;
+	        opacity:0;
+	        transition: .5s ease-in-out;/*移り変わる速さ*/
+	        z-index:3;/*テキストを前面に出す*/
+	        top: 50%;
+            left: 50%;
+	        transform: translate(-50%,-50%);
+	        color: variable.$text-color;
+            line-height: 1.5;
+
+            & span.title{
+                font-size: 18px;
+                border-bottom: 2px solid  variable.$dusty-pink;
+                padding-bottom: 3px;
+            }
+            & span{
+                font-size: 15px;
+                line-height: 1.5;
+            }
+        }
+
+        &:hover p.caption{
+	        opacity:1;
+            }
+    }
+
+    .website__img:hover span.mask::before{
+        content:"";
+        position: absolute;
+        border-radius: 10px;
+        z-index:2;
+        top:10px;
+        left:10px;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        background: rgba(255, 255, 255, 0.7);
+    }
+}
+
+
+/*バナー制作*/
+.banner{
+    // position: relative;
+    padding: 193px 143px 0 143px;
+    // max-width: variable.$width-inner;
+    margin: 0 auto;
+
+    h3{
+        font-size: 33px;
+        font-weight: bold;
+        color: variable.$dusty-pink;
+    }
+
+    &__slider{
+        display: flex;
+        justify-content: center;
+        gap: 39px;
+        // justify-content: space-between;
+        margin-top: 56px;
+    }
+
+
+    &__img{
+	    position: relative; 
+        border-radius: 10px;
+        width: 30%;
+
+        img{
+            width: 100%;
+            border-radius: 10px;
+            transform: scale(1);
+            filter: blur(0);
+            transition: .3s ease-in-out;
+            }
+    
+        span.mask{
+	        position: relative;
+            border-radius: 10px;
+	        transition: .3s ease-in-out;/*移り変わる速さ*/
+	        display: block;/*画像をくくるspanタグをブロック要素にする*/
+            text-align: center;
+            line-height: 0;/*行の高さを0にする*/
+            overflow:hidden;/*拡大してはみ出る要素を隠す*/     
+            }   
+
+        &:hover img{
+            border-radius: 10px;
+	        transform: scale(1.1);/*拡大の値*/
+            }
+
+        & p.caption{
+            position: absolute;
+            width: 80%;
+	        opacity:0;
+	        transition: .5s ease-in-out;/*移り変わる速さ*/
+	        z-index:3;/*テキストを前面に出す*/
+	        top: 50%;
+            left: 50%;
+	        transform: translate(-50%,-50%);
+	        color: variable.$text-color;
+            line-height: 1.5;
+
+            & span.title{
+                font-size: 18px;
+                border-bottom: 2px solid  variable.$dusty-pink;
+                padding-bottom: 3px;
+            }
+            & span{
+                font-size: 15px;
+                line-height: 1.5;
+            }
+        }
+
+        &:hover p.caption{
+	        opacity:1;
+            }
+    }
+
+    .banner__img:hover span.mask::before{
+        content:"";
+        position: absolute;
+        border-radius: 10px;
+        z-index:2;
+        top:10px;
+        left:10px;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        background: rgba(255, 255, 255, 0.7);
+    }
+}
+
+/*チラシ・名刺*/
+.graphic{
+    // position: relative;
+    padding: 193px 143px 0 143px;
+    // max-width: variable.$width-inner;
+    margin: 0 auto;
+
+    h3{
+        font-size: 33px;
+        font-weight: bold;
+        color: variable.$dusty-pink;
+    }
+
+    &__slider{
+        display: flex;
+        justify-content: center;
+        gap: 39px;
+        // justify-content: space-between;
+        margin-top: 56px;
+    }
+
+
+    &__img{
+	    position: relative; 
+        border-radius: 10px;
+        width: 30%;
+
+        img{
+            width: 100%;
+            border-radius: 10px;
+            transform: scale(1);
+            filter: blur(0);
+            transition: .3s ease-in-out;
+            }
+    
+        span.mask{
+	        position: relative;
+            border-radius: 10px;
+	        transition: .3s ease-in-out;/*移り変わる速さ*/
+	        display: block;/*画像をくくるspanタグをブロック要素にする*/
+            text-align: center;
+            line-height: 0;/*行の高さを0にする*/
+            overflow:hidden;/*拡大してはみ出る要素を隠す*/     
+            }   
+
+        &:hover img{
+            border-radius: 10px;
+	        transform: scale(1.1);/*拡大の値*/
+            }
+
+        & p.caption{
+            position: absolute;
+            width: 80%;
+	        opacity:0;
+	        transition: .5s ease-in-out;/*移り変わる速さ*/
+	        z-index:3;/*テキストを前面に出す*/
+	        top: 50%;
+            left: 50%;
+	        transform: translate(-50%,-50%);
+	        color: variable.$text-color;
+            line-height: 1.5;
+
+            & span.title{
+                font-size: 18px;
+                border-bottom: 2px solid  variable.$dusty-pink;
+                padding-bottom: 3px;
+            }
+            & span{
+                font-size: 15px;
+                line-height: 1.5;
+            }
+        }
+
+        &:hover p.caption{
+	        opacity:1;
+            }
+    }
+
+.graphic__img:hover span.mask::before{
+        content:"";
+        position: absolute;
+        border-radius: 10px;
+        z-index:2;
+        top:10px;
+        left:10px;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        background: rgba(255, 255, 255, 0.7);
+    }
+}
+// .graphic{
+//     padding: 193px 143px 0 143px;
+//     // max-width: variable.$width-inner;
+//     margin: 0 auto;
+
+//     h3{
+//         font-size: 33px;
+//         font-weight: bold;
+//         color: variable.$dusty-pink;
+//     }
+
+//     &__slider{
+//         display: flex;
+//         justify-content: center;
+//         gap: 39px;
+//         // justify-content: space-between;
+//         margin-top: 56px;
+
+//     &__img{
+//         width: 31%;
+//         img{
+//             width: 100%;
+//         }
+//     }
+// }
+// }

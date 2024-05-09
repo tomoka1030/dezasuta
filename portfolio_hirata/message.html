@@ -21,7 +21,7 @@
         })(document);
     </script>
 
-    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
@@ -54,7 +54,7 @@
                         </a>
                     </li>
                     <li class="header__item">
-                        <a href="#skill">
+                        <a href="index.html#skill">
                             <span class="header__title-ja">できること</span>
                             <br>
                             <span class="header__title">SKILL</span>
@@ -95,11 +95,10 @@
             </h2>
         </div>
 
-
-        <ul id="page__link">
-            <li><a href="#message">わたしのおもい</a></li>
-            <li><a href="#feature">大切にしていること</a></li>
-            <li><a href="#introduction">わたしのこと</a></li>
+        <ul class="page__link">
+            <li page__item><a href="#message" class="page__link-btn">わたしのおもい</a></li>
+            <li page__item><a href="#feature" class="page__link-btn">大切にしていること</a></li>
+            <li page__item><a href="#introduction" class="page__link-btn">わたしのこと</a></li>
         </ul>
 
         <section id="message" class="message">
@@ -116,7 +115,7 @@
                     また、WebやSNSなどを活用した広報活動も対応可能なため、貴重な時間を有効に使っていただくことができます。<br>
                     前職では、上司に「一家に一台クラちゃん(私の旧姓のニックネームです。)」と言ってもらいましたが、<br>
                     あなたにもそう思っていただけるよう、全力でサポートさせていただきます。<br>
-
+                    <br>
                     デザインパートナーとなって、あなたが提供するサービスやモノが人を幸せにし、<br>
                     その幸せが連鎖する「その先の未来」を思い描いています。
                 </p>
@@ -128,31 +127,34 @@
             <div class="worry__inner">
                 <div class="worry__contents">
                     <p class="worry__title">突然ですが、こんなお悩みありませんか？</p>
-                    <ul class="worry__list">
-                        <li class="worry__item">世界観がふわっとしか決まっていなくて...</li>
-                        <li class="worry__item">持ち合わせている素材がなくて...</li>
-                        <li class="worry__item">どんな人だろう。任せても大丈夫かな...</li>
-                    </ul>
+                    <div class="worry__box">
+                        <ul class="worry__list">
+                            <li class="worry__item-left">世界観がふわっとしか決まっていなくて...</li>
+                            <li class="worry__item-left">持ち合わせている素材がなくて...</li>
+                            <li class="worry__item-left">どんな人だろう。任せても大丈夫かな...</li>
+                        </ul>
 
-                    <div class="worry__img">
-                        <img src="images/img_message_worry.png" alt="worry">
+
+                        <div class="worry__img">
+                            <img src="images/img_message_worry.png" alt="worry">
+                        </div>
+
+                        <ul class="worry__list">
+                            <li class="worry__item-right">何から始めたらいいかわからない... </li>
+                            <li class="worry__item-right">思ってたのと違ったらどうしよう... </li>
+                            <li class="worry__item-right">Webの知識ないけど大丈夫かな.... </li>
+                        </ul>
                     </div>
-
-                    <ul class="worry__list">
-                        <li class="worry__item">何から始めたらいいかわからない... </li>
-                        <li class="worry__item">思ってたのと違ったらどうしよう... </li>
-                        <li class="worry__item">Webの知識ないけど大丈夫かな.... </li>
-                    </ul>
-                    <div class="arrow"></div>
-                    <p class="worry__answer">そのお悩み、私が解決します！</p>
-                    <div class="arrow"></div>
                 </div>
+                <div class="arrow"></div>
+                <p class="worry__answer">そのお悩み、私が解決します！</p>
+                <div class="arrow"></div>
             </div>
         </section>
 
         <section id="feature" class="feature">
-            <h3 class="section title">私が大切にしていること</h3>
             <div class="feature__inner">
+                <h3 class="section title">私が大切にしていること</h3>
                 <ul class="feature__list">
                     <li class="feature__item">
                         <p class="feature__number">01</p>
@@ -185,23 +187,24 @@
                     </li>
                 </ul>
             </div>
+        </section>
 
-            <section id="introduction" class="introduction"></section>
-            <h3 class="section title">わたしのこと</h3>
+        <section id="introduction" class="introduction">
             <div class="introduction__inner">
+                <h3 class="section title">わたしのこと</h3>
                 <div class="introduction__contents">
                     <div class="introduction__img"><img src="images/lead__img.png" alt="">
                     </div>
                     <div class="introduction__textarea">
                         <p class="title">デザイナー</p>
-                        <div>
-                            <p class="name">ひらた ともか</p>
-                            <p class="長崎県出身/京都府在住"></p>
-                        </div>
+                        <p class="name__area">
+                            <span class="name">ひらた ともか</span>
+                            <span class="adress">長崎県出身/京都府在住</span>
+                        </p>
 
                         <p class="introduction__text">前職は京都の旅館で、約6年間勤務しました。<br>
-                            接客から始まり、様々な業務を経験する中で、2020年からチラシなどの<br>
-                            デザイン関係も担当することになりました。<br>
+                            接客から始まり、様々な業務を経験する中で、<br>
+                            2020年からチラシなどのデザイン関係も担当しました。<br>
                             デザインに触れていると時間を忘れるほど没頭し、<br>
                             「デザインを本職にしたい！」「挑戦したい！」という想いが芽生え、<br>
                             プロのデザイナーを目指すことに。<br>
@@ -212,58 +215,92 @@
                             として日々精進します！</p>
                     </div>
                 </div>
+                <div class="history">
+                    <p class="history__title">いままでの歩み</p>
+
+                    <div class="history__contents">
+                        <ul class="timeline">
+                            <li>
+                                <dl>
+                                    <dt>長崎県で生まれる。</dt>
+                                    <dd>からだを動かすことが大好き！</dd>
+                                </dl>
+                                <span class="border-line"></span>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>小学校から高校までスポーツに明け暮れる日々(水泳・バドミントン)。</dt>
+                                    <dd>根性あると言われるのは絶対にこの経験が土台。</dd>
+                                </dl>
+                                <span class="border-line"></span>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>高校・短大では英語を専攻。</dt>
+                                    <dd>高校・短大では英語を専攻。英語できたらカッコいい！がきっかけ。</dd>
+                                </dl>
+                                <span class="border-line"></span>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>ワーホリでニュージーランドに約1年間滞在。スタッフが日本人1人だけのホテルで働く。</dt>
+                                    <dd>異文化交流は価値観や視野を変えるきっかけに！</dd>
+                                </dl>
+                                <span class="border-line"></span>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>海外からのお客様に日本の魅力を感じてもらいたく、「The 和」を求めて京都の旅館に就職。</dt>
+                                    <dd> 長崎出身ですが、おこしやす〜と言って京都人になりきる。 </dd>
+                                </dl>
+                                <span class="border-line"></span>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>約6年間の勤務で、デザイン業務以外にも接客、電話・メール応対、予約管理、プラン作成一般事務など
+                                        旅館のほぼすべての業務に携わる。</dt>
+                                    <dd>どの部署でも、一貫して大切なのは自責と思いやりの心だと感じる。</dd>
+                                </dl>
+                                <span class="border-line"></span>
+                            </li>
+
+                            <li>
+                                <dl>
+                                    <dt>Webデザインスクールに通い、デザインとコーディングスキルを高める。</dt>
+                                    <dd>実践的な課題や、プロの先生によるサポートのおかげで、当サイトを作り上げるまで成長！</dd>
+                                </dl>
+                                <span class="border-line"></span>
+                            </li>
+
+                            <li>
+                                <dl>
+                                    <dt>「デザインパートナーTOMO」として活動を始める。</dt>
+                                    <dd>スクールを卒業しても、情報収集やスキルアップを怠りません！。</dd>
+                                </dl>
+                                <span class="border-line"></span>
+                            </li>
+                        </ul>
+
+                        <div class="history__img">
+                            <img src="images/img-profile.png" alt="猫">
+                        </div>
+                    </div>
+
+                    <div class="btn__container">
+                        <p class="btn-circle">
+                            <a href="service.html" class="service__btn">
+                                サービスを見る
+                            </a>
+                        </p>
+                        <p class="btn-circle">
+                            <a href="./works/index.html" class="works__btn">
+                                つくったものを見る
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
             </div>
-
-            <p class="history">いままでの歩み</p>
-            <dl class="timeline">
-                <dt>長崎県で生まれる。</dt>
-                <dd>からだを動かすことが大好き！</dd>
-                <span class="border-line"></span>
-
-                <dt>小学校から高校までスポーツに明け暮れる日々(水泳・バドミントン)。</dt>
-                <dd>根性あると言われるのは絶対にこの経験が土台。</dd>
-                <span class="border-line"></span>
-
-                <dt>高校・短大では英語を専攻。</dt>
-                <dd>英語できたらカッコいい！がきっかけ。</dd>
-                <span class="border-line"></span>
-
-
-                <dt>ワーホリでニュージーランドに約1年間滞在。スタッフが日本人1人だけのホテルで働く。</dt>
-                <dd>異文化交流は価値観や視野を変えるきっかけに！</dd>
-                <span class="border-line"></span>
-
-                <dt>海外からのお客様に日本の魅力を感じてもらいたく、「The 和」を求めて京都の旅館に就職。</dt>
-                <dd>長崎出身ですが、おこしやす〜と言って京都人になりきる。</dd>
-                <span class="border-line"></span>
-
-                <dt>約6年間の勤務で、デザイン業務以外にも接客、電話・メール応対、予約管理、プラン作成一般事務など
-                    旅館のほぼすべての業務に携わる。</dt>
-                <dd>どの部署でも、一貫して大切なのは自責と思いやりの心だと感じる。</dd>
-                <span class="border-line"></span>
-
-                <dt>結婚、第一子出産。家族には、もふもふの猫ちゃんも。</dt>
-                <dd>慌ただしくも幸せな毎日。</dd>
-                <span class="border-line"></span>
-
-
-                <dt>Webデザインスクールに通い、デザインとコーディングスキルを高める。</dt>
-                <dd>実践的な課題や、プロの先生によるサポートのおかげで、当サイトを作り上げるまで成長！</dd>
-                <span class="border-line"></span>
-
-
-                <dt>「デザインパートナーTOMO」として活動を始める。</dt>
-                <dd>スクールを卒業しても、情報収集やスキルアップを怠りません！</dd>
-                <span class="border-line"></span>
-            </dl>
-
-            <a href="" class="service__btn">
-                サービスを見る
-            </a>
-
-            <a href="" class="works__btn">
-                つくったものを見る
-            </a>
         </section>
 
         <section id="contact" class="contact">
@@ -274,11 +311,14 @@
                     <span class="en">CONTACT</span>
                 </h2>
 
-                <p class="btn-rectangle">
-                    <a href="" class="contact__btn">
-                        無料で相談する
-                        <img src="images/e-mail.png" alt="e-mail">
-                    </a>
+                <p class="btn__area">
+                    <button class="contact-btn">
+                        <a href="contact.html">
+                            無料で相談する </a>
+                        <div class="contact__img">
+                            <img src="images/e-mail.png" alt="e-mail">
+                        </div>
+                    </button>
                 </p>
                 <p class="contact__text">お仕事のご依頼や、こんなことできるかなといった疑問、
                     <br>
@@ -347,8 +387,42 @@
             </p>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--タイムラインの縦線が伸びるJS-->
+    <script>//線が伸びるための設定を関数でまとめる
+        function ScrollTimelineAnime() {
+            $('.timeline li').each(function () {// それぞれのli要素の
+                var elemPos = $(this).offset().top;// 上からの高さ取得
+                var scroll = $(window).scrollTop();// スクロール値取得
+                var windowHeight = $(window).height();// windowの高さ取得
+                var startPoint = 130; //線をスタートさせる位置を指定※レイアウトによって調整してください
+                if (scroll >= elemPos - windowHeight - startPoint) {
+                    var H = $(this).outerHeight(true)//liの余白と高さを含めた数値を取得
+                    //スクロール値から要素までの高さを引いた値を、liの高さの半分のパーセントで出す
+                    var percent = (scroll + startPoint - elemPos) / (H / 2) * 100;//liの余白と高さの半分で線を100％に伸ばす
 
+                    // 100% を超えたらずっと100%を入れ続ける
+                    if (percent > 100) {
+                        percent = 100;
+                    }
+                    // ボーダーの長さをセット
+                    $(this).children('.border-line').css({
+                        height: percent + "%", //CSSでパーセント指定
+                    });
+                }
+            });
+        }
 
+        // 画面をスクロールをしたら動かしたい場合の記述
+        $(window).on('scroll', function () {
+            ScrollTimelineAnime();// 線が伸びる関数を呼ぶ
+        });
+
+        // ページが読み込まれたらすぐに動かしたい場合の記述
+        $(window).on('load', function () {
+            ScrollTimelineAnime();// 線が伸びる関数を呼ぶ
+        });</script>
 </body>
 
 </html>

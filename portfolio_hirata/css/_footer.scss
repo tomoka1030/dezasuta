@@ -1,20 +1,20 @@
 @charset "utf-8";
 @use "variable";
+@use "mixin";
+@use "btn";
 /* --------
 フッター
 -------- */
 .footer {
     top: 0px;
     width: 100%;
-
+    background: linear-gradient(#FFDBC4, #FFD1B6);
     &__inner {
         // display: flex;
         // justify-content: space-between;
         align-items: center;
         height: 162px;
         padding: 0 5%;
-        background: rgb(255,209,182);
-background: linear-gradient(0deg, rgba(255,209,182,1) 0%, rgba(255,219,196,1) 100%);
     }
 
     &__container{
