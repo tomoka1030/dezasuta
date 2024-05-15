@@ -6,20 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WORKS | デザインパートナーTOMO</title>
     <meta name="description" content="優しく、温かく、行き届くデザインパートナーとして、幸せの輪を広げるお手伝いをします。">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="android-chrome-256x256.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../android-chrome-256x256.png">
     <!-- adobe-fonts -->
-    <script>
-        (function (d) {
-            var config = {
-                kitId: 'hib7xfm',
-                scriptTimeout: 3000,
-                async: true
-            },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-        })(document);
-    </script>
     <script>
         (function (d) {
             var config = {
@@ -38,17 +28,22 @@
 </head>
 
 <body>
-
     <header id="header" class="header">
         <div class="header__inner">
             <h1 class="header__logo">
                 <a href="../index.html">
-                    <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                    <img src="../images/img_footer_logo.png" alt="デザインパートナーTOMO">
                 </a>
             </h1>
 
             <nav class="header__nav">
                 <ul class="header__list">
+
+                    <li class="header__item-logo">
+                        <a href="../index.html">
+                            <img src="../images/img_header__logo.png" alt="logo">
+                        </a>
+                    </li>
                     <li class="header__item">
                         <a href="../message.html">
                             <span class="header__title-ja">わたしのおもい</span>
@@ -86,7 +81,7 @@
                     </li>
                     <li class="header__item">
                         <a class="header__sns" href="https://www.instagram.com/tomo_design24/">
-                            <img src="images/img_instagram.png" alt="インスタグラム">
+                            <img src="../images/img_instagram.png" alt="インスタグラム">
                         </a>
                     </li>
                 </ul>
@@ -94,78 +89,111 @@
         </div>
     </header>
 
+    <div class="menu_btn"><span></span><span></span><span></span></div>
+
     <main>
-        <h2 class="mainvisual_title">
-            <span>つくったもの
-            </span>
-            <br>
-            <span>WORK</span>
-        </h2>
+        <div class="mainvisual">
+            <h2 class="mainvisual__title-work">
+                <p class="ja">つくったもの</p>
+                <br>
+                <p class="en">WORKS</p>
+            </h2>
+        </div>
 
         <section class="work">
             <div class="work__img">
-                <img src="images/works_website_workers.png" alt="WORKERS">
+                <img src="images/works_img_website_portfolio.png" alt="website">
             </div>
-            <div class="work__detail">
-                <div class="work__head">
-                    <h3 class="work__heading">Website
-                    </h3>
-                    <div class="work__heading">
-                        <h4 class="work__title">会員制コワーキングスペース
-                        </h4>
-                        <p class="work__lead">WORKERS</p>
+            <div class="work__inner">
+                <!-- <div class="work__head"> -->
+                <h3 class="section__title">Website
+                </h3>
+                <div class="work__detail">
+                    <div class="work__head">
+                        <div class="work__heading">
+                            <h4 class="work__title">当サイト(ポートフォリオ)
+                            </h4>
+                            <p class="work__lead">デザインパートナーTomo</p>
+                        </div>
+                        <div class="work__category">
+                            <p class="work__label">Webサイト</p>
+                            <p class="work__label">自主制作</p>
+                        </div>
                     </div>
-                    <div class="work__category">
-                        <p class="work__label">LP</p>
-                        <p class="work__label">トレース</p>
+                    <div class="work__desc">
+                        <dl>
+                            <dt>URL</dt>
+                            <dd>xxxxxxxxxxxxxx</dd>
+                        </dl>
+                        <dl>
+                            <dt>担当範囲</dt>
+                            <dd>デザイン・コーディング</dd>
+                        </dl>
+                        <dl>
+                            <dt>使用ツール</dt>
+                            <dd>Illustrator/Photoshop/Figma/Visual Studio Code/GitHub</dd>
+                        </dl>
+                        <dl>
+                            <dt>制作期間</dt>
+                            <dd>2ヶ月</dd>
+                        </dl>
+                        <!-- <dl>
+                            <dt>ターゲット</dt>
+                            <dd>20代〜50代 男性</dd>
+                        </dl> -->
+                        <dl>
+                            <dt>デザイン<br>
+                                コーディング</dt>
+                            <dd>「優しく、温かく、行き届く」をコンセプトに、お客様に寄り添い、人が持つ温かみを感じていただけるような温度感があるイメージで制作しました。
+                                また、親しみを持っていただけるよう、イラストやアイコンを積極的に活用し、お問い合わせのハードルを下げることを心がけました。
+                            </dd>
+                        </dl>
                     </div>
                 </div>
+            </div>
 
-                <div work__desc>
-                    <!-- <dl>
-                        <dt>URL</dt>
-                        <dd>xxxxxxxxxxxxxx</dd>
-                    </dl> -->
-                    <dl>
-                        <dt>担当範囲</dt>
-                        <dd>デザイン</dd>
-                    </dl>
-                    <dl>
-                        <dt>使用ツール</dt>
-                        <dd>Illustrator</dd>
-                    </dl>
-                    <dl>
-                        <dt>制作期間</dt>
-                        <dd>2日</dd>
-                    </dl>
-                    <dl>
-                        <dt>ターゲット</dt>
-                        <dd>20代〜50代 男性</dd>
-                    </dl>
-                    <dl>
-                        <dt>デザイン</dt>
-                        <dd>イラストやアイコンを多く使用することで、サービスや特徴をよりわかりやすく認識していただけるサイト制作を心がけました。
-                        </dd>
-                    </dl>
+            <div class="img__inner">
+                <div class="detail__img-pc">
+                    <img src="images/website_designpartnertomo_detail_pc_01.jpg" alt="website">
+                    <img src="images/website_designpartnertomo_detail_pc_02.jpg" alt="website">
+                    <img src="images/website_designpartnertomo_detail_pc_03.jpg" alt="website">
+                    <img src="images/website_designpartnertomo_detail_pc_04.jpg" alt="website">
                 </div>
 
-                <div class="desc__img-pc">
-                    <img src="images/" alt="">
-
+                <div class="detail__img-sp">
+                    <img src="images/website_designpartnertomo_detail_sp_01.jpg" alt="website">
+                    <img src="images/website_designpartnertomo_detail_sp_02.jpg" alt="website">
+                    <img src="images/website_designpartnertomo_detail_sp_03.jpg" alt="website">
                 </div>
 
-                <div class="desc__img-sp">
-                    <img src="" alt="">
+            </div>
 
+            <div class="logo">
+                <h3 class="section title">ロゴについて</h3>
+                <div class="logo__img">
+                    <img src="images/img-logo_desc.png" alt="logo">
                 </div>
+                <p class="logo__desc">左下の丸は事業や提供するモノを、<br>
+                    小さな点はそのサービスを利用するお客さまを表します。<br>
+                    <br>
+                    感謝し、感謝される「幸せの輪」が<br>
+                    生まれることを願ってデザインしました。<br>
+                    <br>
+                    デザインパートナーとなって<br>
+                    「幸せの輪」の起点となり、<br>
+                    広げていくお手伝いができれば嬉しいです。
+                </p>
+            </div>
 
-                <a href="" class="service__btn">
+
+            <p class="btn-circle">
+                <a href="index.html" class="works__btn">
                     他の作品を見る
                 </a>
-            </div>
+            </p>
         </section>
 
-        <section id="CONTACT" class="CONTACT">
+        <section id="contact" class="contact">
             <div class="contact__inner">
                 <h2 class="section__title-contact">
                     <span class="ja">お問い合わせ</span>
@@ -173,11 +201,15 @@
                     <span class="en">CONTACT</span>
                 </h2>
 
-                <a href="" class="contact__btn">
-                    無料で相談する
-                    <img src="../images/e-mail.png" alt="e-mail">
-                </a>
-
+                <p class="btn__area">
+                    <button class="contact-btn">
+                        <a href="../contact.html">
+                            無料で相談する </a>
+                        <div class="contact__img">
+                            <img src="../images/e-mail.png" alt="e-mail">
+                        </div>
+                    </button>
+                </p>
                 <p class="contact__text">お仕事のご依頼や、こんなことできるかなといった疑問、
                     <br>
                     こんなこと一緒にやらない？などのお誘いなど、何でもお気軽にどうぞ！
@@ -186,12 +218,13 @@
         </section>
 
     </main>
+
     <footer class="footer">
         <div class="footer__inner">
             <div class="footer__container">
                 <p class="footer__logo">
                     <a href="../index.html">
-                        <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                        <img src="../images/img_footer_logo.png" alt="デザインパートナーTOMO">
                     </a>
                 </p>
 
@@ -234,7 +267,7 @@
                         </li>
                         <li class="footer__item">
                             <a class="footer__sns" href="https://www.instagram.com/tomo_design24/">
-                                <img src="images/img_instagram.png" alt="インスタグラム">
+                                <img src="../images/img_instagram.png" alt="インスタグラム">
                             </a>
                         </li>
                     </ul>
@@ -245,8 +278,9 @@
             </p>
         </div>
     </footer>
-
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

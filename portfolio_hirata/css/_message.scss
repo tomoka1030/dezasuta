@@ -9,7 +9,7 @@ messageページ
 
 /*メッセージ */
 .message{
-    padding-top: 183px;
+    padding-top: 194px;
 
     &__inner{
         display: block;
@@ -31,6 +31,10 @@ messageページ
     &__text{
         line-height: calc(38 / 16);
         margin-top: 30px;
+        span{
+            text-decoration: underline;
+            text-decoration-color: variable.$dusty-pink;
+        }
     }
     &__from{
         text-align: end;
@@ -59,8 +63,9 @@ messageページ
 .worry__box{
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin: 60px 0;
+    gap: 45px;
+    margin-top: 65px;
+    padding-bottom: 132px;
 }
 
     &__img{
@@ -136,21 +141,53 @@ messageページ
         }
     }
 
-.arrow{
-    text-align: center;
-    width: 16px;
-    height: 16px;
-    border: 0;
-    border-top: solid 2px variable.$dusty-pink;
-    border-right: solid 2px variable.$dusty-pink;
-    transform: rotate(135deg);
-    position: absolute;
-}
     &__answer{
-    margin-top: 132px;
-    font-size: 20px;
+        position: relative;
+        margin-top: 132px;
+        font-size: 20px;  
+        margin: 0 auto; 
+        // 矢印中央寄せできてない
+        &::before {
+            content: '';
+            display: inline-block;
+            margin: 0 auto;
+            width: 16px;
+            height: 16px;
+            bottom: 60px;
+            border: 0;
+            border-top: solid 2px variable.$dusty-pink;
+            border-right: solid 2px variable.$dusty-pink;
+            transform: rotate(135deg);
+            position: absolute;
+        }
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            margin: 0 auto;
+            height: 16px;
+            bottom: -60px;
+            border: 0;
+            border-top: solid 2px variable.$dusty-pink;
+            border-right: solid 2px variable.$dusty-pink;
+            transform: rotate(135deg);
+            position: absolute;
+        }
+        }
+
+        // .arrow{
+        //     width: 16px;
+        //     height: 16px;
+        //     border: 0;
+        //     border-top: solid 2px variable.$dusty-pink;
+        //     border-right: solid 2px variable.$dusty-pink;
+        //     transform: rotate(135deg);
+        //     position: absolute;
+        //     }
+
+
 }
-}
+
 
 /*大切にしていること */
 .feature{
@@ -180,34 +217,30 @@ messageページ
         display: block;
         text-align: center;
         width:27%;
-        padding:32px 30px;
+        padding:42px 30px;
         background-color: variable.$cream-beige;
         border-radius: 10px
     }
 
     &__number{
+        position: relative;
         @include mixin.number;
         font-size:20px ;
-        /*動作してない 修正要 */
-        &:before { 
-            content: '';
-            position: absolute;
-            top: 50%;
-            display: inline-block;
-            width: 5px;
-            height: 1px;
-            background-color: variable.$dusty-pink;
-            left:0;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        // 左右に横線
+        &::before,&::after {
+            background-color: variable.$dusty-pink; /* 横線の色 */
+            content: "";
+            height: 1px; /* 横線の高さ */
+            width: 8px; /* 横線の長さ */
         }
-        &:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            display: inline-block;
-            width: 5px;
-            height: 1px;
-            background-color: variable.$dusty-pink;
-            right: 0;
+        &::before {
+            margin-right: 8px; /* 文字との余白 */
+        }
+        &::after {
+            margin-left: 8px; /* 文字との余白 */
         }
     }
     &__title{
@@ -243,6 +276,7 @@ messageページ
 
     h3{
         display: inline-block;
+        margin-left: 46px;
         padding: 10px;
         border-bottom: 4px dotted variable.$dusty-pink;
         font-size: 30px;
@@ -254,7 +288,7 @@ messageページ
         align-items: flex-start;
         gap:147px;
         margin-top: 65px;
-    }/*流体シェイプいれる */
+    }
 
     &__img{
         margin-top: 41px;
@@ -266,35 +300,64 @@ messageページ
     }
 
     &__text{
-        margin-top: 32px;
+        margin-top: 42px;
+        padding-right: 10px;
         line-height: calc(35/16);
     }
 }
 
 .name__area{
+    position: relative;
+    // display: inline-block;
     display: flex;
     align-items: baseline;
-    gap: 23px;
+    gap: 40px;
     padding: 8px 20px 12px 0;
-    display: inline-block;
-    border-bottom: 2px solid variable.$pink-beige;
+    // 1文字目に流体シェイプ
+    &:before {
+        content: "";
+        position: absolute;
+        background: variable.$pink-beige;
+        width: 67px;
+        height: 75px;
+        border-radius: 54% 46% 38% 62%/49% 70% 30% 52%;
+        top: 50%;
+        left: -20px;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-60%);
+        z-index: -1;
+    }
 }
 .name{
     font-size: 20px;
     }
 
 .history {
-    margin-top: 65px;
+    margin-top: 100px;
 
-    p{
-        padding-left: 80px;
+    &__title {
+        margin-left: 80px;
+        position: relative;
+        
+        &:before {
+            content: "";
+            position: absolute;
+            background: variable.$pink-beige;
+            width: 60px;
+            height: 60px;
+            border-radius: 54% 46% 38% 62%/49% 70% 30% 52%;
+            top: 50%;
+            left: -20px;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            z-index: -1;
+        }
     }
 
     &__contents {
         display: flex;
         align-items: flex-start;
         gap: 33px;
-// 流体シェイプいれる
     }
 
     &__img {
@@ -314,7 +377,7 @@ messageページ
         // 線の起点とするためrelativeを設定
         position: relative;
         list-style: none;
-        padding: 0 0 40px 0;
+        padding: 0 0 32px 0;
 
         dl {
             margin: 0 0 10px 3em;

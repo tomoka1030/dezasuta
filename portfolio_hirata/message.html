@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MESSAGE | デザインパートナーTOMO</title>
-    <meta name="description" content="優しく、温かく、行き届くデザインパートナーとして、幸せの輪を広げるお手伝いをします。">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" href="android-chrome-256x256.png">
@@ -20,7 +20,6 @@
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
-
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +27,6 @@
 </head>
 
 <body>
-
     <header id="header" class="header">
         <div class="header__inner">
             <h1 class="header__logo">
@@ -39,6 +37,11 @@
 
             <nav class="header__nav">
                 <ul class="header__list">
+                    <li class="header__item-logo">
+                        <a href="index.html">
+                            <img src="images/img_header__logo.png" alt="logo">
+                        </a>
+                    </li>
                     <li class="header__item">
                         <a href="message.html">
                             <span class="header__title-ja">わたしのおもい</span>
@@ -84,6 +87,8 @@
         </div>
     </header>
 
+    <div class="menu_btn"><span></span><span></span><span></span></div>
+
     <main class="main">
 
         <div class="mainvisual">
@@ -116,8 +121,8 @@
                     前職では、上司に「一家に一台クラちゃん(私の旧姓のニックネームです。)」と言ってもらいましたが、<br>
                     あなたにもそう思っていただけるよう、全力でサポートさせていただきます。<br>
                     <br>
-                    デザインパートナーとなって、あなたが提供するサービスやモノが人を幸せにし、<br>
-                    その幸せが連鎖する「その先の未来」を思い描いています。
+                    <span>デザインパートナーとなって、あなたが提供するサービスやモノが人を幸せにし、<br>
+                        その幸せが連鎖する「その先の未来」を思い描いています。</span>
                 </p>
                 <p class="message__from">Tomoka Hirata</p>
             </div>
@@ -146,9 +151,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="arrow"></div>
                 <p class="worry__answer">そのお悩み、私が解決します！</p>
-                <div class="arrow"></div>
             </div>
         </section>
 
@@ -208,11 +211,12 @@
                             デザインに触れていると時間を忘れるほど没頭し、<br>
                             「デザインを本職にしたい！」「挑戦したい！」という想いが芽生え、<br>
                             プロのデザイナーを目指すことに。<br>
-
+                            <br>
                             その後、デザインとコーディングスキルを身に着け、<br>
                             2024年5月「デザインパートナーTOMO」として活動を始めました。<br>
                             接客や事務の経験も生かし「優しく、温かく、行き届く」デザインパートナー<br>
-                            として日々精進します！</p>
+                            として日々精進します！
+                        </p>
                     </div>
                 </div>
                 <div class="history">
@@ -414,15 +418,19 @@
             });
         }
 
-        // 画面をスクロールをしたら動かしたい場合の記述
+        // 画面をスクロールをしたら動かす
         $(window).on('scroll', function () {
             ScrollTimelineAnime();// 線が伸びる関数を呼ぶ
         });
 
-        // ページが読み込まれたらすぐに動かしたい場合の記述
+        // ページが読み込まれたらすぐに動かす
         $(window).on('load', function () {
             ScrollTimelineAnime();// 線が伸びる関数を呼ぶ
         });</script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -11,6 +11,7 @@ serviceセクション
 .service{
     padding-top: 143px;
     p{
+        padding-left: 10px;
         line-height:calc(32/18);
     }
 
@@ -30,6 +31,7 @@ serviceセクション
     }
 
     &__number{
+        margin-bottom: -36px;
         @include mixin.number;
         font-size:35px ;
     }
@@ -48,7 +50,7 @@ serviceセクション
     
     &__title{
         font-size:25px ;
-        margin-top: 22px;
+        margin-top: 28px;
     }
 
     &__category{

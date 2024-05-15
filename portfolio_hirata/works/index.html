@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WORKS | デザインパートナーTOMO</title>
     <meta name="description" content="優しく、温かく、行き届くデザインパートナーとして、幸せの輪を広げるお手伝いをします。">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="android-chrome-256x256.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../android-chrome-256x256.png">
     <!-- adobe-fonts -->
     <script>
         (function (d) {
@@ -38,6 +38,12 @@
 
             <nav class="header__nav">
                 <ul class="header__list">
+
+                    <li class="header__item-logo">
+                        <a href="../index.html">
+                            <img src="../images/img_header__logo.png" alt="logo">
+                        </a>
+                    </li>
                     <li class="header__item">
                         <a href="../message.html">
                             <span class="header__title-ja">わたしのおもい</span>
@@ -75,13 +81,15 @@
                     </li>
                     <li class="header__item">
                         <a class="header__sns" href="https://www.instagram.com/tomo_design24/">
-                            <img src="../images/img_instagram.png" alt="インスタグラム">
+                            <img src="../images/img_instagram.png" alt="インスタグラム" class="sn">
                         </a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <div class="menu_btn"><span></span><span></span><span></span></div>
 
     <main>
         <div class="mainvisual">
@@ -97,7 +105,6 @@
             <li page__item><a href="#banner" class="page__link-btn">バナー制作</a></li>
             <li page__item><a href="#graphic" class="page__link-btn">チラシ・名刺制作</a></li>
         </ul>
-
 
         <section id="website" class="website">
             <h3 class="section title">Webサイト制作</h3>
@@ -175,7 +182,7 @@
                 </div>
 
                 <div class="banner__img">
-                    <a href="work-banner_03.htm">
+                    <a href="work-banner_03.html">
                         <span class="mask">
                             <img src="images/img_works_banner_skincare.png" alt="banner">
                             <p class="caption">
@@ -246,12 +253,13 @@
                     </a>
                 </div>
             </div>
-
-            <p class="btn-circle">
-                <a href="" class="service__btn">
-                    サービスについて見る
-                </a>
-            </p>
+            <div class="worsk__btn">
+                <p class="btn-circle">
+                    <a href="../service.html" class="service__btn">
+                        サービスについて見る
+                    </a>
+                </p>
+            </div>
         </section>
 
         <section id="contact" class="contact">
@@ -264,7 +272,7 @@
 
                 <p class="btn__area">
                     <button class="contact-btn">
-                        <a href="contact.html">
+                        <a href="../contact.html">
                             無料で相談する </a>
                         <div class="contact__img">
                             <img src="../images/e-mail.png" alt="e-mail">
@@ -277,8 +285,8 @@
                 </p>
             </div>
         </section>
-
     </main>
+
     <footer class="footer">
         <div class="footer__inner">
             <div class="footer__container">
@@ -339,7 +347,9 @@
         </div>
     </footer>
 
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

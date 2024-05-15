@@ -12,7 +12,7 @@
     text-align: center;
     display: flex;
     justify-content: flex-end;
-    margin-top: 72px;
+    margin-top: 37px;
     padding-right: 14px;
 
     a {
@@ -67,13 +67,14 @@
     }
 }
 
-/*_実績詳細ページの丸ボタンは中央に配置 */
-.work .btn-circle{
+/*worksと実績詳細ページの丸ボタンは中央に配置 */
+.graphic .btn-circle, .work .btn-circle{
     margin-top: 130px;
     text-align: center;
-    display: flex;
+    padding-right: 1px;
     justify-content: center;
 }
+
 
 /*ページ内リンク 下矢印ボタン */
 
@@ -82,38 +83,64 @@
     justify-content: center;
     gap: 100px;
     align-items: center;
-    margin: 0 auto;/*中央に配置できてない 要修正 */
-    margin-top: 90px;
+    margin: 0 auto;
+    margin-top: 95px;
 
     &-btn{
         position: relative;
         display: inline-block;
     }
 }
-.page__link li a{
+.page__link li {
+    a {
+    padding-left: 8px;
     color: variable.$text-color;
     text-decoration: none;
     transition: 0.3s;
+
+        &:before {/* before：下線 */
+            position: absolute;
+            visibility: hidden; /* ホバー前は非表示 */
+            content: '';
+            width: 130%;
+            height: 1px;
+            bottom: -8px;
+            left: 0;
+            border-radius: 3px;
+            background: variable.$peach-fuzz;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        &:after {/* before：矢印 */
+            position: absolute;
+            content: '';
+            width: 7px;
+            height: 7px;
+            border: 0;
+            border-top: solid 1px variable.$peach-fuzz;
+            border-right: solid 1px variable.$peach-fuzz;
+            transform: rotate(135deg);
+            right: -18px;
+            top: 10%;
+            margin: auto;
+            transition: 0.3s;
+        }
+
+        &:hover:before {
+            visibility: visible; /* ホバー前は非表示 */
+            bottom: -10px;
+            opacity: 1;
+            transition: 0.3s;
+        }
+
+        &:hover:after {
+            bottom: -1px;
+            opacity: 1;
+            transition: 0.3s;
+        }
+    }
 }
-    
-.page__link li a:after {
-        content: '';
-        width: 7px;
-        height: 7px;
-        border: 0;
-        border-top: solid 1px variable.$peach-fuzz;
-        border-right: solid 1px variable.$peach-fuzz;
-        transform: rotate(135deg);
-        position: absolute;
-        right: -18px; 
-        top: 10%;
-        margin: auto;
-        transition: 0.3s;
-}
-    /* ホバー時にアンダーラインがフェードイン 未 */
-
-
-
 
 .message__btn{
     text-align: left;
@@ -157,7 +184,7 @@
 .contact .btn__area {
     display: block;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 36px;
     
     .contact-btn {
         display: inline-flex;
@@ -167,7 +194,7 @@
         width: 195px;
         height: 36px;
         box-sizing: border-box;
-        margin-top: 50px;
+        margin-top: 36px;
         border-radius: 10px;
         border: 1px solid variable.$pink-beige;
         background: variable.$cream-beige;

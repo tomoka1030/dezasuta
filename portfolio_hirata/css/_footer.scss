@@ -7,14 +7,20 @@
 -------- */
 .footer {
     top: 0px;
-    width: 100%;
-    background: linear-gradient(#FFDBC4, #FFD1B6);
+    // width: 100%;
+    // background: linear-gradient(#FFDBC4, #FFD1B6);
+
+    a:hover {
+        opacity: 0.5;
+        }
+        
     &__inner {
         // display: flex;
         // justify-content: space-between;
         align-items: center;
         height: 162px;
         padding: 0 5%;
+        background: linear-gradient(#FFDBC4, #FFD1B6);
     }
 
     &__container{
@@ -25,26 +31,26 @@
     }
 
     &__logo img{
-        height: 58px;
+        width: 148px;
         }
 
     &__list{
             display: flex;
             align-items: center;
-            margin: 0
-            ;
+            margin: 0;
             }
 
     &__item{
-            padding-left: 36px;
-            text-align: center;
-            } 
-            a{
-                line-height:1.5;
-            }
- 
+        padding-left: 36px;
+        text-align: center;
+        a{
+            line-height:1.5;
+        }
+    } 
+
     &__title-ja{
     font-size: 11px;
+    letter-spacing: 0.2em;
     // margin-bottom: 5px;
     }
 
@@ -52,16 +58,15 @@
     font-size: 18px;
     font-family: variable.$ff-en; 
     }
-    &__sns img{
-        width: 24px; 
+
+    &__sns{
+        display: block;
+        width: 24px;
     }
+
 
     &__copy{
         font-size: 13px;
     }
 
-}
-
-.sns img{
-width: 24px;
 }

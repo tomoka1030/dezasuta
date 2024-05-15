@@ -8,3 +8,57 @@
 work-banner_01
 ---------------- */
 
+.text__container {
+    max-width: variable.$width-inner;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 45%;
+}
+
+.work__text {
+    position: relative;
+    text-align: center;
+    padding: 17px;
+    margin-top: 74px;
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: 0.8rem;
+        height: 1.8rem;
+        content: '';
+    }
+
+    &::before {
+        border-left: dotted 2px variable.$peach-fuzz;
+        left: 0;
+        transform: rotate(-30deg);
+    }
+
+    &::after {
+        border-right: dotted 2px variable.$peach-fuzz;
+        right: 0;
+        transform: rotate(30deg);
+    }
+}
+
+.banner__wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    padding: 0 17%;
+    margin-top: 67px;
+}
+.banner__more{
+    display: block;
+    width: 35%;
+    margin-bottom: 87px;
+    p{
+        margin-bottom: 18px;
+    }
+    img{
+        width: 100%;
+    }
+}

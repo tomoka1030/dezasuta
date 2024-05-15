@@ -28,61 +28,6 @@
 </head>
 
 <body>
-    <header id="header" class="header">
-        <div class="header__inner">
-            <h1 class="header__logo">
-                <a href="index.html">
-                    <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
-                </a>
-            </h1>
-
-            <nav class="header__nav">
-                <ul class="header__list">
-                    <li class="header__item">
-                        <a href="message.html">
-                            <span class="header__title-ja">わたしのおもい</span>
-                            <br>
-                            <span class="header__title">MESSAGE</span>
-                        </a>
-                    </li>
-                    <li class="header__item">
-                        <a href="./works/index.html">
-                            <span class="header__title-ja">つくったもの</span>
-                            <br>
-                            <span class="header__title">WORKS</span>
-                        </a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#skill">
-                            <span class="header__title-ja">できること</span>
-                            <br>
-                            <span class="header__title">SKILL</span>
-                        </a>
-                    </li>
-                    <li class="header__item">
-                        <a href="service.html">
-                            <span class="header__title-ja">サービス</span>
-                            <br>
-                            <span class="header__title">SERVICE</span>
-                        </a>
-                    </li>
-                    <li class="header__item">
-                        <a href="contact.html">
-                            <span class="header__title-ja">お問い合わせ</span>
-                            <br>
-                            <span class="header__title">CONTACT</span>
-                        </a>
-                    </li>
-                    <li class="header__item">
-                        <a class="header__sns" href="https://www.instagram.com/tomo_design24/">
-                            <img src="images/img_instagram.png" alt="インスタグラム">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
     <main>
         <div class="fv">
             <video src="images/mainvisual_pc.mp4" autoplay muted loop width="100%"></video>
@@ -90,49 +35,49 @@
                 <img src="images/mv_textanimation.gif" alt="優しく、温かく、行き届く">
             </div>
             <div class="fv__inner">
-                <p class="fv__logo">
-                    <a href="index.html">
-                        <img src="images/img_header__logo.png" alt="デザインパートナーTOMO">
-                    </a>
-                </p>
                 <nav class="fv__nav">
-                    <ul>
-                        <li>
+                    <ul class="fv__list">
+                        <li class="fv__item-logo">
+                            <a href="index.html">
+                                <img src="images/img_header__logo.png" alt="logo">
+                            </a>
+                        </li>
+                        <li class="fv__item">
                             <a href="message.html">
                                 <span class="fv__title-ja">わたしのおもい</span>
                                 <br>
                                 <span class="fv__title">MESSAGE</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="fv__item">
                             <a href="./works/index.html">
                                 <span class="fv__title-ja">つくったもの</span>
                                 <br>
                                 <span class="fv__title">WORKS</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="fv__item">
                             <a href="#skill">
                                 <span class="fv__title-ja">できること</span>
                                 <br>
                                 <span class="fv__title">SKILL</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="fv__item">
                             <a href="service.html">
                                 <span class="fv__title-ja">サービス</span>
                                 <br>
                                 <span class="fv__title">SERVICE</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="fv__item">
                             <a href="contact.html">
                                 <span class="fv__title-ja">お問い合わせ</span>
                                 <br>
                                 <span class="fv__title">CONTACT</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="fv__item-sns">
                             <a class="fv__sns" href="https://www.instagram.com/tomo_design24/">
                                 <img src="images/img_instagram.png" alt="インスタグラム">
                             </a>
@@ -141,6 +86,8 @@
                 </nav>
             </div>
         </div>
+
+        <div class="menu_btn"><span></span><span></span><span></span></div>
 
         <div id="lead" class="lead">
             <div class="lead__inner">
@@ -181,40 +128,62 @@
                 <ul class="works__list">
                     <li class="works__item">
                         <div class="works__img">
-                            <a href="">
-                                <img src="images/img_works_web_hairsalon_small.png" alt="美容室のWebサイト">
+                            <a href="./works/work-website_01.html">
+                                <span class="mask">
+                                    <img src="images/img_works_web_hairsalon_small.png" alt="website">
+                                    <p class="caption">
+                                        <span class="title">美容室のLP制作</span><br>
+                                        <span>LIFE hair design</span><br>
+                                        <span>担当:デザイン</span>
+                                    </p>
+                                </span>
                             </a>
-                            <div class="works__category">
-                                <p class="works__label">Webサイト
-                                </p>
-                                <p class="works__label">LP
-                                </p>
-                            </div>
+                        </div>
+                        <div class="works__category">
+                            <p class="works__label">Webサイト
+                            </p>
+                            <p class="works__label">LP
+                            </p>
                         </div>
                     </li>
                     <li class="works__item">
                         <div class="works__img">
-                            <a href="">
-                                <img src="images/img_works_banner_burger.png" alt="ハンバーガーのバナー">
+                            <a href="./works/wwork-banner_01.html">
+                                <span class="mask">
+                                    <img src="images/img_works_banner_burger.png" alt="banner">
+                                    <p class="caption">
+                                        <span class="title">ハンバーガーのバナー制作</span><br>
+                                        <span>デラックスバーガー</span><br>
+                                        <span>担当:デザイン</span>
+                                    </p>
+                                </span>
                             </a>
-                            <div class="works__category">
-                                <p class="works__label">バナー
-                                </p>
-                                <p class="works__label">SNS広告
-                                </p>
-                            </div>
+                        </div>
+                        <div class="works__category">
+                            <p class="works__label">バナー
+                            </p>
+                            <p class="works__label">SNS広告
+                            </p>
                         </div>
                     </li>
                     <li class="works__item">
                         <div class="works__img">
-                            <a href="">
-                                <img src="images/img_works_flyer_harisalon.png" alt="美容室のWebサイト">
+                            <a href="./works/wwork-flyer_01.html">
+                                <span class="mask">
+                                    <img src="images/img_works_flyer_harisalon.png" alt="美容室のWebサイト">
+                                    <p class="caption">
+                                        <span class="title">美容室の新規オープンチラシ</span><br>
+                                        <span>LIFE hair design</span><br>
+                                        <span>担当:デザイン</span>
+                                    </p>
+                                </span>
                             </a>
-                            <div class="works__category">
-                                <p class="works__label">チラシ
-                                </p>
-                            </div>
                         </div>
+                        <div class="works__category">
+                            <p class="works__label">チラシ
+                            </p>
+                        </div>
+
                     </li>
                 </ul>
                 <p class="btn-circle">
@@ -446,6 +415,47 @@
         </div>
     </footer>
 
+    <!-- グローバルナビ　スクロールするとハンバーガーメニューに -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        function FixedAnime() {
+            //fvの高さを取得
+            var fvH = $('.fv').outerHeight(true);
+            var scroll = $(window).scrollTop();
+            if (scroll >= fvH) {//fvの高さ以上までスクロールしたら
+                $('.menu_btn').addClass('fadeDown');//.openbtnにfadeDownというクラス名を付与して
+                $('.fv__inner').addClass('dnone');//fvにdnoneというクラス名を付与
+            } else {//それ以外は
+                $('.menu_btn').removeClass('fadeDown');//fadeDownというクラス名を除き
+                $('.fv__inner').removeClass('dnone');//dnoneというクラス名を除く
+            }
+        }
+
+        // 画面をスクロールをしたら動かす
+        $(window).scroll(function () {
+            FixedAnime();//スクロールをするとハンバーガーメニューに変化するための関数を呼ぶ
+        });
+
+        //ボタンをクリックした際のアニメーションの設定
+        $(".menu_btn").click(function () {//ボタンがクリックされたら
+            $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+            $(".fv__inner").toggleClass('panelactive');//fvにpanelactiveクラスを付与
+        });
+        $(".fv__nav li a").click(function () {//ナビゲーションのリンクがクリックされたら
+            $(".menu_btn").removeClass('active');//ボタンの activeクラスを除去し
+            $(".fv__inner").removeClass('panelactive');//fvのpanelactiveクラスも除去
+        });
+
+
+        //リンク先のidまでスムーススクロール
+        $('.fv__nav li a').click(function () {
+            var elmHash = $(this).attr('href');
+            var pos = $(elmHash).offset().top - 0;
+            $('body,html').animate({ scrollTop: pos }, 1000);
+            return false;
+        });
+    </script>
 </body>
 
 </html>
