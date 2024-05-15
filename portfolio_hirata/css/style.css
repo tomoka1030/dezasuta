@@ -532,17 +532,27 @@ contact ページ
   margin-top: 12px;
   width: 100%;
   height: 43px;
+  padding: 0 10px;
   border-radius: 10px;
   border: 1px solid #FFE9D8;
   background: #FFFBF9;
 }
-.inquire__item input#comment {
+.inquire__item input:focus {
+  outline: none;
+  border: 2px solid #FFBE98;
+}
+.inquire textarea#comment {
   margin-top: 12px;
+  padding: 15px;
   width: 100%;
   height: 111px;
   border-radius: 10px;
   border: 1px solid #FFE9D8;
   background: #FFFBF9;
+}
+.inquire textarea#comment:focus {
+  outline: none;
+  border: 2px solid #FFBE98;
 }
 
 /* --------
