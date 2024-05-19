@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+@use "mediaQuery" as *;
 
 /* --------
 color
@@ -28,7 +28,6 @@ $pink-beige: #FFE9D8;
 ---------- */
 
 $width-inner: 1080px;
-
 
 /* --------
 フォント

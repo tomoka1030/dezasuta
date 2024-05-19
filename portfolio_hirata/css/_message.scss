@@ -1,7 +1,7 @@
 @charset "utf-8";
 @use "variable";
-@use "mixin";
 @use "btn";
+@use "mediaQuery" as *;
 
 /* ------------
 messageページ
@@ -31,6 +31,10 @@ messageページ
     &__text{
         line-height: calc(38 / 16);
         margin-top: 30px;
+
+        @include media(xl){
+            font-size: 14px;
+        }
         span{
             text-decoration: underline;
             text-decoration-color: variable.$dusty-pink;
@@ -39,6 +43,10 @@ messageページ
     &__from{
         text-align: end;
         margin-top: 121px;
+
+        @include media(md){
+            margin-top: 73px;
+        }
     }
 
 }
@@ -52,26 +60,67 @@ messageページ
         max-width: variable.$width-inner;
         text-align: center;
         margin: 0 auto;
+
+        @include media(md){
+            padding-left: 17px;
+        }
         }
 
     &__title{
         display: inline-block;
         font-size: 25px;
         color: variable.$dusty-pink;
+
+        @include media(md){
+            font-size: 20px;
+        }
     }
 
-.worry__box{
-    display: flex;
-    justify-content: center;
-    gap: 45px;
-    margin-top: 65px;
-    padding-bottom: 132px;
-}
+    &__box{
+        display: flex;
+        justify-content: center;
+        gap: 45px;
+        margin-top: 65px;
+        padding-bottom: 132px;
+
+        @include media(md){
+            position: relative;
+            display: block;
+        }
+
+    }
+
+    &__list{
+        @include media(md){
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    &__list-right{//スマホでは左に変わる
+        @include media(md){
+            position: absolute;
+            top: 200px;
+        }
+    }
+
 
     &__img{
-        width: 24%;   
+        width: 30%;   
+
+        @include media(md){
+            width: 70%;
+            margin-left:auto
+        }
+        
         img{
             width: 100%;
+
+            @include media(md){
+                padding-top: 100px;
+                width: 100vw;
+                // margin-right: calc(60% - 50vw);
+            }
         }
     }
 
@@ -85,6 +134,11 @@ messageページ
         // line-height: calc(38 / 16);
         margin-top: 18px;
 
+        @include media(md){
+            font-size: 13px;
+            padding: 10px 20px;
+        }
+
         &:before {
             content: "";
             position: absolute;
@@ -94,6 +148,11 @@ messageページ
             bottom: 0;
             background: variable.$cream-beige;
             border-radius: 50%;
+
+            @include media(md){
+                width: 10px;
+                height: 10px;
+            }
         }
     
         &:after {
@@ -105,6 +164,11 @@ messageページ
             bottom: 3px;
             background: variable.$cream-beige;
             border-radius: 50%;
+
+            @include media(md){
+                width: 15px;
+                height: 15px;
+            }
         }
     }
 
@@ -118,6 +182,11 @@ messageページ
         // line-height: calc(38 / 16);
         margin-top: 18px;
 
+        @include media(md){//スマホでは吹き出しを反転させる
+            font-size: 13px;
+            padding: 10px 20px;
+        }
+
         &:before {
             content: "";
             position: absolute;
@@ -127,8 +196,14 @@ messageページ
             bottom: 0;
             background: variable.$cream-beige;
             border-radius: 50%;
+
+            @include media(md){
+                width: 10px;
+                height: 10px;
+                transform: translateX(300px);
+            }
         }
-    
+
         &:after {
             content: "";
             position: absolute;
@@ -138,6 +213,12 @@ messageページ
             bottom: 3px;
             background: variable.$cream-beige;
             border-radius: 50%;
+
+            @include media(md){
+                width: 15px;
+                height: 15px;
+                transform: translateX(260px);
+            }
         }
     }
 
@@ -149,29 +230,30 @@ messageページ
         // 矢印中央寄せできてない
         &::before {
             content: '';
+            position: absolute;
             display: inline-block;
-            margin: 0 auto;
             width: 16px;
             height: 16px;
             bottom: 60px;
+            transform: rotate(135deg) translateX(-50%);
+            left: 50%;
             border: 0;
             border-top: solid 2px variable.$dusty-pink;
             border-right: solid 2px variable.$dusty-pink;
-            transform: rotate(135deg);
-            position: absolute;
         }
         &::after {
             content: '';
+            position: absolute;
             display: inline-block;
             width: 16px;
             margin: 0 auto;
             height: 16px;
             bottom: -60px;
+            left: 50%;
             border: 0;
             border-top: solid 2px variable.$dusty-pink;
             border-right: solid 2px variable.$dusty-pink;
-            transform: rotate(135deg);
-            position: absolute;
+            transform: rotate(135deg)translateX(-50%);
         }
         }
 
@@ -211,24 +293,29 @@ messageページ
         justify-content: space-between;
         gap: 10px;
         margin-top: 138px;
+
     }
 
     &__item{
         display: block;
         text-align: center;
         width:27%;
+        margin: 5px;
         padding:42px 30px;
         background-color: variable.$cream-beige;
-        border-radius: 10px
+        border-radius: 10px;
     }
 
     &__number{
         position: relative;
-        @include mixin.number;
         font-size:20px ;
         align-items: center;
         display: flex;
         justify-content: center;
+        font-family: "futura-pt", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: variable.$dusty-pink;
         // 左右に横線
         &::before,&::after {
             background-color: variable.$dusty-pink; /* 横線の色 */
@@ -243,6 +330,7 @@ messageページ
             margin-left: 8px; /* 文字との余白 */
         }
     }
+    
     &__title{
         font-size:20px ;
         margin-top: 22px;
@@ -268,11 +356,19 @@ messageページ
 /*わたしのこと */
 .introduction{
     padding-top: 287px;
+    
+    @include media(md){
+        padding-top: 205px;
+    }
 
     &__inner{
         max-width: variable.$width-inner;
         margin: 0 auto;
+
+        @include media(md){
+            padding: 0 17px;
         }
+    }
 
     h3{
         display: inline-block;
@@ -288,21 +384,38 @@ messageページ
         align-items: flex-start;
         gap:147px;
         margin-top: 65px;
+
+        @include media(md){
+            display: block;
+        }
     }
 
     &__img{
         margin-top: 41px;
         width: 30%;
+        @include media(md){
+            width: 76%;
+        }
     }
 
     &__img img{
         width: 100%;
     }
 
+    &__textarea{
+        @include media(md){
+            padding: 63px 20px 0 20px;
+        }
+    }
+
     &__text{
         margin-top: 42px;
         padding-right: 10px;
         line-height: calc(35/16);
+        @include media(md){
+            font-size: 14px;
+            padding-right: 0;
+        }
     }
 }
 
@@ -313,6 +426,7 @@ messageページ
     align-items: baseline;
     gap: 40px;
     padding: 8px 20px 12px 0;
+
     // 1文字目に流体シェイプ
     &:before {
         content: "";
@@ -328,9 +442,26 @@ messageページ
         z-index: -1;
     }
 }
+
+.title{
+    @include media(md){
+        font-size: 13px;
+    }
+}
+
 .name{
     font-size: 20px;
+
+    @include media(md){
+        font-size: 16px;
     }
+}
+
+.adress{
+@include media(md){
+    font-size: 13px;
+}
+}
 
 .history {
     margin-top: 100px;
@@ -338,6 +469,10 @@ messageページ
     &__title {
         margin-left: 80px;
         position: relative;
+
+        @include media(md){
+            margin-left: 35px;
+        }
         
         &:before {
             content: "";
@@ -358,6 +493,10 @@ messageページ
         display: flex;
         align-items: flex-start;
         gap: 33px;
+        @include media(md){
+            display: block;
+            font-size: 13px;
+        }
     }
 
     &__img {

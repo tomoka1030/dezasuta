@@ -1,12 +1,18 @@
 @charset "utf-8";
-$breakpoints:(
-    // sm:400px,
-    md:767px,
-    lg:840px,
+
+$breakpoints: (
+    'sm': 'screen and (max-width: 560px)',
+    'md': 'screen and (max-width: 767px)',
+    'lg': 'screen and (max-width: 840px)',
+    'xl': 'screen and (max-width: 1000px)',
 );
 
-@mixin responsive($breakpoint){
-    @media(width >= #{map-get($breakpoints,$breakpoint)}){
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
         @content;
     }
 }
+
+// memo
+// smはファーストビューのコピー用
+// xlはハンバーガーメニューの出し分け

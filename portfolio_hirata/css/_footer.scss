@@ -1,7 +1,8 @@
 @charset "utf-8";
 @use "variable";
-@use "mixin";
+
 @use "btn";
+@use "mediaQuery" as *;
 /* --------
 フッター
 -------- */
@@ -9,6 +10,12 @@
     top: 0px;
     // width: 100%;
     // background: linear-gradient(#FFDBC4, #FFD1B6);
+    @include media(md){
+        padding-top: 123px;
+        text-align: center;
+        background-color: #FFDBC4;
+        padding-bottom: 26px;
+    }
 
     a:hover {
         opacity: 0.5;
@@ -21,6 +28,10 @@
         height: 162px;
         padding: 0 5%;
         background: linear-gradient(#FFDBC4, #FFD1B6);
+        @include media(md){
+            height: 650px;
+            background: none;
+        }
     }
 
     &__container{
@@ -28,40 +39,74 @@
         justify-content: space-between;
         align-items: center;  
         padding-top: 34px;
+
+        @include media(md){
+            display: block;
+        }
     }
 
-    &__logo img{
-        width: 148px;
+    &__logo {
+        @include media(md){
+            margin-bottom: 54px;
         }
 
-    &__list{
-            display: flex;
-            align-items: center;
-            margin: 0;
+        img{
+            width: 148px;
+
+            @include media(md){
+                width: 101px;
             }
+        }
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        margin: 0;
+        @include media(md){
+            display: block;
+        }
+    }
 
     &__item{
         padding-left: 36px;
         text-align: center;
+
+        @include media(md){
+            padding-left: 0;
+            margin-bottom: 29px;
+        }
+
         a{
             line-height:1.5;
         }
     } 
 
     &__title-ja{
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    // margin-bottom: 5px;
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        // margin-bottom: 5px;
+
+        @include media(md){
+            font-size: 10px;
+        }
     }
 
     &__title{
     font-size: 18px;
     font-family: variable.$ff-en; 
+
+        @include media(md){
+            font-size: 18px;
+        }
     }
 
     &__sns{
         display: block;
         width: 24px;
+        @include media(md){
+            margin: 0 auto;
+            padding-top:11px;
+        }
     }
 
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>デザインパートナーTOMO | 優しく温かく行き届く</title>
-    <meta name="description" content="優しく、温かく、行き届くデザインパートナーとして、幸せの輪を広げるお手伝いをします。">
+    <meta name="description" content="京都府在住のデザイナーです。優しく、温かく、行き届くデザインパートナーとして、幸せの輪を広げるお手伝いをします。">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" href="android-chrome-256x256.png">
@@ -21,16 +21,26 @@
         })(document);
     </script>
 
-    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <main>
+    <header class="header-home">
+        <h1 class="header__logo">
+            <a href="index.html" class="nav__link">
+                <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+            </a>
+        </h1>
+    </header>
+    <main class="main">
         <div class="fv">
-            <video src="images/mainvisual_pc.mp4" autoplay muted loop width="100%"></video>
+            <video src="images/mainvisual_pc.mp4" autoplay muted loop></video>
             <div class="fv__maincopy">
                 <img src="images/mv_textanimation.gif" alt="優しく、温かく、行き届く">
             </div>
@@ -78,7 +88,7 @@
                             </a>
                         </li>
                         <li class="fv__item-sns">
-                            <a class="fv__sns" href="https://www.instagram.com/tomo_design24/">
+                            <a class="fv__sns" href="https://www.instagram.com/tomo_design24/" target="_blank">
                                 <img src="images/img_instagram.png" alt="インスタグラム">
                             </a>
                         </li>
@@ -102,12 +112,17 @@
                         「幸せの輪」を広げるために
                     </p>
                     <p class="lead__text">
-                        サービスやモノを提供するあなたと、それを利用するお客さま。<br>
-                        感謝し、感謝される「幸せの輪」が生まれ、どんどん広がっていく。<br>
+                        サービスやモノを提供するあなたと、<br class="spOnly">
+                        それを利用するお客さま。<br>
+                        感謝し、感謝される「幸せの輪」<br class="spOnly">
+                        が生まれ、どんどん広がっていく。<br>
                         <br>
-                        そんな未来を実現するため、優しく、温かく、行き届く<br>
-                        デザインパートナーとしてお手伝いさせていただきます。
+                        そんな未来を実現するため、<br class="spOnly">
+                        優しく、温かく、行き届く<br>
+                        デザインパートナーとして<br class="spOnly">
+                        お手伝いさせていただきます。
                     </p>
+
                     <p class="btn-circle">
                         <a href="message.html" class="message__btn">
                             メッセージを見る
@@ -129,59 +144,59 @@
                     <li class="works__item">
                         <div class="works__img">
                             <a href="./works/work-website_01.html">
-                                <span class="mask">
+                                <div class="mask">
                                     <img src="images/img_works_web_hairsalon_small.png" alt="website">
                                     <p class="caption">
                                         <span class="title">美容室のLP制作</span><br>
                                         <span>LIFE hair design</span><br>
                                         <span>担当:デザイン</span>
                                     </p>
-                                </span>
+                                </div>
                             </a>
                         </div>
                         <div class="works__category">
-                            <p class="works__label">Webサイト
-                            </p>
-                            <p class="works__label">LP
-                            </p>
+                            <span class="works__label">Webサイト
+                            </span>
+                            <span class="works__label">LP
+                            </span>
                         </div>
                     </li>
                     <li class="works__item">
                         <div class="works__img">
-                            <a href="./works/wwork-banner_01.html">
-                                <span class="mask">
+                            <a href="./works/work-banner_01.html">
+                                <div class="mask">
                                     <img src="images/img_works_banner_burger.png" alt="banner">
                                     <p class="caption">
                                         <span class="title">ハンバーガーのバナー制作</span><br>
                                         <span>デラックスバーガー</span><br>
                                         <span>担当:デザイン</span>
                                     </p>
-                                </span>
+                                </div>
                             </a>
                         </div>
                         <div class="works__category">
-                            <p class="works__label">バナー
-                            </p>
-                            <p class="works__label">SNS広告
-                            </p>
+                            <span class="works__label">バナー
+                            </span>
+                            <span class="works__label">SNS広告
+                            </span>
                         </div>
                     </li>
                     <li class="works__item">
                         <div class="works__img">
-                            <a href="./works/wwork-flyer_01.html">
-                                <span class="mask">
+                            <a href="./works/work-flyer_01.html">
+                                <div class="mask">
                                     <img src="images/img_works_flyer_harisalon.png" alt="美容室のWebサイト">
                                     <p class="caption">
                                         <span class="title">美容室の新規オープンチラシ</span><br>
                                         <span>LIFE hair design</span><br>
                                         <span>担当:デザイン</span>
                                     </p>
-                                </span>
+                                </div>
                             </a>
                         </div>
                         <div class="works__category">
-                            <p class="works__label">チラシ
-                            </p>
+                            <span class="works__label">チラシ
+                            </span>
                         </div>
 
                     </li>
@@ -241,7 +256,7 @@
                     </li>
                     <li class="skill__item">
                         <div class="skill__content">
-                            <img src="images/img_skill_photoshop.png" alt="CSS" class="skill__img">
+                            <img src="images/img_skill_css.png" alt="CSS" class="skill__img">
                             <p class=" skill__caption">CSS
                             </p>
                         </div>
@@ -277,7 +292,8 @@
                     <span class="section__title-ja">サービス</span>
                     <span class="section__title-en">SERVICE</span>
                 </h2>
-                <p>デザインからコーディングまでワンストップで担当できるWEBサイト制作をメインに、<br>
+                <p class="service__message">デザインからコーディングまでワンストップで<br class="spOnly">
+                    担当できるWEBサイト制作をメインに、<br>
                     デザインにかかわる様々なお仕事を承っております。
                 </p>
 
@@ -290,8 +306,8 @@
                         <div class="service__body">
                             <p class="service__title"> Webサイト制作</p>
                             <div class="service__category">
-                                <p class="service__label">Webサイト</p>
-                                <p class="service__label">LP</p>
+                                <span class="service__label">Webサイト</span>
+                                <span class="service__label">LP</span>
                             </div>
                         </div>
                     </li>
@@ -303,8 +319,8 @@
                         <div class="service__body">
                             <p class="service__title">バナー制作</p>
                             <div class="service__category">
-                                <p class="service__label">Web広告</p>
-                                <p class="service__label">SNS広告</p>
+                                <span class="service__label">Web広告</span>
+                                <span class="service__label">SNS広告</span>
                             </div>
                         </div>
                     </li>
@@ -316,8 +332,8 @@
                         <div class="service__body">
                             <p class="service__title">チラシ・名刺制作</p>
                             <div class="service__category">
-                                <p class="service__label">チラシ</p>
-                                <p class="service__label">名刺</p>
+                                <span class="service__label">チラシ</span>
+                                <span class="service__label">名刺</span>
                             </div>
                         </div>
                     </li>
@@ -334,22 +350,19 @@
             <div class="contact__inner">
                 <h2 class="section__title-contact">
                     <span class="ja">お問い合わせ</span>
-                    <br>
                     <span class="en">CONTACT</span>
                 </h2>
 
                 <p class="btn__area">
-                    <button class="contact-btn">
-                        <a href="contact.html">
-                            無料で相談する </a>
-                        <div class="contact__img">
-                            <img src="images/e-mail.png" alt="e-mail">
-                        </div>
-                    </button>
+                    <a href="contact.html" class="contact-btn">
+                        無料で相談する
+                        <img class="contact__img" src="images/e-mail.png" alt="e-mail">
+                    </a>
                 </p>
-                <p class="contact__text">お仕事のご依頼や、こんなことできるかなといった疑問、
-                    <br>
-                    こんなこと一緒にやらない？などのお誘いなど、何でもお気軽にどうぞ！
+                <p class="contact__text">お仕事のご依頼や、<br class="spOnly">
+                    こんなことできるかなといった疑問、<br>
+                    こんなこと一緒にやらない？<br class="spOnly">
+                    などのお誘いなど、何でもお気軽にどうぞ！
                 </p>
             </div>
         </section>
@@ -360,7 +373,10 @@
             <div class="footer__container">
                 <p class="footer__logo">
                     <a href="index.html">
-                        <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="images/img_header__logo.png">
+                            <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                        </picture>
                     </a>
                 </p>
 
@@ -402,7 +418,7 @@
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a class="footer__sns" href="https://www.instagram.com/tomo_design24/">
+                            <a class="footer__sns" href="https://www.instagram.com/tomo_design24/" target="_blank">
                                 <img src="images/img_instagram.png" alt="インスタグラム">
                             </a>
                         </li>
@@ -416,8 +432,7 @@
     </footer>
 
     <!-- グローバルナビ　スクロールするとハンバーガーメニューに -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
     <script>
         function FixedAnime() {
             //fvの高さを取得
@@ -425,16 +440,18 @@
             var scroll = $(window).scrollTop();
             if (scroll >= fvH) {//fvの高さ以上までスクロールしたら
                 $('.menu_btn').addClass('fadeDown');//.openbtnにfadeDownというクラス名を付与して
-                $('.fv__inner').addClass('dnone');//fvにdnoneというクラス名を付与
+                $('.fv__inner').addClass('done');//fvにdoneというクラス名を付与
             } else {//それ以外は
                 $('.menu_btn').removeClass('fadeDown');//fadeDownというクラス名を除き
-                $('.fv__inner').removeClass('dnone');//dnoneというクラス名を除く
+                $('.fv__inner').removeClass('done');//doneというクラス名を除く
             }
         }
 
-        // 画面をスクロールをしたら動かす
+        // 画面をスクロールをしたら動かしたい場合の記述
         $(window).scroll(function () {
-            FixedAnime();//スクロールをするとハンバーガーメニューに変化するための関数を呼ぶ
+            if (window.matchMedia('(min-width: 1001px)').matches) {
+                FixedAnime();
+            } //画面幅が1000px以上になるとFixedAnimeを実行する
         });
 
         //ボタンをクリックした際のアニメーションの設定

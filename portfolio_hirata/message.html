@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MESSAGE | デザインパートナーTOMO</title>
+    <meta name="description" content="デザインパートナーTOMOのメッセージページです。わたしが大切にしている想いについて紹介しています。">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -20,17 +21,27 @@
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <!-- slick見た目 -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <!-- style.css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- slick -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
     <header id="header" class="header">
         <div class="header__inner">
             <h1 class="header__logo">
-                <a href="index.html">
+                <a href="index.html" class="nav__link">
                     <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
                 </a>
             </h1>
@@ -38,47 +49,42 @@
             <nav class="header__nav">
                 <ul class="header__list">
                     <li class="header__item-logo">
-                        <a href="index.html">
+                        <a href="index.html" class="nav__link">
                             <img src="images/img_header__logo.png" alt="logo">
                         </a>
                     </li>
                     <li class="header__item">
-                        <a href="message.html">
+                        <a href="message.html" class="nav__link">
                             <span class="header__title-ja">わたしのおもい</span>
-                            <br>
                             <span class="header__title">MESSAGE</span>
                         </a>
                     </li>
                     <li class="header__item">
-                        <a href="./works/index.html">
+                        <a href="./works/index.html" class="nav__link">
                             <span class="header__title-ja">つくったもの</span>
-                            <br>
                             <span class="header__title">WORKS</span>
                         </a>
                     </li>
                     <li class="header__item">
-                        <a href="index.html#skill">
+                        <a href="index.html#skill" class="nav__link">
                             <span class="header__title-ja">できること</span>
-                            <br>
                             <span class="header__title">SKILL</span>
                         </a>
                     </li>
                     <li class="header__item">
-                        <a href="service.html">
+                        <a href="service.html" class="nav__link">
                             <span class="header__title-ja">サービス</span>
-                            <br>
                             <span class="header__title">SERVICE</span>
                         </a>
                     </li>
                     <li class="header__item">
-                        <a href="contact.html">
+                        <a href="contact.html" class="nav__link">
                             <span class="header__title-ja">お問い合わせ</span>
-                            <br>
                             <span class="header__title">CONTACT</span>
                         </a>
                     </li>
                     <li class="header__item">
-                        <a class="header__sns" href="https://www.instagram.com/tomo_design24/">
+                        <a class="header__sns" href="https://www.instagram.com/tomo_design24/" target="_blank">
                             <img src="images/img_instagram.png" alt="インスタグラム">
                         </a>
                     </li>
@@ -94,16 +100,15 @@
         <div class="mainvisual">
             <img src="images/mv_message.jpg" alt="わたしのおもい">
             <h2 class="mainvisual__title">
-                <p class="mainvisual__title-ja">わたしのおもい</p>
-                <br>
-                <p class="mainvisual__title-en">MESSAGE</p>
+                <span class="mainvisual__title-ja">わたしのおもい</span>
+                <span class="mainvisual__title-en">MESSAGE</span>
             </h2>
         </div>
 
         <ul class="page__link">
-            <li page__item><a href="#message" class="page__link-btn">わたしのおもい</a></li>
-            <li page__item><a href="#feature" class="page__link-btn">大切にしていること</a></li>
-            <li page__item><a href="#introduction" class="page__link-btn">わたしのこと</a></li>
+            <li class="page__item"><a href="#message" class="page__link-btn">わたしのおもい</a></li>
+            <li class="page__item"><a href="#feature" class="page__link-btn">大切にしていること</a></li>
+            <li class="page__item"><a href="#introduction" class="page__link-btn">わたしのこと</a></li>
         </ul>
 
         <section id="message" class="message">
@@ -131,7 +136,7 @@
         <section class="worry">
             <div class="worry__inner">
                 <div class="worry__contents">
-                    <p class="worry__title">突然ですが、こんなお悩みありませんか？</p>
+                    <h3 class="worry__title">突然ですが、こんなお悩みありませんか？</h3>
                     <div class="worry__box">
                         <ul class="worry__list">
                             <li class="worry__item-left">世界観がふわっとしか決まっていなくて...</li>
@@ -144,7 +149,7 @@
                             <img src="images/img_message_worry.png" alt="worry">
                         </div>
 
-                        <ul class="worry__list">
+                        <ul class="worry__list-right">
                             <li class="worry__item-right">何から始めたらいいかわからない... </li>
                             <li class="worry__item-right">思ってたのと違ったらどうしよう... </li>
                             <li class="worry__item-right">Webの知識ないけど大丈夫かな.... </li>
@@ -186,7 +191,7 @@
                         <p class="feature__text">企業によっては大人数が関わるため、<br>
                             引き継ぎがうまくできてなかったり、<br>
                             認識のズレが生じてしまうことがあります。<br>
-                            私はそうならないよう、お打ち合わせから納品までワンストップで対応させていただきます！私は案件の数よりもあなたにしっかりと向き合い、「信頼関係」を大切にします。</p>
+                            私はそうならないよう、お打ち合わせから納品までワンストップで対応させていただきます！案件の数よりもあなたにしっかりと向き合い、「信頼関係」を大切にします。</p>
                     </li>
                 </ul>
             </div>
@@ -196,7 +201,7 @@
             <div class="introduction__inner">
                 <h3 class="section title">わたしのこと</h3>
                 <div class="introduction__contents">
-                    <div class="introduction__img"><img src="images/lead__img.png" alt="">
+                    <div class="introduction__img"><img src="images/lead__img.png" alt="introduction">
                     </div>
                     <div class="introduction__textarea">
                         <p class="title">デザイナー</p>
@@ -208,14 +213,13 @@
                         <p class="introduction__text">前職は京都の旅館で、約6年間勤務しました。<br>
                             接客から始まり、様々な業務を経験する中で、<br>
                             2020年からチラシなどのデザイン関係も担当しました。<br>
+                            <br class="spOnly">
                             デザインに触れていると時間を忘れるほど没頭し、<br>
-                            「デザインを本職にしたい！」「挑戦したい！」という想いが芽生え、<br>
-                            プロのデザイナーを目指すことに。<br>
+                            「デザインを本職にしたい！」「挑戦したい！」という想いが芽生え、プロのデザイナーを目指すことに。<br>
                             <br>
                             その後、デザインとコーディングスキルを身に着け、<br>
                             2024年5月「デザインパートナーTOMO」として活動を始めました。<br>
-                            接客や事務の経験も生かし「優しく、温かく、行き届く」デザインパートナー<br>
-                            として日々精進します！
+                            接客や事務の経験も生かし「優しく、温かく、行き届く」デザインパートナーとして日々精進します！
                         </p>
                     </div>
                 </div>
@@ -311,22 +315,19 @@
             <div class="contact__inner">
                 <h2 class="section__title-contact">
                     <span class="ja">お問い合わせ</span>
-                    <br>
                     <span class="en">CONTACT</span>
                 </h2>
 
                 <p class="btn__area">
-                    <button class="contact-btn">
-                        <a href="contact.html">
-                            無料で相談する </a>
-                        <div class="contact__img">
-                            <img src="images/e-mail.png" alt="e-mail">
-                        </div>
-                    </button>
+                    <a href="contact.html" class="contact-btn">
+                        無料で相談する
+                        <img class="contact__img" src="images/e-mail.png" alt="e-mail">
+                    </a>
                 </p>
-                <p class="contact__text">お仕事のご依頼や、こんなことできるかなといった疑問、
-                    <br>
-                    こんなこと一緒にやらない？などのお誘いなど、何でもお気軽にどうぞ！
+                <p class="contact__text">お仕事のご依頼や、<br class="spOnly">
+                    こんなことできるかなといった疑問、<br>
+                    こんなこと一緒にやらない？<br class="spOnly">
+                    などのお誘いなど、何でもお気軽にどうぞ！
                 </p>
             </div>
         </section>
@@ -379,7 +380,7 @@
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a class="footer__sns" href="https://www.instagram.com/tomo_design24/">
+                            <a class="footer__sns" href="https://www.instagram.com/tomo_design24/" target="_blank">
                                 <img src="images/img_instagram.png" alt="インスタグラム">
                             </a>
                         </li>
@@ -391,8 +392,7 @@
             </p>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
     <!--タイムラインの縦線が伸びるJS-->
     <script>//線が伸びるための設定を関数でまとめる
         function ScrollTimelineAnime() {
@@ -428,8 +428,7 @@
             ScrollTimelineAnime();// 線が伸びる関数を呼ぶ
         });</script>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
     <script src="js/script.js"></script>
 </body>
 

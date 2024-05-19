@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WORKS | デザインパートナーTOMO</title>
-    <meta name="description" content="優しく、温かく、行き届くデザインパートナーとして、幸せの輪を広げるお手伝いをします。">
+    <meta name="description" content="デザインパートナーTOMOの実績紹介ページです。バナーの制作物について紹介しています。">
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
     <link rel="icon" type="image/png" href="../android-chrome-256x256.png">
@@ -20,11 +20,13 @@
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
-
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -47,40 +49,35 @@
                     <li class="header__item">
                         <a href="../message.html">
                             <span class="header__title-ja">わたしのおもい</span>
-                            <br>
                             <span class="header__title">MESSAGE</span>
                         </a>
                     </li>
                     <li class="header__item">
                         <a href="index.html">
                             <span class="header__title-ja">つくったもの</span>
-                            <br>
                             <span class="header__title">WORKS</span>
                         </a>
                     </li>
                     <li class="header__item">
                         <a href="../index.html#skill">
                             <span class="header__title-ja">できること</span>
-                            <br>
                             <span class="header__title">SKILL</span>
                         </a>
                     </li>
                     <li class="header__item">
                         <a href="../service.html">
                             <span class="header__title-ja">サービス</span>
-                            <br>
                             <span class="header__title">SERVICE</span>
                         </a>
                     </li>
                     <li class="header__item">
                         <a href="../contact.html">
                             <span class="header__title-ja">お問い合わせ</span>
-                            <br>
                             <span class="header__title">CONTACT</span>
                         </a>
                     </li>
                     <li class="header__item">
-                        <a class="header__sns" href="https://www.instagram.com/tomo_design24/">
+                        <a class="header__sns" href="https://www.instagram.com/tomo_design24/" target="_blank">
                             <img src="../images/img_instagram.png" alt="インスタグラム">
                         </a>
                     </li>
@@ -94,9 +91,8 @@
     <main>
         <div class="mainvisual">
             <h2 class="mainvisual__title-work">
-                <p class="ja">つくったもの</p>
-                <br>
-                <p class="en">WORKS</p>
+                <span class="mainvisual__title-ja">つくったもの</span>
+                <span class="mainvisual__title-en">WORKS</span>
             </h2>
         </div>
 
@@ -116,8 +112,8 @@
                             <p class="work__lead">tmスイミングスクール</p>
                         </div>
                         <div class="work__category">
-                            <p class="work__label">SNS広告</p>
-                            <p class="work__label">自主制作</p>
+                            <span class="work__label">SNS広告</span>
+                            <span class="work__label">自主制作</span>
                         </div>
                     </div>
                     <div class="work__desc">
@@ -162,18 +158,14 @@
             <div class="contact__inner">
                 <h2 class="section__title-contact">
                     <span class="ja">お問い合わせ</span>
-                    <br>
                     <span class="en">CONTACT</span>
                 </h2>
 
                 <p class="btn__area">
-                    <button class="contact-btn">
-                        <a href="../contact.html">
-                            無料で相談する </a>
-                        <div class="contact__img">
-                            <img src="../images/e-mail.png" alt="e-mail">
-                        </div>
-                    </button>
+                    <a href="../contact.html" class="contact-btn">
+                        無料で相談する
+                        <img class="contact__img" src="../images/e-mail.png" alt="e-mail">
+                    </a>
                 </p>
                 <p class="contact__text">お仕事のご依頼や、こんなことできるかなといった疑問、
                     <br>
@@ -203,7 +195,7 @@
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a href="works/index.html">
+                            <a href="index.html">
                                 <span class="footer__title-ja">つくったもの</span>
                                 <br>
                                 <span class="footer__title">WORKS</span>
@@ -231,7 +223,7 @@
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a class="footer__sns" href="https://www.instagram.com/tomo_design24/">
+                            <a class="footer__sns" href="https://www.instagram.com/tomo_design24/" target="_blank">
                                 <img src="../images/img_instagram.png" alt="インスタグラム">
                             </a>
                         </li>
@@ -243,8 +235,6 @@
             </p>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
 </body>
 

@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @use "variable";
+@use "mediaQuery" as *;
 
 
 /* ------------
@@ -12,8 +13,12 @@
     text-align: center;
     display: flex;
     justify-content: flex-end;
-    margin-top: 37px;
+    margin-top: 50px;
     padding-right: 14px;
+
+    @include media(md){
+        margin-top: 22px;
+    }
 
     a {
         display: inline-block;
@@ -24,6 +29,10 @@
         font-weight: normal;
         transition: 0.3s;
         text-decoration: none;
+        @include media(md){
+            padding: 1em 65px 1em 0em;
+            font-size: 14px;
+        }
 
     /* before:丸 */
     &::before {
@@ -39,6 +48,10 @@
         background: #FFFDFA;
         border: 1px solid variable.$peach-fuzz;
         transition: 0.3s;
+        @include media(md){
+            width: 46px;
+            height: 46px;
+        }
     }
 
     /* after:矢印 */
@@ -53,6 +66,9 @@
         border-top: 1px solid variable.$text-color;
         border-right: 1px solid variable.$text-color;
         transition: 0.3s;
+        @include media(md){
+            right: 23px;
+        }
     }
 
     &:hover::before {
@@ -85,59 +101,81 @@
     align-items: center;
     margin: 0 auto;
     margin-top: 95px;
+    @include media(md){
+        display: block;
+        text-align: right;
+        padding: 0 40px;
+    }
 
     &-btn{
         position: relative;
         display: inline-block;
     }
 }
-.page__link li {
-    a {
-    padding-left: 8px;
-    color: variable.$text-color;
-    text-decoration: none;
-    transition: 0.3s;
-
-        &:before {/* before：下線 */
-            position: absolute;
-            visibility: hidden; /* ホバー前は非表示 */
-            content: '';
-            width: 130%;
-            height: 1px;
-            bottom: -8px;
-            left: 0;
-            border-radius: 3px;
-            background: variable.$peach-fuzz;
-            opacity: 0;
+.page__link {
+    .page__item{
+        a {
+            padding-left: 8px;
+            color: variable.$text-color;
+            text-decoration: none;
             transition: 0.3s;
-        }
+            @include media(md){
+                margin-bottom: 27px;
+            }
 
-        &:after {/* before：矢印 */
-            position: absolute;
-            content: '';
-            width: 7px;
-            height: 7px;
-            border: 0;
-            border-top: solid 1px variable.$peach-fuzz;
-            border-right: solid 1px variable.$peach-fuzz;
-            transform: rotate(135deg);
-            right: -18px;
-            top: 10%;
-            margin: auto;
-            transition: 0.3s;
-        }
+            &:before {/* before：下線 */
+                position: absolute;
+                visibility: hidden; /* ホバー前は非表示 */
+                content: '';
+                width: 130%;
+                height: 1px;
+                bottom: -8px;
+                left: 0;
+                border-radius: 3px;
+                background: variable.$peach-fuzz;
+                opacity: 0;
+                transition: 0.3s;
+                @include media(md){
+                    position: absolute;
+                    content: '';
+                    width: 130%;
+                    height: 1px;
+                    bottom: -8px;
+                    left: 0;
+                    border-radius: 3px;
+                    background: variable.$peach-fuzz;
+                    opacity: 0;
+                    transition: 0.3s;
+                }
+            }
 
-        &:hover:before {
-            visibility: visible; /* ホバー前は非表示 */
-            bottom: -10px;
-            opacity: 1;
-            transition: 0.3s;
-        }
+            &:after {/* before：矢印 */
+                position: absolute;
+                content: '';
+                width: 7px;
+                height: 7px;
+                border: 0;
+                border-top: solid 1px variable.$peach-fuzz;
+                border-right: solid 1px variable.$peach-fuzz;
+                transform: rotate(135deg);
+                right: -18px;
+                top: 10%;
+                margin: auto;
+                transition: 0.3s;
+            }
 
-        &:hover:after {
-            bottom: -1px;
-            opacity: 1;
-            transition: 0.3s;
+            &:hover:before {
+                visibility: visible; /* ホバー前は非表示 */
+                bottom: -10px;
+                opacity: 1;
+                transition: 0.3s;
+            }
+
+            &:hover:after {
+                bottom: -1px;
+                opacity: 1;
+                transition: 0.3s;
+            }
         }
     }
 }
@@ -198,11 +236,11 @@
         border-radius: 10px;
         border: 1px solid variable.$pink-beige;
         background: variable.$cream-beige;
+        cursor: pointer;
     
     .contact__img {
             width: 16px;
             height: auto;
-            padding-bottom: 2px;
         }
     
     &:hover {
@@ -240,7 +278,6 @@
     .send__img {
         width: 17px;
         height: auto;
-        padding-bottom: 10px;
     }
 
     &:hover {
@@ -255,4 +292,8 @@
     display: flex;
     justify-content: center;
     gap: 60px;
+
+    @include media(md){
+        display: block;
+    }
 }

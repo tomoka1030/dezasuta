@@ -1,8 +1,9 @@
 @charset "utf-8";
 
 @use "variable";
-@use "mixin";
+
 @use "btn";
+@use "mediaQuery" as *;
 /* ------------
 worksページ
 ------------- */
@@ -14,7 +15,7 @@ worksページ
     // max-width: variable.$width-inner;
     margin: 0 auto;
 
-    h3{
+    .section title{
         padding-left: 8%;
         font-size: 33px;
         font-weight: bold;
@@ -35,6 +36,10 @@ worksページ
         border-radius: 10px;
         width: 40%;
         // width: 32%;
+        margin: 10px;
+        @include media(md){
+            width: 100%;
+        }
 
         img{
             width: 100%;
@@ -44,7 +49,7 @@ worksページ
             transition: .3s ease-in-out;
             }
     
-        span.mask{
+        .mask{
             position: relative;
             border-radius: 10px;
             transition: .3s ease-in-out;/*移り変わる速さ*/
@@ -87,7 +92,7 @@ worksページ
             }
     }
 
-    .website__img:hover span.mask::before{
+    .website__img:hover .mask::before{
         content:"";
         position: absolute;
         border-radius: 10px;
@@ -125,9 +130,10 @@ worksページ
 
 
     &__img{
+        width: 30%;
+        margin: 10px;
         position: relative; 
         border-radius: 10px;
-        width: 30%;
 
         img{
             width: 100%;
@@ -137,7 +143,7 @@ worksページ
             transition: .3s ease-in-out;
             }
     
-        span.mask{
+        .mask{
             position: relative;
             border-radius: 10px;
             transition: .3s ease-in-out;/*移り変わる速さ*/
@@ -180,7 +186,7 @@ worksページ
             }
     }
 
-    .banner__img:hover span.mask::before{
+    .banner__img:hover .mask::before{
         content:"";
         position: absolute;
         border-radius: 10px;
@@ -217,9 +223,10 @@ worksページ
 
 
     &__img{
-	    position: relative; 
+        position: relative; 
         border-radius: 10px;
         width: 30%;
+        margin: 10px;
 
         img{
             width: 100%;
@@ -229,7 +236,7 @@ worksページ
             transition: .3s ease-in-out;
             }
     
-        span.mask{
+        .mask{
             position: relative;
             border-radius: 10px;
             transition: .3s ease-in-out;/*移り変わる速さ*/
@@ -272,7 +279,7 @@ worksページ
             }
     }
 
-.graphic__img:hover span.mask::before{
+.graphic__img:hover .mask::before{
         content:"";
         position: absolute;
         border-radius: 10px;
@@ -284,29 +291,297 @@ worksページ
         background: rgba(255, 255, 255, 0.7);
     }
 }
-// .graphic{
-//     padding: 193px 143px 0 143px;
-//     // max-width: variable.$width-inner;
-//     margin: 0 auto;
 
-//     h3{
-//         font-size: 33px;
-//         font-weight: bold;
-//         color: variable.$dusty-pink;
-//     }
+.slick-prev slick-arrow{
+    display: none;
+}
+/* -----------------------------------
+works/下層ページ
+-------------------------------------- *
+/*制作実績の詳細ページ基本の型 */
 
-//     &__slider{
-//         display: flex;
-//         justify-content: center;
-//         gap: 39px;
-//         // justify-content: space-between;
-//         margin-top: 56px;
+.mainvisual__title-work{
+    // display: inline-block;
+    padding: 135px 0 135px 0;
+    margin: 0 auto;
+    text-align: center;
+        
+    .mainvisual__title-ja{
+        display: block;
+        margin-bottom: 13px;
+        font-size: 17px;
+        letter-spacing: 0.2em;
+    }
+    .mainvisual__title-en{
+        font-size: 32px;
+        font-family: variable.$ff-en; 
+    }
+}
 
-//     &__img{
-//         width: 31%;
-//         img{
-//             width: 100%;
-//         }
-//     }
-// }
-// }
+.work{
+    &__img{
+        margin: 0 auto;
+        width:52% ;
+        img{
+            width: 100%;
+        }
+    }
+    &__inner{
+        max-width: variable.$width-inner;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 141px;
+        margin: 0 auto;
+
+        @include media(md){
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+        }      
+
+        h3{
+            font-size: 32px;
+            font-family: variable.$ff-en;
+        }
+    }
+    &__detail{
+        display: block;
+        text-align: left;
+        width: 67%;
+        padding-left: 20px;
+
+        @include media(md){
+            display: block;
+            width: 80%;
+        }   
+    }
+
+    &__head{
+        display: flex;
+        gap: 36px;
+
+        @include media(md){
+            display: block;
+        }      
+    }
+
+    &__heading{
+        display: block;
+        h4{
+            font-size: 25px;
+            font-weight: normal;
+            margin: 0;
+        }
+        p.work__lead{
+            margin-top: 14px;
+            font-size: 18px;
+        }
+    }
+
+    &__category{
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+
+    
+        &__label{
+        display: inline-block;
+        padding: 6px 24px;
+        color: variable.$text-color;
+        background-color: variable.$cream-beige;
+        border: 1px solid variable.$peach-fuzz;
+        border-radius: 32px;
+    }  
+    }  
+
+    &__desc{
+        padding-top: 48px;
+        margin-left: auto;
+
+        & dl{
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            padding-bottom: 32px;
+
+            @include media(md){
+                display: block;
+            }      
+    
+            dt{
+                position: relative;
+                text-align: center;
+                width: 107px;
+                font-size: 15px;
+                padding: 3px 10px;
+
+                &::before, &::after {
+                    content:'';
+                    position: absolute;
+                    width: 10px;
+                    height: 100%;
+                }
+
+                &::before {
+                    border-left: dotted 1px  variable.$peach-fuzz;
+                    border-top: dotted 1px variable.$peach-fuzz;
+                    border-bottom: dotted 1px variable.$peach-fuzz;
+                    top: 0;
+                    left: 0;
+                }
+                &::after {
+                    border-right: dotted 1px variable.$peach-fuzz;
+                    border-top: dotted 1px variable.$peach-fuzz;
+                    border-bottom: dotted 1px variable.$peach-fuzz;
+                    top: 0;
+                    right: 0;
+                }
+            }
+    
+            dd{
+                width: 70%;
+                padding-right:6%;
+                font-size: 15px;
+                line-height: 1.5;
+            }
+        }
+    }               
+}
+
+  /*_websiteの画像配置 */
+
+.detail__img-pc{
+    max-width: variable.$width-inner;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 92px;
+    // justify-content: flex-start;
+    // justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 146px;
+    padding: 0 20px; 
+
+    @include media(md){
+        justify-content: center;
+        margin-bottom: 0;
+    } 
+    img{
+        width: 45%;
+        border-radius: 10px;
+        margin-bottom: 100px;
+        box-shadow: 5px 5px 5px -2px #F3EBE5;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.detail__img-sp{
+    max-width: variable.$width-inner;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 20px;
+    img{
+        width: 28%;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px -2px #F3EBE5;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+/* ------------------
+デザインパートナーTOMO
+------------------- */
+/*当サイトのロゴについての説明*/
+
+.logo{
+    width: 30%;
+    padding-top: 226px;
+    margin: 0 auto;
+    text-align: center;
+
+    h3{
+        display: inline-block;
+        padding: 10px;
+        border-bottom: 4px dotted variable.$dusty-pink;
+        font-size: 30px;
+        color: variable.$dusty-pink;
+    }
+
+    &__img{
+        margin: 0 auto;
+        padding-top: 102px;
+        width: 71%;
+        img{
+            width: 100%;
+        }
+    }
+    &__desc{
+        margin-top: 80px;
+        font-size: 15px;
+        line-height:1.5 ;
+    }
+}
+
+/* ---------------
+ハンバーガーのバナー
+------------------ */
+// 提案
+.text__container {
+    max-width: variable.$width-inner;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 45%;
+}
+
+.work__text {
+    position: relative;
+    text-align: center;
+    padding: 17px;
+    margin-top: 74px;
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: 0.8rem;
+        height: 1.8rem;
+        content: '';
+    }
+
+    &::before {
+        border-left: dotted 2px variable.$peach-fuzz;
+        left: 0;
+        transform: rotate(-30deg);
+    }
+
+    &::after {
+        border-right: dotted 2px variable.$peach-fuzz;
+        right: 0;
+        transform: rotate(30deg);
+    }
+}
+
+.banner__wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    padding: 0 17%;
+    margin-top: 67px;
+}
+.banner__more{
+    display: block;
+    width: 35%;
+    margin-bottom: 87px;
+    p{
+        margin-bottom: 18px;
+    }
+    img{
+        width: 100%;
+    }
+}
