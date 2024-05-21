@@ -4,7 +4,10 @@
 @use "mediaQuery" as *;
 /* ------------
 全ページ共通のcss
-------------- */
+// ------------- */
+// * {
+//   outline: 2px solid blue;
+// }
 
 .spOnly{
   display: none;
@@ -99,6 +102,7 @@ body{
   padding-left: 60px;
 
   @include media(md){
+    margin-bottom: 41px;
     padding-left: 30px;
   }
 
@@ -150,11 +154,16 @@ body{
   position: absolute;
   bottom: -50px;
   display: block;
-  width: 100%;
+  width: 90%;
   padding: 0;
   margin: 0;
   list-style: none;
   text-align: center;
+
+      @include media(md){
+        bottom: -30px;
+    }
+
 }
 
   .slick-dots li button
@@ -177,7 +186,7 @@ body{
 {
     position: relative;
     display: inline-block;
-    width: 120px;
+    width: 150px;
     height: 3px;
     background: variable.$pink-beige;
     margin: 0;
@@ -188,10 +197,12 @@ body{
     }
 }
 
-li.slick-active {
+.slick-dots .slick-active {
     border-radius: 10px;
     background: variable.$peach-fuzz;
+    cursor: pointer;
 }
+
 
 .slick-dots li button:before {
   font-family: 'slick';

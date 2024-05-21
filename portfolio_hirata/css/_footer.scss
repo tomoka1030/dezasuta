@@ -10,8 +10,8 @@
     top: 0px;
     // width: 100%;
     // background: linear-gradient(#FFDBC4, #FFD1B6);
-    @include media(md){
-        padding-top: 123px;
+    @include media(xl){
+        padding-top: 40px;
         text-align: center;
         background-color: #FFDBC4;
         padding-bottom: 26px;
@@ -28,7 +28,7 @@
         height: 162px;
         padding: 0 5%;
         background: linear-gradient(#FFDBC4, #FFD1B6);
-        @include media(md){
+        @include media(xl){
             height: 650px;
             background: none;
         }
@@ -40,20 +40,21 @@
         align-items: center;  
         padding-top: 34px;
 
-        @include media(md){
+        @include media(xl){
             display: block;
+            padding-top: 0;
         }
     }
 
     &__logo {
-        @include media(md){
+        @include media(xl){
             margin-bottom: 54px;
         }
 
         img{
             width: 148px;
 
-            @include media(md){
+            @include media(xl){
                 width: 101px;
             }
         }
@@ -62,7 +63,7 @@
         display: flex;
         align-items: center;
         margin: 0;
-        @include media(md){
+        @include media(xl){
             display: block;
         }
     }
@@ -71,9 +72,9 @@
         padding-left: 36px;
         text-align: center;
 
-        @include media(md){
+        @include media(xl){
             padding-left: 0;
-            margin-bottom: 29px;
+            margin-bottom: 20px;
         }
 
         a{
@@ -86,7 +87,7 @@
         letter-spacing: 0.2em;
         // margin-bottom: 5px;
 
-        @include media(md){
+        @include media(xl){
             font-size: 10px;
         }
     }
@@ -95,7 +96,7 @@
     font-size: 18px;
     font-family: variable.$ff-en; 
 
-        @include media(md){
+        @include media(xl){
             font-size: 18px;
         }
     }
@@ -103,9 +104,10 @@
     &__sns{
         display: block;
         width: 24px;
-        @include media(md){
+
+        @include media(xl){
             margin: 0 auto;
-            padding-top:11px;
+            padding-top:18px;
         }
     }
 

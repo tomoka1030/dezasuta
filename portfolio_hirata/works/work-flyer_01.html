@@ -39,13 +39,12 @@
             </h1>
 
             <nav class="header__nav">
+                <div class="header__item-logo">
+                    <a href="index.html" class="nav__link">
+                        <img src="../images/img_header__logo.png" alt="logo">
+                    </a>
+                </div>
                 <ul class="header__list">
-
-                    <li class="header__item-logo">
-                        <a href="../index.html">
-                            <img src="../images/img_header__logo.png" alt="logo">
-                        </a>
-                    </li>
                     <li class="header__item">
                         <a href="../message.html">
                             <span class="header__title-ja">わたしのおもい</span>
@@ -171,9 +170,10 @@
                         <img class="contact__img" src="../images/e-mail.png" alt="e-mail">
                     </a>
                 </p>
-                <p class="contact__text">お仕事のご依頼や、こんなことできるかなといった疑問、
-                    <br>
-                    こんなこと一緒にやらない？などのお誘いなど、何でもお気軽にどうぞ！
+                <p class="contact__text">お仕事のご依頼や、<br class="spOnly">
+                    こんなことできるかなといった疑問、<br>
+                    こんなこと一緒にやらない？<br class="spOnly">
+                    などのお誘いなど、何でもお気軽にどうぞ！
                 </p>
             </div>
         </section>
@@ -184,8 +184,11 @@
         <div class="footer__inner">
             <div class="footer__container">
                 <p class="footer__logo">
-                    <a href="../index.html">
-                        <img src="../images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                    <a href="index.html">
+                        <picture>
+                            <source media="(max-width:1000px)" srcset="../images/img_header__logo.png">
+                            <img src="../images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                        </picture>
                     </a>
                 </p>
 

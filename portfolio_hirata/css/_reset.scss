@@ -1,7 +1,5 @@
 @charset "utf-8";
-
 @use "variable";
-
 @use "btn";
 @use "mediaQuery" as *;
 /* ------------
@@ -28,7 +26,7 @@ li {
     padding: 0;
     line-height: 1;
     /*デフォルトの文字色、font-familyを予め当てておく*/
-    color: #522A28;
+    color: variable.$text-color;
     
     font-family: "fot-tsukuardgothic-std", sans-serif, "游明朝", YuMincho, "Hiragino Mincho ProN W3",
         "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
@@ -68,16 +66,16 @@ img {
 }
 
 /* 汎用クラス */
-.sp_only {
+.spOnly {
     display: none;
 }
 
 @media screen and (max-width: 767px) {
-    .sp_only {
+    .spOnly {
         display: block;
     }
 
-    .pc_only {
+    .pcOnly {
         display: none;
     }
 }

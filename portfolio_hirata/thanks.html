@@ -20,15 +20,17 @@
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <!-- style.css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
-<body>
-
+<body class="thanksPage">
     <header id="header" class="header">
         <div class="header__inner">
             <h1 class="header__logo">
@@ -38,12 +40,12 @@
             </h1>
 
             <nav class="header__nav">
+                <div class="header__item-logo">
+                    <a href="index.html" class="nav__link">
+                        <img src="images/img_header__logo.png" alt="logo">
+                    </a>
+                </div>
                 <ul class="header__list">
-                    <li class="header__item-logo">
-                        <a href="index.html" class="nav__link">
-                            <img src="images/img_header__logo.png" alt="logo">
-                        </a>
-                    </li>
                     <li class="header__item">
                         <a href="message.html" class="nav__link">
                             <span class="header__title-ja">わたしのおもい</span>
@@ -83,6 +85,10 @@
             </nav>
         </div>
     </header>
+
+    <div class="menu_btn"><span></span><span></span><span></span></div>
+
+
     <main class="main">
         <section id="confirm" class="confirm">
             <p class="confirm__title">
@@ -93,11 +99,12 @@
             </div>
             <p class="confirm__message">お問い合わせいただきありがとうございました。<br>
                 <br>
-                いただいた内容につきましては確認後、
-                2日以内にご連絡いたしますのでしばらくお待ち下さいませ。<br>
+                いただいた内容につきましては確認後、<br class="spOnly">
+                2日以内にご連絡いたしますので<br class="spOnly">
+                しばらくお待ち下さいませ。<br>
                 <br>
-
-                しばらくたってもメールが届かない場合は、お手数ですが再度お問い合わせください。
+                しばらくたってもメールが届かない場合は、<br class="spOnly">
+                お手数ですが再度お問い合わせください。
             </p>
 
             <div class="sns">
@@ -107,8 +114,9 @@
                 </a>
                 <!-- </div> -->
                 <p class="sns__message">
-                    Instagramでは最新の情報を発信しております。<br>
-                    返信をお待ちの間にぜひチェックしてください
+                    Instagramでは<br class="spOnly">
+                    最新の情報を発信しております。<br>
+                    返信をお待ちの間にぜひチェックしてください!
                 </p>
             </div>
         </section>
@@ -119,7 +127,10 @@
             <div class="footer__container">
                 <p class="footer__logo">
                     <a href="index.html">
-                        <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                        <picture>
+                            <source media="(max-width:1000px)" srcset="images/img_header__logo.png">
+                            <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                        </picture>
                     </a>
                 </p>
 
@@ -173,6 +184,56 @@
             </p>
         </div>
     </footer>
+    <script>
+
+        $(function () {
+            // 初回ロード時に#headerにdoneクラスを付与
+            $('#header').addClass('done');
+
+            // ボタンをクリックした際のアニメーションの設定
+            $(".menu_btn").click(function () { // ボタンがクリックされたら
+                $(this).toggleClass('active'); // ボタン自身に activeクラスを付与し
+                $("#header").toggleClass('panelactive'); // ヘッダーにpanelactiveクラスを付与
+            });
+
+            $(".header__nav").click(function () { // ナビゲーションのリンクがクリックされたら
+                $(".menu_btn").removeClass('active'); // ボタンの activeクラスを除去し
+                $("#header").removeClass('panelactive'); // ヘッダーのpanelactiveクラスも除去
+            });
+        });
+        // function FixedAnime() {
+        //     //mvの高さを取得
+        //     var header = $('#header').outerHeight(true);
+        //     var scroll = $(window).scrollTop();
+        //     if (scroll >= headerH) {//mvの高さ以上までスクロールしたら
+        //         $('.menu_btn').addClass('fadeDown');//.openbtnにfadeDownというクラス名を付与して
+        //         $('#header').addClass('done');//#headerにdoneというクラス名を付与
+        //     } else {//それ以外は
+        //         $('.menu_btn').removeClass('fadeDown');//fadeDownというクラス名を除き
+        //         $('#header').removeClass('done');//doneというクラス名を除く
+        //     }
+        // }
+
+        // // 画面をスクロールをしたら動かしたい場合の記述
+        // $(window).scroll(function () {
+        //     if (window.matchMedia('(min-width: 1001px)').matches) {
+        //         FixedAnime();
+        //     } //画面幅が1000px以上になるとFixedAnimeを実行する
+        // });
+        // if (window.matchMedia('(max-width: 1000px)').matches) {
+        //     $('#header').addClass('done');
+        // }//画面幅が1000px以下になると#headerにdoneというクラス名を付与(メニューを表示させる)
+
+        // //ボタンをクリックした際のアニメーションの設定
+        // $(".menu_btn").click(function () {//ボタンがクリックされたら
+        //     $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+        //     $("#header").toggleClass('panelactive');//ヘッダーにpanelactiveクラスを付与
+        // });
+        // $(".header__nav").click(function () {//ナビゲーションのリンクがクリックされたら
+        //     $(".menu_btn").removeClass('active');//ボタンの activeクラスを除去し
+        //     $("#header").removeClass('panelactive');//ヘッダーのpanelactiveクラスも除去
+        // });
+    </script>
 </body>
 
 </html>

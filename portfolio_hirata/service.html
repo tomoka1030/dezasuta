@@ -47,12 +47,12 @@
             </h1>
 
             <nav class="header__nav">
+                <div class="header__item-logo">
+                    <a href="index.html" class="nav__link">
+                        <img src="images/img_header__logo.png" alt="logo">
+                    </a>
+                </div>
                 <ul class="header__list">
-                    <li class="header__item-logo">
-                        <a href="index.html" class="nav__link">
-                            <img src="images/img_header__logo.png" alt="logo">
-                        </a>
-                    </li>
                     <li class="header__item">
                         <a href="message.html" class="nav__link">
                             <span class="header__title-ja">わたしのおもい</span>
@@ -112,9 +112,9 @@
         </ul>
         <section id="service" class="service">
             <div class="service__inner">
-                <p>デザインからコーディングまでワンストップで担当できるWEBサイト制作をメインに、<br>
-                    デザインにかかわる様々なお仕事を承っております。
-                </p>
+                <p class="service__message">デザインからコーディングまでワンストップで<br class="spOnly">
+                    担当できるWEBサイト制作をメインに、<br>
+                    デザインにかかわる様々なお仕事を承っております。</p>
 
                 <ul class="service__list">
                     <li class="service__item">
@@ -132,7 +132,7 @@
                                 あなたのブランドの価値を最大限魅せるデザインを創り上げます。<br>
                                 JavaScriptやjQueryを使用し、テンプレートでは表現できない雰囲気にあった動きのあるWebサイトができます。
                             </p>
-                            <a href="" class="btn-arrow">
+                            <a href="./works/index.html#website" class="btn-arrow">
                                 Webサイト制作の実績を見る</a>
                         </div>
                     </li>
@@ -151,7 +151,7 @@
                                 バナーは多くのユーザーの目に触れるため、認知度を高めるチャンスです。<br>
                                 オープンの告知や、新商品の紹介など、ターゲットのニーズにマッチする広告を作ります。
                             </p>
-                            <a href="" class="btn-arrow">
+                            <a href="./works/index.html#banner" class="btn-arrow">
                                 バナー制作の実績を見る</a>
                         </div>
                     </li>
@@ -170,13 +170,13 @@
                                 チラシは手に取り、必ず目に触れるため、記憶にも残りやすい特徴があります。心に響くデザインをして、手に取った方の行動に結びつけます。
                                 名刺などの印刷物も対応可能です！
                             </p>
-                            <a href="" class="btn-arrow">
+                            <a href="./works/index.html#graphic" class="btn-arrow">
                                 チラシ・名刺制作の実績を見る</a>
                         </div>
                     </li>
                 </ul>
                 <p class="btn-circle">
-                    <a href="" class="service__btn">
+                    <a href="./works/index.html" class="service__btn">
                         つくったものを見る
                     </a>
                 </p>
@@ -188,7 +188,7 @@
                 <span class="section__title-ja">ご利用のながれ</span>
                 <span class="section__title-en">FLOW</span>
             </h3>
-            <div class="flow__detail">
+            <div class="flow__slider">
                 <ol class="flow__list">
                     <li class="flow__item">
                         <p class="flow__number">STEP 01</p>
@@ -300,7 +300,10 @@
             <div class="footer__container">
                 <p class="footer__logo">
                     <a href="index.html">
-                        <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                        <picture>
+                            <source media="(max-width:1000px)" srcset="images/img_header__logo.png">
+                            <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                        </picture>
                     </a>
                 </p>
 
@@ -360,6 +363,29 @@
             $('a').on('click', function () {
                 return false;
             });
+        });
+    </script> -->
+    <!-- 
+    <script>
+        $(document).ready(function () {
+            var $slider = $('.flow__list');
+            var $slide = $slider.children();
+            var slideLen = $slide.length;
+            $slider
+                .slick({
+                    dots: true,
+                    autoplay: true,
+                    infinite: false,
+                    pauseOnHover: true,
+                    slidesToShow: 5,
+                    slidesToScroll: 2
+                })
+                .on('afterChange', function () {
+                    var $self = $(this);
+                    if ((slideLen - 1) <= $self.slick('slickCurrentSlide')) {
+                        $self.slick('slickSetOption', 'autoplay', false);
+                    }
+                });
         });
     </script> -->
     <script src="js/script.js"></script>

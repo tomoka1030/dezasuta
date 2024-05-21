@@ -17,7 +17,7 @@
     padding-right: 14px;
 
     @include media(md){
-        margin-top: 22px;
+        margin-top: 40px;
     }
 
     a {
@@ -103,8 +103,8 @@
     margin-top: 95px;
     @include media(md){
         display: block;
-        text-align: right;
-        padding: 0 40px;
+        padding-right: 4vw;
+        padding-left: 28vw;
     }
 
     &-btn{
@@ -114,6 +114,10 @@
 }
 .page__link {
     .page__item{
+        @include media(md){
+            margin-right: 10px;
+        }
+
         a {
             padding-left: 8px;
             color: variable.$text-color;
@@ -135,8 +139,10 @@
                 background: variable.$peach-fuzz;
                 opacity: 0;
                 transition: 0.3s;
+                
                 @include media(md){
                     position: absolute;
+                    visibility: visible; 
                     content: '';
                     width: 130%;
                     height: 1px;
@@ -144,7 +150,7 @@
                     left: 0;
                     border-radius: 3px;
                     background: variable.$peach-fuzz;
-                    opacity: 0;
+                    opacity: 1;
                     transition: 0.3s;
                 }
             }
@@ -176,6 +182,12 @@
                 opacity: 1;
                 transition: 0.3s;
             }
+        }
+        @include media(md){
+            display: block;
+            width: 60%;
+            text-align: left;
+            margin-left: auto;/* 右寄せ */
         }
     }
 }
@@ -223,7 +235,7 @@
     display: block;
     text-align: center;
     margin-bottom: 36px;
-    
+
     .contact-btn {
         display: inline-flex;
         gap: 10px;
@@ -237,6 +249,12 @@
         border: 1px solid variable.$pink-beige;
         background: variable.$cream-beige;
         cursor: pointer;
+
+        @include media(md){
+            height: 44px;
+            border: 1px solid variable.$peach-fuzz;   
+            font-size: 15px;
+        }
     
     .contact__img {
             width: 16px;
@@ -261,19 +279,24 @@
     text-align: center;
     margin-bottom: 100px;
 
+    @include media(md){
+        margin-bottom: 0;
+    }
+    
+
     .submit-btn {
-    display: inline-flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    width: 147px;
-    height: 36px;
-    box-sizing: border-box;
-    margin-top: 80px;
-    border-radius: 10px;
-    border: 1px solid variable.$pink-beige;
-    background: variable.$cream-beige;
-    font-family: variable.$ff-gothic;
+        display: inline-flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 147px;
+        height: 36px;
+        box-sizing: border-box;
+        margin-top: 80px;
+        border-radius: 10px;
+        border: 1px solid variable.$pink-beige;
+        background: variable.$cream-beige;
+        font-family: variable.$ff-gothic;
 
     .send__img {
         width: 17px;

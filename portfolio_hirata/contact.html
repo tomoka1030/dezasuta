@@ -40,12 +40,12 @@
             </h1>
 
             <nav class="header__nav">
+                <div class="header__item-logo">
+                    <a href="index.html" class="nav__link">
+                        <img src="images/img_header__logo.png" alt="logo">
+                    </a>
+                </div>
                 <ul class="header__list">
-                    <li class="header__item-logo">
-                        <a href="index.html" class="nav__link">
-                            <img src="images/img_header__logo.png" alt="logo">
-                        </a>
-                    </li>
                     <li class="header__item">
                         <a href="message.html" class="nav__link">
                             <span class="header__title-ja">わたしのおもい</span>
@@ -105,8 +105,10 @@
                 <div class="inquire__img">
                     <img src="images/contact__img.png" alt="お問い合わせ">
                 </div>
-                <p class="inquire__message">お仕事のご依頼や、こんなことできるかなといった疑問、<br>
-                    こんなこと一緒にやらない？などのお誘いなど何でもお気軽にどうぞ！</p>
+                <p class="inquire__message">お仕事のご依頼や、<br class="spOnly">
+                    こんなことできるかなといった疑問、<br>
+                    こんなこと一緒にやらない？<br class="spOnly">
+                    などのお誘いなど何でもお気軽にどうぞ！</p>
 
                 <form
                     action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe2m_CsYfhCuHpDPnxg6A7_NWO7ZO-328eX_kIjLpDRTS_BZg/formResponse"
@@ -136,7 +138,8 @@
                         <!-- <input type="submit" name="submit" value="送信する" id="submit">
                         <img src="images/send.png" alt="send"> -->
                     </p>
-                    <script type="text/javascript">
+                    <!-- <script type="text/javascript"> -->
+                    <script src="script.js">
                         var submitted = false;
                     </script>
                     <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
@@ -151,7 +154,10 @@
             <div class="footer__container">
                 <p class="footer__logo">
                     <a href="index.html">
-                        <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                        <picture>
+                            <source media="(max-width:1000px)" srcset="images/img_header__logo.png">
+                            <img src="images/img_footer_logo.png" alt="デザインパートナーTOMO">
+                        </picture>
                     </a>
                 </p>
 

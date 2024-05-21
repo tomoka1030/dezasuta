@@ -1,6 +1,5 @@
 @charset "utf-8";
 @use "variable";
-
 @use "btn";
 @use "mediaQuery" as *;
 
@@ -41,15 +40,21 @@
             @include media(xl){
                 width: 121px;
                 padding-top: 5px;
+                position: relative;
+                z-index: 99;
             }
         }
     }
 
     &__nav{
+        display: flex;
+        align-items: center;
+
         @include media(xl){
             display: none;
         }
     }
+    
     &__list {
         display: flex;
         align-items: center;
@@ -87,6 +92,7 @@
     &__sns{
         width: 24px; 
         img{
+            margin-top: 14px;
             width: 100%;
         }
     }
@@ -190,10 +196,10 @@
 }
 
 
-/*.doneクラスがついたヘッダー*/
-#header.done {
-    opacity: 0; /*透過0にして非表示に*/
-}
+// /*.doneクラスがついたヘッダー*/
+// #header.done {
+//     opacity: 1; /*透過0にして非表示に*/
+// }
 
 /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
 #header.done.panelactive {
@@ -212,9 +218,9 @@
     z-index: -1;
     /*高さと幅*/  
     // width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    // justify-content: center;
+    // align-items: center;
     text-align: center; 
     // opacity: 0;
     transition: 0.3s;
@@ -225,7 +231,8 @@
     top: 0;
     right: 0;
     width: 284px;
-    height: 600px;
+    height: 500px;
+    padding-top: 70px;
     padding-bottom: 52px;
     opacity: 1; // 不透明に
     z-index: 3; // 最前面に
@@ -233,22 +240,38 @@
     border-radius: 0px 0px 20px 20px;
     transition: 0.7s;
 
+    @include media(xl){
+        width: 100%;
+    }
+
+    @include media(xl){
+        width: 100%;
+        height: 100vh;
+    }
+
 
     ul {
-        display: block; 
-        margin: 0 auto;
+        display: block;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
     }
 
     li {
         padding: 0;
+        margin-bottom: 10px;
     }
 
     .header__item-logo{
         // margin-top: 65px;
         opacity: 1;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         img{
             width: 96px;
+        }
+
+        @include media(xl){
+            display: none;
         }
     }
 
@@ -274,12 +297,6 @@
     }
 
 }
-
-section {
-    position: relative;
-    z-index: 1;
-}
-
 
 
 

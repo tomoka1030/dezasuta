@@ -17,10 +17,14 @@
         position: relative;
         margin-left: 5%;
         z-index: 1;
-        img{
-            width: 148px;
-            }
+
+        @include media(xl){
+            width: 121px;
+            padding-top: 5px;
+            position: relative;
+            z-index: 99;
         }
+    }
 
     @include media(xl){
         display:block;
@@ -67,7 +71,7 @@
         right: 5%;
     }
     @include media(md){
-        width: 20rem;
+        width: 19rem;
         right: 5%;
     }
 
@@ -143,6 +147,7 @@
         opacity: 0.5;
         }
         img{
+            margin-top: 14px;
             width: 100%;
         }
     }
@@ -158,7 +163,7 @@
     opacity: 1; /*不透明にして出現*/
     top: 0;
     left: 0;
-    background: variable.$text-color;
+    // background: variable.$text-color;
     
     @include media(xl){
         display: block;
@@ -177,7 +182,7 @@
                 margin: 0 auto;
                 color: variable.$text-color;
                 padding: 8px;
-                margin-bottom: 8px;
+                margin-bottom: 10px;
             }
         }
     }
@@ -205,13 +210,18 @@
     top: 0;
     right: 0;
     width: 284px;
-    height: 600px;
+    height: 570px;
     padding-bottom: 52px;
     opacity: 1;
     z-index: 3;
     background: rgba(255, 229, 213, 0.8);
     border-radius: 0px 0px 20px 20px;
     transition: 0.7s;
+
+    @include media(xl){
+        padding-top: 130px;
+        width: 100%;
+    }
 
     ul {
         display: inline-block;
@@ -230,15 +240,20 @@
     }
 
     .fv__item-logo{
-        margin-top: 65px;
+        padding-top: 70px;
+        padding-bottom: 30px;
+        margin: 0 auto;
         opacity: 1;
-        margin-bottom: 20px;
         img{
             width: 96px;
         }
         a:hover {
             opacity: 0.5;
             }
+
+        @include media(xl){
+            display: none;
+        }
     }
 
     br {
@@ -277,18 +292,22 @@ section {
 .lead{
     padding-top: 220px;
 
+    @include media(md){
+        padding-top: 120px;
+    }
+
     &__inner{
-    max-width: variable.$width-inner;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    align-items: center;
-    padding: 0 66px;
+        max-width: variable.$width-inner;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        align-items: center;
+        padding: 0 66px;
     
-        @include media(md){
-            padding: 0 17px;
-        }
+            @include media(md){
+                padding: 0 17px;
+            }
     }
 
     &__img{
@@ -317,7 +336,7 @@ section {
         margin-bottom: 14px;
         width: 6vw;
         @include media(md){
-            width:4.57vw;
+            width:12vw;
         }
     }
 
@@ -326,20 +345,29 @@ section {
         // font-size: 25px;
         font-size: 1.7vw;
         color:variable.$dusty-pink;
+
         @include media(md){
-            font-size:2.09vw;
+            font-size:4vw;
         }
     }
 
     &__text{
         font-size: 1.2vw;
         line-height:calc(30 / 16);
+
         @include media(md){
             padding: 0 17px;
             display: block;
-            font-size:1.83vw;
+            font-size:3vw;
+            letter-spacing: 0.1em;
         }
     }
+
+    .btn-circle{
+        @include media(md){
+            margin-top: 40px;
+    }
+}
 }
 
 /* ------------
@@ -348,23 +376,28 @@ works
 .works{
     padding-top: 323px;
     @include media(md){
-        padding-top: 221px;
+        padding-top: 180px;
     }
 
     &__inner{
         max-width: variable.$width-inner;
         margin: 0 auto;
+        // @include media(md){
+        //     // padding: 0 17px;
+        // }
         @include media(md){
-            // padding: 0 17px;
-            @include media(xl){
-                display: none;
-        }
+            padding-right: 4.26vw;
+            padding-left: 4.26vw;
         }
         }
 
     &__list{
         display: flex;
         justify-content: space-between;
+
+        @include media(md){
+            display: block;
+        }
     }
 
     &__item{
@@ -468,9 +501,11 @@ skill
     &__inner{
         max-width: variable.$width-inner;
         margin: 0 auto;
-        @include media(md){
-            padding: 0 17px;
-        }
+        
+            @include media(md){
+                padding-right: 4.26vw;
+                padding-left: 4.26vw;
+            }
         }
 
     &__list{
@@ -479,6 +514,8 @@ skill
         margin-bottom:50px;
 
         @include media(md){
+            width: 100%;
+            margin: 0 auto;
             justify-content: center;
             margin-bottom: 0;
         }
@@ -495,6 +532,7 @@ skill
         border-radius: 48% 52% 56% 44% / 50% 52% 48% 50% ;
 
         @include media(md){
+            margin-left:5%;
             margin-bottom: 25px;
         }
     }
