@@ -90,8 +90,8 @@
 
 
     <main class="main">
-        <section id="confirm" class="confirm">
-            <p class="confirm__title">
+        <div id="confirm" class="confirm fadeUpTrigger">
+            <p class="confirm__title fadeUpTrigger">
                 Thank you for your inquiry
             </p>
             <div class="confirm__img">
@@ -109,7 +109,7 @@
 
             <div class="sns">
                 <!-- <div class="sns__img"> -->
-                <a class="sns__img" href="https://www.instagram.com/tomo_design24/">
+                <a class="sns__img" href="https://www.instagram.com/tomo_design24/" target="_blank">
                     <img src="images/img_instagram.png" alt="インスタグラム">
                 </a>
                 <!-- </div> -->
@@ -119,7 +119,7 @@
                     返信をお待ちの間にぜひチェックしてください!
                 </p>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="footer">
@@ -184,8 +184,18 @@
             </p>
         </div>
     </footer>
-    <script>
 
+    <script>
+        /* --------------
+        ふわっとページ遷移
+        ---------------- */
+
+        $(function () {
+            $('body').fadeIn(1000); //1秒かけてフェードイン
+        });
+    </script>
+
+    <script>
         $(function () {
             // 初回ロード時に#headerにdoneクラスを付与
             $('#header').addClass('done');
@@ -201,38 +211,26 @@
                 $("#header").removeClass('panelactive'); // ヘッダーのpanelactiveクラスも除去
             });
         });
-        // function FixedAnime() {
-        //     //mvの高さを取得
-        //     var header = $('#header').outerHeight(true);
-        //     var scroll = $(window).scrollTop();
-        //     if (scroll >= headerH) {//mvの高さ以上までスクロールしたら
-        //         $('.menu_btn').addClass('fadeDown');//.openbtnにfadeDownというクラス名を付与して
-        //         $('#header').addClass('done');//#headerにdoneというクラス名を付与
-        //     } else {//それ以外は
-        //         $('.menu_btn').removeClass('fadeDown');//fadeDownというクラス名を除き
-        //         $('#header').removeClass('done');//doneというクラス名を除く
-        //     }
-        // }
+    </script>
+    <script>
+        // 動きのきっかけの起点となるアニメーションの名前を定義
+        function fadeAnime() {
+            // ふわっ
+            $('.fadeUpTrigger').each(function () { //fadeUpTriggerというクラス名が
+                var elemPos = $(this).offset().top - 50;//要素より、50px上の
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
 
-        // // 画面をスクロールをしたら動かしたい場合の記述
-        // $(window).scroll(function () {
-        //     if (window.matchMedia('(min-width: 1001px)').matches) {
-        //         FixedAnime();
-        //     } //画面幅が1000px以上になるとFixedAnimeを実行する
-        // });
-        // if (window.matchMedia('(max-width: 1000px)').matches) {
-        //     $('#header').addClass('done');
-        // }//画面幅が1000px以下になると#headerにdoneというクラス名を付与(メニューを表示させる)
+                if (scroll >= elemPos - windowHeight) {
+                    $(this).addClass('fadeUp');// 画面内に入ったらfadeUpというクラス名を追記
+                }
+            });
+        }
 
-        // //ボタンをクリックした際のアニメーションの設定
-        // $(".menu_btn").click(function () {//ボタンがクリックされたら
-        //     $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
-        //     $("#header").toggleClass('panelactive');//ヘッダーにpanelactiveクラスを付与
-        // });
-        // $(".header__nav").click(function () {//ナビゲーションのリンクがクリックされたら
-        //     $(".menu_btn").removeClass('active');//ボタンの activeクラスを除去し
-        //     $("#header").removeClass('panelactive');//ヘッダーのpanelactiveクラスも除去
-        // });
+        // 画面が読み込まれたらすぐに動かす
+        $(window).on('load', function () {
+            fadeAnime();/* アニメーション用の関数を呼ぶ*/
+        });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
     </script>
 </body>
 

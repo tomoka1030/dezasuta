@@ -99,9 +99,9 @@
         </div>
 
         <section id="inquire" class="inquire">
-            <div class="inquire__inner">
+            <div class="inquire__inner fadeUpTrigger">
 
-                <h3 class="inquire__title">メールでのお問い合わせはこちらから</h3>
+                <h3 class="inquire__title fadeUpTrigger">メールでのお問い合わせはこちらから</h3>
                 <div class="inquire__img">
                     <img src="images/contact__img.png" alt="お問い合わせ">
                 </div>
@@ -126,9 +126,10 @@
                             required>
                     </p>
 
-                    <p class="inquire__item"></p>
-                    <label for="comment">お問い合わせ内容<span class="required"> *</span></label>
-                    <textarea id="comment" name="entry.1275055082" placeholder=""></textarea>
+                    <p class="inquire__item">
+                        <label for="comment">お問い合わせ内容<span class="required"> *</span></label>
+                        <textarea id="comment" name="entry.1275055082" placeholder=""></textarea>
+                    </p>
 
                     <p class="btn__area">
                         <!-- 送信ボタン -->
@@ -138,8 +139,8 @@
                         <!-- <input type="submit" name="submit" value="送信する" id="submit">
                         <img src="images/send.png" alt="send"> -->
                     </p>
-                    <!-- <script type="text/javascript"> -->
-                    <script src="script.js">
+                    <script type="text/javascript">
+                        // <script src="script.js">
                         var submitted = false;
                     </script>
                     <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
@@ -211,6 +212,12 @@
             </p>
         </div>
     </footer>
+    <script>
+        // 画面が読み込まれたらすぐに動かす
+        $(window).on('load', function () {
+            fadeAnime();/* アニメーション用の関数を呼ぶ*/
+        });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+    </script>
     <script src="js/script.js"></script>
 </body>
 

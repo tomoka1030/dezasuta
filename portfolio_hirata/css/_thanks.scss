@@ -9,6 +9,9 @@ Thanksページ
 .thanksPage .menu_btn{
     display: block;
     margin-top: 18px;
+    @include media(xl){
+        margin-top: 0;
+    }
 }
 .confirm{
     padding-top: 138px;
@@ -66,12 +69,14 @@ Thanksページ
         text-align: center;
     }
 
-    a:hover {
-        opacity: 0.5;
-    }
     // 吹き出しいれる
     &__img{
-        width: 24px;   
+        width: 24px;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
         
         @include media(md){
             display: block;

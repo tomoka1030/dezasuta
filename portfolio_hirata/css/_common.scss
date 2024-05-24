@@ -9,6 +9,10 @@
 //   outline: 2px solid blue;
 // }
 
+body {
+	display: none;
+}
+
 .spOnly{
   display: none;
 
@@ -16,8 +20,6 @@
     display: block;
   }
 }
-
-
 
 /*グラデーション背景 */
 body{
@@ -39,13 +41,14 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30rem;
+  height: 20rem;
   // min-height: calc(100svh - 120px);
   // min-height: 42svh;
 
   @include media(xl){
     // min-height: calc(100svh - 63px);
-    top: 63px;
+    // top: 63px;
+    margin-top: 63px;
     height: 15rem;
   }
   
@@ -80,6 +83,10 @@ body{
       &-en{
         font-size: 32px;
         font-family: variable.$ff-en; 
+
+        @include media(lg){
+          font-size: 28px;
+        }
 
         @include media(md){
           font-size: 24px;
@@ -160,10 +167,15 @@ body{
   list-style: none;
   text-align: center;
 
-      @include media(md){
-        bottom: -30px;
-    }
+  @include media(md){
+    width: 85%;
+    bottom: -30px;
+  }
 
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 50px;
 }
 
   .slick-dots li button
@@ -192,8 +204,12 @@ body{
     margin: 0;
     cursor: pointer;
 
+    @include media(lg){
+      width: 130px;
+    }
+
     @include media(md){
-      width: 80px;
+      width: 70px;
     }
 }
 
@@ -269,6 +285,10 @@ body{
     font-size: 32px;
     font-family: variable.$ff-en; 
 
+    @include media(lg){
+      font-size: 28px;
+    }
+
     @include media(md){
       font-size: 26px;
     }
@@ -276,12 +296,12 @@ body{
 }
 
 .contact{
-  padding-top: 346px;
+  padding-top: 150px;
   padding-bottom: 132px;
   background: linear-gradient(0deg, rgba(255,219,196,1) 0%, rgba(255,219,196,0) 100%);
   
   @include media(md){
-    padding-top: 255px;
+    padding-top: 200px;
   }
 
   &__inner{
@@ -292,7 +312,7 @@ body{
       }
       
   .btn-rectangle{
-          margin-top: 36px;  
+          margin-top: 36px; 
       }
 
   &__text{
@@ -300,8 +320,40 @@ body{
       padding: 0 10px;
       line-height: 1.5;
 
+      @include media(lg){
+        font-size: 15px;
+      }
+
       @include media(md){
         font-size: 14px;
       }
-  }
+  }    
 }
+
+/*fadeUp */
+.fadeUp{
+  animation-name:fadeUpAnime;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+      transform: translate3d(0px, 40px, 0px);
+      }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0px, 0px, 0px);
+    }
+  }
+  
+  
+  /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+  .fadeUpTrigger{
+      opacity: 0;
+      transition: opacity 1000ms ease, transform 1000ms ease;
+  }
+

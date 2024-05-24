@@ -112,11 +112,11 @@
         </ul>
         <section id="service" class="service">
             <div class="service__inner">
-                <p class="service__message">デザインからコーディングまでワンストップで<br class="spOnly">
+                <h4 class="service__message fadeUpTrigger">デザインからコーディングまでワンストップで<br class="spOnly">
                     担当できるWEBサイト制作をメインに、<br>
-                    デザインにかかわる様々なお仕事を承っております。</p>
+                    デザインにかかわる様々なお仕事を承っております。</h4>
 
-                <ul class="service__list">
+                <ul class="service__list offs">
                     <li class="service__item">
                         <p class="service__number">01</p>
                         <div class="service__img">
@@ -136,7 +136,7 @@
                                 Webサイト制作の実績を見る</a>
                         </div>
                     </li>
-                    <li class="service__item">
+                    <li class="service__item" data-delay="0.2">
                         <p class="service__number">02</p>
                         <div class="service__img">
                             <img src="images/img_service_design.png" alt="Webサイト">
@@ -155,7 +155,7 @@
                                 バナー制作の実績を見る</a>
                         </div>
                     </li>
-                    <li class="service__item">
+                    <li class="service__item" data-delay="0.4">
                         <p class="service__number">03</p>
                         <div class="service__img">
                             <img src="images/img_service_graphic.png" alt="Webサイト">
@@ -175,7 +175,8 @@
                         </div>
                     </li>
                 </ul>
-                <p class="btn-circle">
+                <p class="btn-circle fadeUpTrigger">
+
                     <a href="./works/index.html" class="service__btn">
                         つくったものを見る
                     </a>
@@ -184,11 +185,11 @@
         </section>
 
         <section id="flow" class="flow">
-            <h3 class="section__title">
+            <h3 class="section__title fadeUpTrigger">
                 <span class="section__title-ja">ご利用のながれ</span>
                 <span class="section__title-en">FLOW</span>
             </h3>
-            <div class="flow__slider">
+            <div class="flow__slider fadeUpTrigger">
                 <ol class="flow__list">
                     <li class="flow__item">
                         <p class="flow__number">STEP 01</p>
@@ -274,7 +275,7 @@
         </section>
 
         <section id="contact" class="contact">
-            <div class="contact__inner">
+            <div class="contact__inner fadeUpTrigger">
                 <h2 class="section__title-contact">
                     <span class="ja">お問い合わせ</span>
                     <span class="en">CONTACT</span>
@@ -358,36 +359,77 @@
         </div>
     </footer>
 
-    <!-- <script>
-        $(fudnction () {
-            $('a').on('click', function () {
-                return false;
-            });
-        });
-    </script> -->
-    <!-- 
     <script>
-        $(document).ready(function () {
-            var $slider = $('.flow__list');
-            var $slide = $slider.children();
-            var slideLen = $slide.length;
-            $slider
-                .slick({
-                    dots: true,
-                    autoplay: true,
-                    infinite: false,
-                    pauseOnHover: true,
-                    slidesToShow: 5,
-                    slidesToScroll: 2
-                })
-                .on('afterChange', function () {
-                    var $self = $(this);
-                    if ((slideLen - 1) <= $self.slick('slickCurrentSlide')) {
-                        $self.slick('slickSetOption', 'autoplay', false);
+        /* -------------------------------------
+        service/スクロールすると子要素が時間差ででてくる
+        ---------------------------------------- */
+        // スクロール出現用関数（.offs ⇄ .ons）
+        function scr_ani(scr, offs_max) {
+            var
+                window_h = $(window).height(),
+                offs_length = $('.offs').length,
+                ons_length = $('.ons').length,
+                wh_pos = 10;// 対象コンテンツの上端が画面下からどれくらい入ったら反応するか。画面高さに対する割合（%）
+            if (offs_length) {
+                var first_item = offs_max - offs_length;
+                for (var i = 0; i < offs_length; i++) {
+                    var data_scr = first_item + i;
+                    var offs = $('.offs[data-scr="' + data_scr + '"]');
+                    var target = offs.offset().top;
+                    var trigger = target - (window_h + scr - window_h * wh_pos / 100);
+                    if (trigger < 0) {
+                        offs.removeClass('offs').addClass('ons');
+                    } else {
+                        break;
                     }
-                });
+                }
+            }
+            if (ons_length) {
+                var last_item = ons_length - 1;
+                for (var i = 0; i < ons_length; i++) {
+                    var data_scr = last_item - i;
+                    var ons = $('.ons[data-scr="' + data_scr + '"]');
+                    var target = ons.offset().top;
+                    var trigger = target - (window_h + scr);
+                    if (trigger > 0) {
+                        ons.removeClass('ons').addClass('offs');
+                    } else {
+                        break;
+                    }
+                }
+            }
+        };
+
+        $(function () {
+
+            // スクロール出現アイテムにナンバリング
+            var offs_max = $('.offs').length;
+            for (var i = 0; i < offs_max; i++) {
+                $('.offs').eq(i).attr('data-scr', i);
+            }
+            // ディレイを設定
+            var service__item = $('.service__item');
+            for (var i = 0; i < service__item.length; i++) {
+                let delay = service__item.eq(i).data('delay');
+                if (delay) {
+                    service__item.eq(i).css('transition-delay', delay + 's');
+                }
+            }
+
+            // （リロード時など）ロード時にすでにスクロールされている場合に対応
+            var scr = $(window).scrollTop();
+            scr_ani(scr, offs_max);
+
+
+            // スクロール時
+            $(window).on('scroll', function () {
+                var scr = $(window).scrollTop();
+                scr_ani(scr, offs_max);
+            });// end scroll
+
         });
-    </script> -->
+    </script>
+
     <script src="js/script.js"></script>
 </body>
 

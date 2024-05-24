@@ -13,7 +13,7 @@
     text-align: center;
     display: flex;
     justify-content: flex-end;
-    margin-top: 50px;
+    margin-top: 100px;
     padding-right: 14px;
 
     @include media(md){
@@ -29,7 +29,8 @@
         font-weight: normal;
         transition: 0.3s;
         text-decoration: none;
-        @include media(md){
+
+        @include media(lg){
             padding: 1em 65px 1em 0em;
             font-size: 14px;
         }
@@ -48,7 +49,7 @@
         background: #FFFDFA;
         border: 1px solid variable.$peach-fuzz;
         transition: 0.3s;
-        @include media(md){
+        @include media(lg){
             width: 46px;
             height: 46px;
         }
@@ -66,7 +67,7 @@
         border-top: 1px solid variable.$text-color;
         border-right: 1px solid variable.$text-color;
         transition: 0.3s;
-        @include media(md){
+        @include media(lg){
             right: 23px;
         }
     }
@@ -115,7 +116,15 @@
 .page__link {
     .page__item{
         @include media(md){
+            display: block;
+            width: 40%;
+            text-align: left;
             margin-right: 10px;
+            margin-left: auto;/* 右寄せ */
+        }
+
+        @include media(sm){
+            width: 60%;
         }
 
         a {
@@ -123,8 +132,11 @@
             color: variable.$text-color;
             text-decoration: none;
             transition: 0.3s;
+
             @include media(md){
+                width: 100%;
                 margin-bottom: 27px;
+                font-size: 15px;
             }
 
             &:before {/* before：下線 */
@@ -144,7 +156,7 @@
                     position: absolute;
                     visibility: visible; 
                     content: '';
-                    width: 130%;
+                    width: 100%;
                     height: 1px;
                     bottom: -8px;
                     left: 0;
@@ -168,6 +180,10 @@
                 top: 10%;
                 margin: auto;
                 transition: 0.3s;
+
+                @include media(md){
+                    right: 10px;
+                }
             }
 
             &:hover:before {
@@ -182,12 +198,6 @@
                 opacity: 1;
                 transition: 0.3s;
             }
-        }
-        @include media(md){
-            display: block;
-            width: 60%;
-            text-align: left;
-            margin-left: auto;/* 右寄せ */
         }
     }
 }
@@ -314,9 +324,15 @@
 .btn__container{
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 80px;
 
     @include media(md){
         display: block;
+    }
+
+    .btn-circle{
+        @include media(md){
+            margin-top: 25px;
+        }
     }
 }

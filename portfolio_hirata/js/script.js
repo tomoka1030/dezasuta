@@ -1,3 +1,12 @@
+
+/* --------------
+ふわっとページ遷移
+---------------- */
+
+$(function() {
+	$('body').fadeIn(1000); //1秒かけてフェードイン
+});
+
 /* ---------------------------------------------
 ヘッダー スクロールするとハンバーガーメニューに変化
 ----------------------------------------------- */
@@ -15,7 +24,7 @@ function FixedAnime() {
     }
 }
 
-  // 画面をスクロールをしたら動かしたい場合の記述
+  // 画面をスクロールをしたら動かす
 $(window).scroll(function () {
     if (window.matchMedia('(min-width: 1001px)').matches) {
         FixedAnime();
@@ -47,7 +56,7 @@ $(function () {
         slidesToScroll: 1,
         autoplay: true,
         dots: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         // centerMode: true,// 次の画像をちら見せ
         // centerPadding: '5%',
         responsive: [
@@ -72,7 +81,7 @@ $(function () {
         slidesToScroll: 1,
         autoplay: true,
         dots: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         // centerMode: true,// 次の画像をちら見せ
         // centerPadding: '5%',
         responsive: [
@@ -125,20 +134,17 @@ $(document).ready(function () {
         
         $slider.slick({
             dots: true,
-            autoplay: true,
+            // autoplay: true,
             infinite: false,// スライダーのループを無効にする
-            arrows: false,// マウスホバー時に自動再生を一時停止する
-            pauseOnHover: true,
-            slidesToShow: 5,
-            slidesToScroll: 2,
+            arrows: false,
+            // pauseOnHover: true,// マウスホバー時に自動再生を一時停止する
+            slidesToScroll: 5,
+            variableWidth:true,
             responsive: [
                 {
                     breakpoint: 768,
                     settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        centerMode: true,
-                        centerPadding: '2%',
+                        slidesToScroll:1,
                     }
                 }
             ]
@@ -154,7 +160,7 @@ $(document).ready(function () {
 
 
 /* ---------------------
-slick/message/feature
+slick/message▶feature
 --------------------- */
 /*スマホのときのみスライダーを有効にする*/
 $(function(){
@@ -165,12 +171,15 @@ $(function(){
                 $('.feature__list').not('.slick-initialized').slick({
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    autoplay: true,
-                    autoplaySpeed: 4000,
+                    // autoplay: true,
+                    // autoplaySpeed: 4000,
                     dots: true,
                     arrows: false,
                     centerMode: true,// 次の画像をちら見せ
                     centerPadding: '5%',
+                    infinite: false,// スライダーのループを無効にする
+                    pauseOnHover: true,// マウスホバー時に自動再生を一時停止する
+                    variableWidth:true,
                 });
             } else {
                 $('.slide.slick-initialized').slick('unslick');
@@ -183,3 +192,30 @@ $(function(){
 	});
 });
 
+
+/* ----------------
+フェードイン
+------------------- */
+
+
+// // 動きのきっかけとなるアニメーションの名前を定義
+function fadeAnime(){
+
+    // ふわっ
+    $('.fadeUpTrigger').each(function(){ //fadeUpTriggerというクラス名が
+        var elemPos = $(this).offset().top-40;//要素より、50px上の
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+
+        if (scroll >= elemPos - windowHeight){
+            $(this).addClass('fadeUp');// 画面内に入ったらfadeUpというクラス名を追記
+        }else{
+            $(this).removeClass('fadeUp');// 画面外に出たらfadeUpというクラス名を外す
+        }
+    });
+}
+
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function (){
+    fadeAnime();/* アニメーション用の関数を呼ぶ*/
+});// ここまで画面をスクロールをしたら動かしたい場合の記述
