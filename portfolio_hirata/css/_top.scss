@@ -549,15 +549,16 @@ works
             text-align: center;
             line-height: 0;/*行の高さを0にする*/
             overflow:hidden;/*拡大してはみ出る要素を隠す*/     
-            }   
+            } 
 
         &:hover img{
             border-radius: 10px;
             transform: scale(1.1);/*拡大の値*/
             }
 
-        & p.caption{
+        .caption{
             position: absolute;
+            display: inline-block;
             width: 80%;
             opacity:0;
             transition: .5s ease-in-out;/*移り変わる速さ*/
@@ -568,18 +569,26 @@ works
             color: variable.$text-color;
             line-height: 1.5;
 
-            & span.title{
+            .title{
+                display: inline-block;
                 font-size: 18px;
                 border-bottom: 2px solid  variable.$dusty-pink;
-                padding-bottom: 3px;
+                padding-bottom: 1px;
             }
-            & span{
+
+            .subtitle{
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                margin-top: 10px;
                 font-size: 15px;
-                line-height: 1.5;
+            }
+            .text{
+                font-size: 15px;
             }
         }
 
-        &:hover p.caption{
+        &:hover .caption{
             opacity:1;
             }
     }

@@ -3630,8 +3630,9 @@ works
   border-radius: 10px;
   transform: scale(1.1); /*拡大の値*/
 }
-.works__img p.caption {
+.works__img .caption {
   position: absolute;
+  display: inline-block;
   width: 80%;
   opacity: 0;
   transition: 0.5s ease-in-out; /*移り変わる速さ*/
@@ -3642,16 +3643,23 @@ works
   color: #73524F;
   line-height: 1.5;
 }
-.works__img p.caption span.title {
+.works__img .caption .title {
+  display: inline-block;
   font-size: 18px;
   border-bottom: 2px solid #DAA180;
-  padding-bottom: 3px;
+  padding-bottom: 1px;
 }
-.works__img p.caption span {
+.works__img .caption .subtitle {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
   font-size: 15px;
-  line-height: 1.5;
 }
-.works__img:hover p.caption {
+.works__img .caption .text {
+  font-size: 15px;
+}
+.works__img:hover .caption {
   opacity: 1;
 }
 .works .works__img:hover .mask::before {

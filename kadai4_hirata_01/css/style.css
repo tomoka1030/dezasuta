@@ -26,7 +26,7 @@ li {
     font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
         "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
         "ＭＳ 明朝", serif;
-    font-feature-settings: "palt";
+    /* font-feature-settings: "palt"; */
 }
 
 a {
@@ -158,7 +158,7 @@ HEADER
         height: 3px;
         border-radius: 2px;
         background: #fff;
-        transition: 0.3s;
+        /* transition: 0.3s; */
     }
 }
 
@@ -171,7 +171,7 @@ HEADER
     height: 3px;
     border-radius: 2px;
     background: #fff;
-    transition: 0.3s;
+    /* transition: 0.3s; */
 }
 
 .sp_btn span::before {
